@@ -48,11 +48,25 @@
 }
 
 #nav ul li{
-	text-align: center;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
 	border: #000000 1px solid;
 	background-color: #32CD32;
+}
+
+#nav ul li a{
+	display:block;
+	text-decoration:none;
+	background-color:#999;
+	padding: 10px 20px;
+}
+#nav ul li a:hover{
+	display:block;
+	text-decoration:none;
+	background-color:#CCC;
+	padding: 10px 20px;
+}
+
+#current_page{
+	padding: 10px 20px;
 }
 
 #section {
@@ -60,13 +74,17 @@
 }
 
 #content {
-	margin-right: 25%;
+	margin-top:2em;
+	margin-right:10%;
 }
 
 #recent_news {
 	float: right;
+	margin:2em;
+	padding:1em;
 	width: 22%;
 	padding-right: 2em;
+	background-color:#CFF;
 
 }
 
