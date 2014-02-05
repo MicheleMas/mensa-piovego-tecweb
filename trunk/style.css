@@ -90,4 +90,34 @@
 
 #footer {
 	clear: both;
+	position:fixed;
+	bottom:0px;
+	z-index:9999;
+	background-color: #DDDDDD;
+	width:100%;
 }
+
+#footer > * {
+	margin:2em;
+	margin-left:2em;
+	
+}
+
+.link_container {
+	margin:2em;
+}
+
+.link_container > img
+{
+	float:right;
+	margin-right:4em;
+}
+
+#facebook_info	{
+	display:none;
+	border:1px;
+	width:150px;
+	height:100px;
+	border: solid black; 
+}
+
