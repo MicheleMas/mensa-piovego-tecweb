@@ -5,7 +5,7 @@
 }
 
 html {
-	background-color: #DDDDDD;
+	background-color: #E5E5E5;
 }
 
 body {
@@ -22,29 +22,48 @@ body {
 
 #header h1 {
 	font-size: 3em;
-	color: #FFFFFF;
+	color: #FFDD55;
 	text-align: center;
-	padding-top: 2em;
-	text-shadow: 1px 1px 3px #000000;
+	padding-top: 2.8em;
+	text-shadow: 0px 0px 5px #000000;
 }
 
 #lang {
 	float: right;
 }
 
-.lang_switch {
+#lang_switch {
 	padding-left: 0.2em;
 	padding-right: 0.2em;
 	border: #000000 1px solid;
 	text-decoration: none;
+	background-color: #FFDD55;
+	color: #555555;
+	font-weight: bold;
+}
+
+#lang_switch_selected {
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	border: #000000 1px solid;
+	text-decoration: none;
+	background-color: #FFDD55;
+	color: #555555;
+	font-weight: bold;
+	opacity: 0.3;
 }
 
 #path {
-	background-color: #99CC99;
+	background-color: #555555;
 	padding-left: 1em;
+	margin-top: 0.5em;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
-	color: #000000;
+	color: #FFDD55;
+}
+
+#clb {
+	font-weight: bold;
 }
 
 #nav {
@@ -67,8 +86,8 @@ body {
 #nav ul li a{
 	display:block;
 	text-decoration:none;
-	color: #000000;
-	background-color:#99CC99;
+	color: #FFDD55;
+	background-color:#555555;
 	padding: 0.8em 1.5em;
 	transition: 0.5s;
 }
@@ -77,11 +96,13 @@ body {
 	text-decoration:none;
 	background-color:#FFDD55;
 	padding: 0.8em 1.5em;
+	color: #555555;
 }
 
 #current_page{
 	padding: 0.8em 1.5em;
 	background-color: #FFDD55;
+	color: #555555;
 }
 
 #section {
@@ -144,7 +165,7 @@ body {
 	clear: both;
 	bottom:0em;
 	z-index:9999;
-	background-color: #99CC99;
+	background-color: #555555;
 	height: 2em;
 }
 
