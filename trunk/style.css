@@ -186,8 +186,9 @@ body {
 }
 
 #menu_section {
-	margin-left: 23%;
-	margin-bottom: 2.1em;
+	margin-left: 2em;
+	margin-bottom: 2em;
+	margin-right:2em;
 }
 
 #menu_section h1 {
@@ -203,6 +204,7 @@ body {
 	color: #FFDD55;
 	font-style: italic;
 	margin-right: 10%;
+	width:100%;
 }
 
 #menu_section dd img {
@@ -219,35 +221,37 @@ body {
 	border-bottom: #555555 1px solid;
 	border-left: #555555 1px solid;
 	border-right: #555555 1px solid;
+	width:100%;
+	
 }
 
 #menu_section dd {
 	margin-bottom: 1.5em;
 }
 
-.commenti_submit
-{
-	padding:1.5em;
-	margin:1em;
-	width:80%;
-	
-}
 .commenti_submit legend	{
 	margin:1em;
 }
 
+.commenti_submit	{
+	margin-right:1em;
+	margin-left:2em;
+	margin-bottom:2em;
+}
+ 
 .form_description	{
 	width:25%;
 	margin:0.5em;
 }
 
 .form_item	{
-	width:90%;
+	width:100%;
 	margin:0.5em;
 }
 
 .form_item input	{
-	width:100%;
+	width:25em;
+	margin:1em;
 }
 
 .form_action	{
@@ -256,8 +260,8 @@ body {
 }
 
 .menu_photo	{
-	width:30%;
-	float:left;
+	width:20em;
+	height:20em;
 	margin:1em;
 }
 
@@ -287,3 +291,24 @@ body {
 	float:right;
 }
 
+#form_container {
+	border-color:#555555;
+	width:100%;
+
+}
+
+.like_pic {
+	width:2.5em !important;
+	margin:0em !important; 
+	float:right !important;
+	padding: 0em !important;
+	
+}
+.like_n{
+	float:right;
+	margin-right:0.5em;
+	margin-left:0.5em;
+	color: #3399ff;
+	text-align: center;
+	text-shadow: 0px 0px 1px #000000;
+}

@@ -15,7 +15,7 @@
 			<h1>Ristorante NordESU Piovego</h1>
 		</div>
 		<div id="path">
-			Ti trovi in: <span id="clb" xml:lang="eng">Home</span>
+			Ti trovi in: <a href="../index.html"><span xml:lang="eng">Home</span></a> > <a href="../menu.html"><span xml:lang="eng">Menù</span></a> > <span id="clb">Gnocchi al ragù</span>
 		</div>
 		<div id="nav">
 			<ul>
@@ -40,81 +40,89 @@
 			</ul>
 		</div>
 		<div id="section">
-		<h1>Gnocchi al ragù</h1>
-		<div class="menu_container">			
-			<img src="../images/gnocchi.png" alt="Gnocchi al sugo con abbondante ragù" class="menu_photo"/>
-			<p id="menu_item_dialog">
-				Gli gnocchi sono uno dei piatti più famosi della tradizione italiana. Facili da preparare e gustosissimi se abbinati ad un sugo di carne come
-				il ragù di carne proposto per il nostro menù. <a href="http://blog.giallozafferano.it/cucinamartina/gnocchi-al-ragu-di-carne/">Qui</a> trovi 
-				la ricetta per prepararli da te ma, se li avessi mangiati da noi, sei invitato a votarli e a lasciare un commento!				
-		</div>
-		</div>
-		<div>
-		<form class="commenti_submit">
-			<fieldset>
-				<legend>
-					I tuoi dati
-				</legend>
+			<h1>Gnocchi al ragù</h1>
+			<div >			
+				<div id="recent_news">
+					Gli gnocchi sono uno dei piatti più famosi della tradizione italiana. Facili da preparare e gustosissimi se abbinati ad un sugo di carne come
+					il ragù di carne proposto per il nostro menù. <a href="http://blog.giallozafferano.it/cucinamartina/gnocchi-al-ragu-di-carne/">Qui</a> trovi 
+					la ricetta per prepararli da te ma, se li avessi mangiati da noi, sei invitato a votarli e a lasciare un <a href="#form">commento</a>!
+				</div>
+				<div id="content"><img src="../images/gnocchi.png" alt="Gnocchi al sugo con abbondante ragù" /></div>
+					
+			</div>			
+			<h2>
+				Commenti:
+			</h2>
+			
+			<!-- Commenti recenti -->
+			<div class="commenti_recenti" id="menu_section">
 				<dl>
+					<dt>
+						Nome utente1
+					</dt>
 					<dd>
-						<p class="form_description">
-							<label for="email">La tua email:</label>
-						</p>
-						<p class="form_item">
-							<input type="email" id="email" placeholder="Indirizzo email" required/>
-						</p>
-					</dd>				
-					<dd>
-						<p class="form_description">
-							<label for="commento">Commento</label>
-						</p>
-						<p class="form_item">
-							<input type="text" id="commento" placeholder="Commento..." rows="3" required/>
-						</p>
-					</dd>				
-					<dd>
-						<p class="form_description">
-							<label for="tipologia">Tipo di utente</label>
-						</p>						
-						<p class="form_item">
-							<select id="tipologia" name="list" onChange="">
-								<option>Studente</option>
-								<option>Docente</option>
-								<option>Esterno</option>
-							</select>
-						</p>
+						Gli gnocchi di oggi sembravano veramente di patate<br/>
+						<div>
+							<img src="../images/like.jpg" alt="Mi piace"  class="like_pic"/><div class="like_n">3</div>
+						</div>
 					</dd>
-				</dl>
-			</fieldset>
-			<fieldset class="form_action">
-				<button type="submit">Invia!</button>
-			</fieldset>
-		</form>
-		<h2>
-			Commenti:
-		</h2>
-		<div class="commenti_recenti" id="menu_section">
-			<dl>
-				<dt>
-					Nome utente1
-				</dt>
-				<dd>
-					Gli gnocchi di oggi sembravano veramente di patate<br/>
-					<div class="like_dinner">
-						<img src="../images/like.jpg" alt="Mi piace"/>3
-					</div>
-				</dd>
-				<dt>
-					Nome utente2
-				</dt>
-				<dd>
-					Il gusto del ragù di carne mi ricordava molto le svizzere di ieri<br/> 
-					<div class="like_dinner">
-						<img src="../images/like.jpg" alt="Mi piace"/>4
-					</div>
-				</dd>
+					<dt>
+						Nome utente2
+					</dt>
+					<dd>
+						Il gusto del ragù di carne mi ricordava molto le svizzere di ieri<br/> 
+						<div>
+							<img src="../images/like.jpg" alt="Mi piace" class="like_pic"/><div class="like_n">5</div>
+						</div>
+					</dd>
 		</div>
 		
+		<h2>
+				Commenta!
+			</h2>
+		<!-- form inserimento commenti -->
+		<div id="form_container"><a name="form"/>
+			<form class="commenti_submit">
+				<fieldset>
+					<legend>
+						I tuoi dati
+					</legend>
+					<dl>
+						<dd>
+							<p class="form_description">
+								<label for="email">La tua email:</label>
+							</p>
+							<p class="form_item">
+								<input type="email" id="email" placeholder="Indirizzo email" required/>
+							</p>
+						</dd>				
+						<dd>
+							<p class="form_description">
+								<label for="commento">Commento</label>
+							</p>
+							<p class="form_item">
+								<input type="text" id="commento" placeholder="Commento..." rows="3" required/>
+							</p>
+						</dd>				
+						<!--<dd>
+							<p class="form_description">
+								<label for="tipologia">Tipo di utente</label>
+							</p>						
+							<p class="form_item">
+								<select id="tipologia" name="list" onChange="">
+									<option>Studente</option>
+									<option>Docente</option>
+									<option>Esterno</option>
+								</select>
+							</p>
+						</dd>-->
+					</dl>
+				</fieldset>
+				<fieldset class="form_action">
+					<button type="submit">Invia!</button>
+				</fieldset>
+			</form>
+			</div>
 		
 		</div>
 		<div id="footer">
