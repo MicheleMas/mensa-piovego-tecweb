@@ -87,6 +87,7 @@ body {
 #nav ul li{
 	margin-bottom: 3px;
 	font-weight: bold;
+	border-radius: 5px;
 }
 
 #nav ul li a{
@@ -96,6 +97,8 @@ body {
 	background-color:#555555;
 	padding: 0.8em 1.5em;
 	transition: 0.5s;
+	border-radius: 5px;
+
 }
 #nav ul li a:hover{
 	display:block;
