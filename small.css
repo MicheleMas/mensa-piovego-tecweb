@@ -1,0 +1,80 @@
+* {
+	font-family: Helvetica, Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	height: 8em;
+	margin: 0em;
+}
+
+#header h1 {
+	font-size: 2em;
+	padding-top: 1em;
+}
+
+#lang_switch {
+	font-size: 1.25em;
+}
+
+#nav {
+	float: none;
+	width: 95%;
+	padding-left: 0em;
+	padding-top: 1em;
+	padding-right: 0em;
+	text-align: center;
+	margin: auto;
+}
+
+#nav ul li {
+	border-radius: 10px;
+}
+
+#nav ul li a {
+	border-radius: 10px;
+}
+
+#current_page {
+	border: none;
+}
+
+#recent_news {
+	float: none;
+	padding: 0;
+	padding-top: 1em;
+	margin: auto;
+	box-shadow: none;
+	width: 95%;
+	border-bottom: #DDDDDD 1px solid;
+}
+
+#recent_news h1 {
+	text-align: center;
+}
+
+#content {
+	margin: auto;
+	padding: 0em;
+	padding-top: 1em;
+	width: 95%;
+}
+
+#content h1 {
+	text-align: center;
+}
+
+#section {
+	margin: 0em;
+}
+
+#footer {
+	height: 7em;
+	padding: 0em;
+}
+
+#footer > * {
+	display: block;
+	padding-top: 0.5em;
+}
