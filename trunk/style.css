@@ -112,6 +112,7 @@ body {
 	padding: 0.8em 1.5em;
 	background-color: #FFDD55;
 	color: #555555;
+	border-left: #555555 5px solid;
 }
 
 #section {
@@ -153,7 +154,13 @@ body {
 	border-top: #DDDDDD 1px solid;
 	padding-top: 0.5em;
 	font-size: 1em;
+}
+
+#recent_news h3 {
+	font-size: 0.9em;
 	padding-bottom: 0.5em;
+	font-weight: normal;
+	font-style: italic;
 }
 
 #recent_news div {
@@ -166,7 +173,6 @@ body {
 }
 
 #news_box_link {
-
 	margin-top: 1em;
 }
 
@@ -175,11 +181,21 @@ body {
 	bottom:0em;
 	z-index:9999;
 	background-color: #555555;
-	height: 2em;
+	height: 2.5em;
+	margin: auto;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 0.5em;
 }
 
-.link_container {
-	margin:2em;
+#social_container {
+	margin-right: 2em;
+}
+
+#credits {
+	margin-right: 2em;
+	color: #FFFFFF;
+	font-weight: bold;
 }
 
 .link_container > img
