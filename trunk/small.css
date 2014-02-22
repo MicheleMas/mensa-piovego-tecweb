@@ -69,6 +69,30 @@
 	margin: 0em;
 }
 
+#menu_section {
+	margin: 0;
+}
+
+#menu_section h1 {
+	
+}
+
+#menu_section dt {
+	font-size: 1.3em;
+}
+
+#menu_section dd img {
+	
+}
+
+#menu_section dd p {
+	
+}
+
+#menu_section dd {
+	border: none;
+}
+
 #footer {
 	height: 7em;
 	padding: 0em;
