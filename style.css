@@ -14,6 +14,19 @@ body {
 	background-color: #FFFFFF;
 }
 
+.hiddenELEGANTE {
+	display: none;
+}
+
+.hidden {
+	position: absolute;
+	left:0px;
+	top:-500px;
+	width:1px;
+	height:1px;
+	overflow: hidden;
+}
+
 #header {
 	background-image: url("images/header_bg.png");
 	background-repeat: no-repeat;
