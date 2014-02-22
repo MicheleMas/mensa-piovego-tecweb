@@ -218,9 +218,9 @@ body {
 }
 
 #menu_section {
-	margin-left: 2em;
+	margin-left: 20%;
 	margin-bottom: 2em;
-	margin-right:2em;
+	margin-right:4em;
 }
 
 #menu_section h1 {
@@ -235,8 +235,6 @@ body {
 	background-color: #555555;
 	color: #FFDD55;
 	font-style: italic;
-	margin-right: 10%;
-	width:100%;
 }
 
 #menu_section dd img {
@@ -250,15 +248,13 @@ body {
 	padding: 1em;
 	min-height: 6.5em;
 	margin-right: 10%;
-	border-bottom: #555555 1px solid;
-	border-left: #555555 1px solid;
-	border-right: #555555 1px solid;
-	width:100%;
-	
 }
 
 #menu_section dd {
 	margin-bottom: 1.5em;
+	border-bottom: #555555 1px solid;
+	border-left: #555555 1px solid;
+	border-right: #555555 1px solid;
 }
 
 .commenti_submit legend	{
