@@ -12,8 +12,8 @@
 	<body>
 		<div id="header">
 			<span id="lang">
-				<a class="lang_switch" href="">ITA</a>
-				<a class="lang_switch" href="">ENG</a>
+				<a id="lang_switch_selected" href="">ITA</a>
+				<a id="lang_switch" href="">ENG</a>
 			</span>
 			<h1>Ristorante NordESU Piovego</h1>
 		</div>
@@ -22,14 +22,14 @@
 		</div>
 		<div id="nav">
 			<ul>
-				<li id="current_page">
-					Home
+				<li>
+					<a href="index.html"><span xml:lang="en">Home</span></a>
 				</li>
 				<li>
 					<a href="news.html"><span xml:lang="en">News</span></a>
 				</li>
-				<li>
-					<a href="where.html">Dove Siamo</a>
+				<li id="current_page">
+					Dove Siamo
 				</li>
 				<li>
 					<a href="menu.html">Menù</a>
@@ -43,66 +43,29 @@
 			</ul>
 		</div>
 		<div id="section">
-			<div id="recent_news">
-				<h1 xml:lang="en">News</h1>
-				<div>
-					<h2>titolo news1</h2>
-					<p>VHS accusamus chillwave umami id drinking vinegar photo booth hella cliche distillery. Four loko paleo messenger bag</p>
-					<a class="news_link" href="">continua..</a>
-				</div>
-				<div id="second_news">
-					<h2>titolo news2</h2>
-					<p>Tempor laboris hella, retro Terry Richardson pariatur PBR cardigan nulla vegan viral qui est. YOLO deserunt American Apparel try-hard</p>
-					<a class="news_link" href="">continua..</a>
-				</div>
-				
-			</div>
 			<div id="content">
-				<div>
-					<h1>RistoESU "Nord Piovego"</h1>
+				
+				<h1>Dove ci puoi trovare</h1>
+				<p>
+					La mensa NordESU Piovego è situata lungo il lungargine del 
+					canale Piovego, ed è accessibile anche da via Ugo Bassi, accanto
+					alla facoltà di psicologia ed al Complesso Interdipartimentale
+					A. Vallisneri.
+				</p>
+				<p>
+					Indirizzo: via G. Colombo, 1 (angolo con via Ugo Bassi )
+				</p>
+				<p>
+					Telefono: 049 8071530 
+				</p>
+				<p>
+					Fax: 049 8071474
+				</p>
+				<div id="mapContainer">
 					<p>
-Ristorante, Pizzeria  e Bar , adiacente a numerose facoltà, produce da sola circa 500.000 pasti all'anno. Dispone di 700 posti a sedere e 6 punti di distribuzione. In questo RistorESU potete gustare, oltre alle varietà di pasto tradizionale, pizze, insalatone e panini. Inoltre alla mattina è aperto il bar per le colazioni.</p>
-				</div>
-				<div>
-					<h1>Orari</h1>
-					<p>L'orario di apertura è dalle 11:30 alle 14:30 dal lunedì al venerdì. Sabato e domenica chiuso.</p>
-					<p>Il bar per la colazione è aperto dalle 8:00 alle 11:00</p>
-				</div>
-				<div>
-					<h1>Menù della settimana</h1>
-					<table>
-						<tr>
-							<th>Giorno</th>
-							<th>Primi</th>
-							<th>Secondi</th>
-						</tr>
-
-						<tr>
-							<td>lunedì</td>
-							<td>Carbonara</td>
-							<td>bruschetta</td>
-						</tr>
-						<tr>
-							<td>martedì</td>
-							<td>Carbonara</td>
-							<td>bruschetta</td>
-						</tr>
-						<tr>
-							<td>mercoledì</td>
-							<td>Carbonara</td>
-							<td>bruschetta</td>
-						</tr>
-						<tr>
-							<td>giovedì</td>
-							<td>Carbonara</td>
-							<td>bruschetta</td>
-						</tr>
-						<tr>
-							<td>venerdì</td>
-							<td>Carbonara</td>
-							<td>bruschetta</td>
-						</tr>
-					</table>
+						Per una più agevole ricerca è possibile utilizzare la mappa seguente:
+					</p>
+					<iframe id="Gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d700.2347782921662!2d11.889217793426374!3d45.4105673612162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf60d6b6371%3A0x2c00159331ead3d8!2sRistorEsu+Nord+Piovego!5e0!3m2!1sit!2sit!4v1393089568938" ></iframe>
 				</div>
 			</div>
 		</div>
