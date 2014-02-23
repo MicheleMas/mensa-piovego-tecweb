@@ -14,7 +14,7 @@ body {
 	background-color: #FFFFFF;
 }
 
-.hiddenELEGANTE {
+.nav_helper {
 	display: none;
 }
 
@@ -142,10 +142,26 @@ body {
 #content h1 {
 	font-size: 2em;
 	padding-bottom: 0.5em;
+	text-align: center;
+}
+
+#content h2 {
+	font-size: 1.5em;
+	padding-top: 0.5em;
+}
+
+#content h3 {
+	font-size: 0.8em;
+	padding-bottom: 0.5em;
 }
 
 #content p {
 	padding-bottom: 0.5em;
+}
+
+.notizia
+{
+	border-bottom: #DDDDDD 1px solid;
 }
 
 #recent_news {
