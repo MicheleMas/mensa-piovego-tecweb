@@ -109,7 +109,7 @@ body {
 	color: #FFDD55;
 	background-color:#555555;
 	padding: 0.8em 1.5em;
-	transition: 0.5s;
+	
 	border-radius: 5px;
 
 }
@@ -119,6 +119,7 @@ body {
 	background-color:#FFDD55;
 	padding: 0.8em 1.5em;
 	color: #555555;
+	transition: 0.5s;
 }
 
 #nav ul li a:focus{
