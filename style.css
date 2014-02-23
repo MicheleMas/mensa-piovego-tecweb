@@ -196,6 +196,20 @@ body {
 	border: 0;
 }
 
+.infoContainer {
+	color: #004F76;
+	padding-bottom: 1em;
+}
+
+.infoContainer p {
+	padding-left: 1em;
+}
+
+.infoTitle {
+	font-style: italic;
+	font-weight: bold;
+}
+
 #footer {
 	clear: both;
 	bottom:0em;
