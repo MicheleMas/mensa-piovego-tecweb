@@ -159,6 +159,10 @@ body {
 	padding-bottom: 0.5em;
 }
 
+#content_image {
+	width: 60%;
+}
+
 .notizia
 {
 	border-bottom: #DDDDDD 1px solid;
