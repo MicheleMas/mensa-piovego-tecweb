@@ -69,6 +69,12 @@
 	text-align: center;
 }
 
+#content_image {
+	width: 100%;
+	margin: auto;
+	border-radius: 0.5em;
+}
+
 #section {
 	margin: 0em;
 }
