@@ -19,8 +19,9 @@
 }
 
 .nav_helper {
-	display: inline;
-	text-align: center;
+	display: inline-block;
+	text-align: right;
+	width: 99%;
 }
 
 #nav {
