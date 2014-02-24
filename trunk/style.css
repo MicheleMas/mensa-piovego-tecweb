@@ -327,6 +327,7 @@ table tr:nth-child(even){
 	border-bottom: #555555 1px solid;
 	border-left: #555555 1px solid;
 	border-right: #555555 1px solid;
+	padding:1em;
 }
 
 .commenti_submit legend	{
@@ -334,9 +335,9 @@ table tr:nth-child(even){
 }
 
 .commenti_submit	{
-	margin-right:1em;
-	margin-left:2em;
-	margin-bottom:2em;
+	margin-right:1em !important;
+	margin-left:2em !important;
+	margin-bottom:2em !important;
 }
  
 .form_description	{
@@ -411,4 +412,34 @@ table tr:nth-child(even){
 	color: #3399ff;
 	text-align: center;
 	text-shadow: 0px 0px 1px #000000;
+}
+
+h1
+{
+	margin:1em;
+}
+
+h2
+{
+	margin:1em;
+}
+
+h3
+{
+	margin:1em;
+}
+
+h4
+{
+	margin:1em;
+}
+
+.action-button
+{
+	width:4em;
+	height:2.5em;
+	background-color:#707070;
+	color:white;
+	margin-bottom:2em;
+	border-width:0px;
 }
