@@ -196,6 +196,10 @@ table tr:nth-child(even){
 	border-bottom: #DDDDDD 1px solid;
 }
 
+.notizia h3 {
+	font-style:italic;
+}
+
 #recent_news {
 	float: right;
 	margin:2em;
