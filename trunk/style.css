@@ -21,7 +21,8 @@ table{
 table td{ 
 	padding:7px;
 	border:#000000 1px solid;
-}/
+}
+
 table tr{
 	background: #707070;
 }
@@ -412,26 +413,6 @@ table tr:nth-child(even){
 	color: #3399ff;
 	text-align: center;
 	text-shadow: 0px 0px 1px #000000;
-}
-
-h1
-{
-	margin:1em;
-}
-
-h2
-{
-	margin:1em;
-}
-
-h3
-{
-	margin:1em;
-}
-
-h4
-{
-	margin:1em;
 }
 
 .action-button
