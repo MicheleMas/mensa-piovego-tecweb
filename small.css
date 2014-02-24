@@ -20,7 +20,7 @@
 
 .nav_helper {
 	display: inline;
-	text-align: right;
+	text-align: center;
 }
 
 #nav {
@@ -116,4 +116,8 @@
 #footer > * {
 	display: block;
 	padding-top: 0.5em;
+}
+
+#social_container img {
+	height: 2.5em;
 }
