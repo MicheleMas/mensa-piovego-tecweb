@@ -273,6 +273,10 @@ table tr:nth-child(even){
 	margin-right: 2em;
 }
 
+#social_container img {
+	height: 2.1em;
+}
+
 #credits {
 	margin-right: 2em;
 	color: #FFFFFF;
