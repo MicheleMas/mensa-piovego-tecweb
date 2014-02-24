@@ -14,6 +14,24 @@ body {
 	background-color: #FFFFFF;
 }
 
+table{
+	width:100%; 
+	border-collapse:collapse; 
+}
+table td{ 
+	padding:7px;
+	border:#000000 1px solid;
+}/
+table tr{
+	background: #707070;
+}
+table tr:nth-child(odd){ 
+	background: #CCCCCC;
+}
+table tr:nth-child(even){
+	background: #999999;
+}
+
 .nav_helper {
 	display: none;
 }
