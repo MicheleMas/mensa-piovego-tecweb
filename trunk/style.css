@@ -297,7 +297,7 @@ table tr:nth-child(even){
 }
 
 #menu_section {
-	margin-left: 20%;
+ 	padding-left: 2em;
 	margin-bottom: 2em;
 	margin-right:4em;
 }
@@ -387,7 +387,6 @@ table tr:nth-child(even){
 	box-shadow: 0px 0px 5px 5px #DDDDDD;
 
 }
-
 
 #like_dinner img {
 	width:80px;
