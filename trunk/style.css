@@ -16,11 +16,13 @@ body {
 
 table{
 	width:100%; 
-	border-collapse:collapse; 
+	border-spacing: 0.2em;
 }
 table td{ 
 	padding:7px;
-	border:#000000 1px solid;
+}
+table th{
+	border:#000000 2px solid;
 }
 
 table tr{
