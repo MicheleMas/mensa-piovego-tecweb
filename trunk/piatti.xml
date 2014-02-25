@@ -1,0 +1,35 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+<piatti>
+	<piatto categoria="primo">
+		<nome>Gnocchi al ragù</nome>
+		<img>gnocchi.png</img>
+		<descrizione>Gli gnocchi sono uno dei piatti più famosi della tradizione italiana. Facili da preparare e gustosissimi se abbinati ad un sugo di carne come il ragù di carne proposto per il nostro menù. </descrizione>
+		<commenti>
+			<commento lingua="ITA">
+				<autore>cguarisc</autore>
+				<testo>Gli gnocchi di oggi sembravano veramente di patate</testo>
+				<data>2014/02/15</data>
+				<email>c@guarisc.it</email>
+			</commento>
+			<commento lingua="ENG">
+				<autore>cguarisc</autore>
+				<testo>Il gusto del ragù di carne mi ricordava molto le svizzere di ieri</testo>
+				<data>2014/02/16</data>
+				<email>c@guarisc.it</email>
+			</commento>
+		</commenti>
+	</piatto>
+	<piatto categoria="primo">
+		<nome>Carbonara</nome>
+		<img>carbonara.png</img>
+		<descrizione>Gli gnocchi sono uno dei piatti più famosi della tradizione italiana. Facili da preparare e gustosissimi se abbinati ad un sugo di carne come il ragù di carne proposto per il nostro menù. </descrizione>
+		<commenti>
+			<commento lingua="ITA">
+				<autore>cguarisc</autore>
+				<testo>La carbonara di oggi sembravano veramente di patate</testo>
+				<data>2014/02/15</data>
+				<email>c@guarisc.it</email>
+			</commento>
+		</commenti>
+	</piatto>
+</piatti>
