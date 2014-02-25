@@ -1,0 +1,45 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="piatti" type="Tpiatti" />
+	<xsd:complexType name="Tpiatti">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="piatto" type="Tpiatto" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Tpiatto">
+		<xsd:sequence>
+			<xsd:element name="nome" type="xsd:string" />
+			<xsd:element name="img" type="xsd:string" />
+			<xsd:element name="descrizione" type="xsd:string" />
+			<xsd:element name="commenti" type="Tcommenti" />
+		</xsd:sequence>
+		<xsd:attribute name="categoria" type="Tcategoria" use="required" />
+	</xsd:complexType>
+	<xsd:simpleType name="Tcategoria">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="primo"/>
+			<xsd:enumeration value="secondo"/>
+			<xsd:enumeration value="contorno"/>
+			<xsd:enumeration value="dessert"/>
+    	</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="Tcommenti">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="commento" type="Tcommento" />
+		</xsd:sequence>	
+	</xsd:complexType>
+	<xsd:complexType name="Tcommento">
+		<xsd:sequence>
+			<xsd:element name="autore" type="xsd:string" />
+			<xsd:element name="testo" type="xsd:string" />
+			<xsd:element name="data" type="xsd:string" />
+			<xsd:element name="email" type="xsd:string" />
+		</xsd:sequence>
+		<xsd:attribute name="lingua" type="Tlingua" use="required" />
+	</xsd:complexType>
+	<xsd:simpleType name="Tlingua">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ITA"/>
+			<xsd:enumeration value="ENG"/>
+    	</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
