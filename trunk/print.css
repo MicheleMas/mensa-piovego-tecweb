@@ -15,8 +15,43 @@ html {
 	display: none;
 }
 #Gmap {
-	display: none;
-}
-#Gmap_print {
 	width: 15cm;
+}
+#menu_section img {
+	width: 3cm;
+	float: left;
+}
+#menu_section dt {
+	margin-left: 1cm;
+	font-weight: bold;
+}
+#menu_section dd {
+	margin-bottom: 2cm;
+}
+#menu_section p {
+	margin-left: 4cm;
+}
+.infoContainer {
+	padding-left: 2cm;
+}
+.infoTitle {
+	font-weight: bold;
+}
+#section h1 {
+	font-size: 22pt;
+}
+#section h2 {
+	font-size: 16pt;
+}
+#section h3 {
+	font-size: 13pt;
+}
+#recent_news h1 {
+	font-size: 22pt;
+}
+#recent_news h2 {
+	font-size: 16pt;
+}
+#recent_news h3 {
+	font-size: 13pt;
 }
