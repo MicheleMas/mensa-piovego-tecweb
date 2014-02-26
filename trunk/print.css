@@ -11,3 +11,12 @@ html {
 #lang {
 	display: none;
 }
+.nav_helper {
+	display: none;
+}
+#Gmap {
+	display: none;
+}
+#Gmap_print {
+	width: 15cm;
+}
