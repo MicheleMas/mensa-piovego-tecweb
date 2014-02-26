@@ -284,6 +284,10 @@ table tr:nth-child(even){
 	height: 2.1em;
 }
 
+.social_icon {
+	height: 2.1em;
+}
+
 #credits {
 	margin-right: 2em;
 	color: #FFFFFF;
@@ -335,6 +339,10 @@ table tr:nth-child(even){
 	border-left: #555555 1px solid;
 	border-right: #555555 1px solid;
 	padding:1em;
+}
+
+.commenti_recenti	{
+	margin-right:1em !important;
 }
 
 .commenti_submit legend	{
@@ -402,22 +410,6 @@ table tr:nth-child(even){
 	border-color:#555555;
 	width:100%;
 
-}
-
-.like_pic {
-	width:2.5em !important;
-	margin:0em !important; 
-	float:right !important;
-	padding: 0em !important;
-	
-}
-.like_n{
-	float:right;
-	margin-right:0.5em;
-	margin-left:0.5em;
-	color: #3399ff;
-	text-align: center;
-	text-shadow: 0px 0px 1px #000000;
 }
 
 .action-button
