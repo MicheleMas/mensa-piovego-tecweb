@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes" />
+
+<xsl:template match="piatti">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="Lista di tutti i piatti presenti nel menu del RistorESU Nord Piovego, con relativa immagine e descrizione" />
+        <meta name="keywords" content="piatti, pasta, carne, contorno, RistorESU, menu, mensa" />
+        <meta name="author" content="Claudio Guarisco, Gianluca Bariga Boscolo, Michele Massaro, Daniele Ronzani" />
+        <meta name="language" content="italian it" />
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="small.css" media="handheld, screen and (max-width:39em), only screen and (max-device-width:30em)" />
+		<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<title>Piatti - RistorESU Nord Piovego</title>
+	</head>
+	<body>
+		<div id="header">
+			<span id="lang">
+				<span id="lang_switch_selected">ITA</span>
+				<a id="lang_switch" href="">ENG</a>
+			</span>
+			<h1>RistorESU Nord Piovego</h1>
+		</div>
+		<div id="path">
+			Ti trovi in: <a href="index.html"><span xml:lang="eng">Home</span></a> > <span id="clb">Piatti</span>
+		</div>
+		<div id="nav">
+			<ul>
+				<li>
+					<a href="index.html"><span xml:lang="en">Home</span></a>
+				</li>
+				<li>
+					<a href="news.html"><span xml:lang="en">News</span></a>
+				</li>
+				<li>
+					<a href="where.html">Dove Siamo</a>
+				</li>
+				<li  id="current_page">
+					Piatti
+				</li>
+				<li>
+					<a href="prices.html">Prezzi</a>
+				</li>
+				<li>
+					<a href="info.html">Info e Contatti</a>
+				</li>
+			</ul>
+		</div>
+		<div id="section">
+			<div id="menu_section">
+				<h1>Lista di Piatti</h1>
+				<h2>Primi Piatti</h2>
+				<dl>
+					<xsl:for-each select="piatto[@categoria='primo']">
+						<xsl:sort select="nomeITA" />
+						<dt>
+							<xsl:value-of select="nomeITA" />
+						</dt>
+						<dd>
+							<a href="dishes/viewpiatto.cgi?id={@id}"><img src="images/{img}" alt="{altITA}" /></a>
+							<p><xsl:value-of select="descrizioneITA" /></p>
+							<a href="dishes/viewpiatto.cgi?id={@id}">[continua e vota il piatto <xsl:value-of select="nomeITA" />]</a>
+						</dd>
+					</xsl:for-each>
+				</dl>
+				<h2>Secondi Piatti</h2>
+				<dl>
+					<xsl:for-each select="piatto[@categoria='secondo']">
+						<xsl:sort select="nomeITA" />
+						<dt>
+							<xsl:value-of select="nomeITA" />
+						</dt>
+						<dd>
+							<a href="dishes/viewpiatto.cgi?id={@id}"><img src="images/{img}" alt="{altITA}" /></a>
+							<p><xsl:value-of select="descrizioneITA" /></p>
+							<a href="dishes/viewpiatto.cgi?id={@id}">[continua e vota il piatto <xsl:value-of select="nomeITA" />]</a>
+						</dd>
+					</xsl:for-each>
+				</dl>
+				<h2>Desserts</h2>
+				<dl>
+					<xsl:for-each select="piatto[@categoria='dessert']">
+						<xsl:sort select="nomeITA" />
+						<dt>
+							<xsl:value-of select="nomeITA" />
+						</dt>
+						<dd>
+							<a href="dishes/viewpiatto.cgi?id={@id}"><img src="images/{img}" alt="{altITA}" /></a>
+							<p><xsl:value-of select="descrizioneITA" /></p>
+							<a href="dishes/viewpiatto.cgi?id={@id}">[continua e vota il piatto <xsl:value-of select="nomeITA" />]</a>
+						</dd>
+					</xsl:for-each>
+				</dl>
+			</div>
+		</div>
+		<div id="footer">
+			<span id="social_container">
+				<a href="http://www.facebook.com"><img src="images/icon_fb.png" alt="Facebook" /></a>
+				<a href="http://www.foursquare.com"><img src="images/icon_foursquare.png" alt="Foursquare" /></a>
+				<a href="http://www.instagram.com"><img src="images/icon_instagram.png" alt="Instagram"/></a>
+			</span>
+			<span id="credits">Mensaddicted</span>
+			<span id="w3c_container">
+				<a href="http://validator.w3.org/check?uri=referer">
+					<img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" /></a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+        		<img src="http://jigsaw.w3.org/css-validator/images/vcss"
+alt="CSS Valido!" />
+    			</a>
+			</span>
+		</div>
+	</body>
+</html>
+
+</xsl:template>
+</xsl:stylesheet>
