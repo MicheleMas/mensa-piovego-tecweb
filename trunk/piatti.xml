@@ -1,9 +1,11 @@
 <?xml version="1.1" encoding="UTF-8" ?>
 <piatti>
-	<piatto categoria="primo">
+	<piatto id="1" categoria="primo">
 		<nomeITA>Gnocchi al ragù</nomeITA>
-		<nomeENG>Goncchi with meat sauce</nomeENG>
+		<nomeENG>Gnocchi with meat sauce</nomeENG>
 		<img>gnocchi.png</img>
+		<altITA>Gnocchi al sugo con abbondante ragù</altITA>
+		<altENG>Gnocchi with lot of meat sauce</altENG>
 		<descrizioneITA>Gli gnocchi sono uno dei piatti più famosi della tradizione italiana. Facili da preparare e gustosissimi se abbinati ad un sugo di carne come il ragù di carne proposto per il nostro menù. </descrizioneITA>
 		<descrizioneENG>Gnocchi are one of the most famous dishes of the Italian tradition. Easy to prepare and tasty if combined with a gravy as the meat sauce for our menu. </descrizioneENG>
 		<commenti>
@@ -22,10 +24,12 @@
 		</commenti>
 	</piatto>
 	
-	<piatto categoria="primo">
+	<piatto id="2" categoria="primo">
 		<nomeITA>Carbonara</nomeITA>
 		<nomeENG>Carbonara</nomeENG>
 		<img>carbonara.png</img>
+		<altITA>Piatto di pasta alla carbonara</altITA>
+		<altENG>A dish full with carbonara</altENG>
 		<descrizioneITA>La pasta alla carbonara è un piatto caratteristico del Lazio e più in particolare di Roma preparato con ingredienti popolari e dal gusto intenso.</descrizioneITA>
 		<descrizioneENG>Pasta alla carbonara is a dish typical of Lazio and Rome in particular prepared with ingredients and intense flavour.</descrizioneENG>
 		<commenti>
@@ -38,10 +42,12 @@
 		</commenti>
 	</piatto>
 
-	<piatto categoria="secondo">
+	<piatto id="3" categoria="secondo">
 		<nomeITA>Patate prezzemolate</nomeITA>
 		<nomeENG>Parsley potatoes</nomeENG>
 		<img>prezzemolate.png</img>
+		<altITA>Patate prezzemolate con un po' di olio</altITA>
+		<altENG>Parsley potateos with some oil</altENG>
 		<descrizioneITA>Patate prezzemolate non so</descrizioneITA>
 		<descrizioneENG>Parsley potatoes are unknown</descrizioneENG>
 		<commenti>
@@ -54,10 +60,12 @@
 		</commenti>
 	</piatto>
 
-	<piatto categoria="secondo">
+	<piatto id="4" categoria="secondo">
 		<nomeITA>Pollo al limone</nomeITA>
 		<nomeENG>Lemon Chicken</nomeENG>
 		<img>pollolimone.png</img>
+		<altITA>Un piatto con pollo al limone</altITA>
+		<altENG>Dish of lemon chicken</altENG>
 		<descrizioneITA>Il pollo al limone o pollo in salsa di limone è un piatto tipico della cucina cinese, creato e tramandato non dalla cucina tradizionale ma dalle comunità cinesi sparse nel mondo.</descrizioneITA>
 		<descrizioneENG>The lemon chicken or chicken in lemon sauce is a typical dish of Chinese cuisine, created and passed down not from traditional cuisine but from Chinese communities around the world.</descrizioneENG>
 		<commenti>
@@ -70,10 +78,12 @@
 		</commenti>
 	</piatto>
 
-	<piatto categoria="dessert">
+	<piatto id="5" categoria="dessert">
 		<nomeITA>Crepes</nomeITA>
 		<nomeENG>Crepes</nomeENG>
 		<img>creepes.png</img>
+		<altITA>Qualche piatto di crépes alla nutella</altITA>
+		<altENG>Some dishes of crépes</altENG>
 		<descrizioneITA>Le crêpes vengono farcite di ripieni vari, dolci o salati e arrotolate su se stesse per racchiuderli. L'impasto è a base di latte, uova, farina. La crêpe è generalmente considerata una pietanza tipica della cucina francese, tuttavia sono presenti preparazioni simili in vari paesi d'Europa.</descrizioneITA>
 		<descrizioneENG>The crêpes are stuffed with various fillings, sweet or salted and rolled up on themselves to enclose them. The dough is made with milk, eggs, flour. The crêpe is generally considered a dish typical of French cuisine, but there are similar preparations in various European countries.</descrizioneENG>   
 		<commenti>
