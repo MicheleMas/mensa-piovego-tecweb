@@ -87,16 +87,12 @@
 	padding: 0;
 }
 
-#menu_section h1 {
-	
+#menu_section h2 {
+	padding-left: 1em;
 }
 
 #menu_section dt {
 	font-size: 1.3em;
-}
-
-#menu_section dd img {
-	
 }
 
 #menu_section dd p {

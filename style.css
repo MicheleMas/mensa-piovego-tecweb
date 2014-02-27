@@ -314,6 +314,11 @@ table tr:nth-child(even){
 	padding-bottom: 0.5em;
 }
 
+#menu_section h2 {
+	font-size: 1.5em;
+	padding-bottom: 0.5em;
+}
+
 #menu_section dt {
 	padding: 0.5em;
 	background-color: #555555;
@@ -325,11 +330,11 @@ table tr:nth-child(even){
 	display: inline;
 	width: 7em;
 	float: left;
-	padding: 1em;
+	padding: 0.5em;
 }
 
 #menu_section dd p {
-	padding: 1em;
+	padding-left: 0.5em;
 	min-height: 6.5em;
 	margin-right: 10%;
 }
