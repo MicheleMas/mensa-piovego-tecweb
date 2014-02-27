@@ -1,9 +1,11 @@
 <?xml version="1.1" encoding="UTF-8" ?>
 <piatti>
 	<piatto categoria="primo">
-		<nome>Gnocchi al ragù</nome>
+		<nomeITA>Gnocchi al ragù</nomeITA>
+		<nomeENG>Goncchi with meat sauce</nomeENG>
 		<img>gnocchi.png</img>
-		<descrizione>Gli gnocchi sono uno dei piatti più famosi della tradizione italiana. Facili da preparare e gustosissimi se abbinati ad un sugo di carne come il ragù di carne proposto per il nostro menù. </descrizione>
+		<descrizioneITA>Gli gnocchi sono uno dei piatti più famosi della tradizione italiana. Facili da preparare e gustosissimi se abbinati ad un sugo di carne come il ragù di carne proposto per il nostro menù. </descrizioneITA>
+		<descrizioneENG>Gnocchi are one of the most famous dishes of the Italian tradition. Easy to prepare and tasty if combined with a gravy as the meat sauce for our menu. </descrizioneENG>
 		<commenti>
 			<commento lingua="ITA">
 				<autore>cguarisc</autore>
@@ -13,22 +15,73 @@
 			</commento>
 			<commento lingua="ENG">
 				<autore>cguarisc</autore>
-				<testo>Il gusto del ragù di carne mi ricordava molto le svizzere di ieri</testo>
+				<testo>I liked it!</testo>
 				<data>2014/02/16</data>
 				<email>c@guarisc.it</email>
 			</commento>
 		</commenti>
 	</piatto>
+	
 	<piatto categoria="primo">
-		<nome>Carbonara</nome>
+		<nomeITA>Carbonara</nomeITA>
+		<nomeENG>Carbonara</nomeENG>
 		<img>carbonara.png</img>
-		<descrizione>Gli gnocchi sono uno dei piatti più famosi della tradizione italiana. Facili da preparare e gustosissimi se abbinati ad un sugo di carne come il ragù di carne proposto per il nostro menù. </descrizione>
+		<descrizioneITA>La pasta alla carbonara è un piatto caratteristico del Lazio e più in particolare di Roma preparato con ingredienti popolari e dal gusto intenso.</descrizioneITA>
+		<descrizioneENG>Pasta alla carbonara is a dish typical of Lazio and Rome in particular prepared with ingredients and intense flavour.</descrizioneENG>
 		<commenti>
 			<commento lingua="ITA">
 				<autore>cguarisc</autore>
-				<testo>La carbonara di oggi sembravano veramente di patate</testo>
+				<testo>La carbonara di oggi era proprio buona. Ma va!!</testo>
 				<data>2014/02/15</data>
 				<email>c@guarisc.it</email>
+			</commento>
+		</commenti>
+	</piatto>
+
+	<piatto categoria="secondo">
+		<nomeITA>Patate prezzemolate</nomeITA>
+		<nomeENG>Parsley potatoes</nomeENG>
+		<img>prezzemolate.png</img>
+		<descrizioneITA>Patate prezzemolate non so</descrizioneITA>
+		<descrizioneENG>Parsley potatoes are unknown</descrizioneENG>
+		<commenti>
+			<commento lingua="ITA">
+				<autore>cguarisc</autore>
+				<testo>Ma cosa sono queste patate prezzemolate?</testo>
+				<data>2014/02/22</data>
+				<email>c@guarisc.it</email>
+			</commento>
+		</commenti>
+	</piatto>
+
+	<piatto categoria="secondo">
+		<nomeITA>Pollo al limone</nomeITA>
+		<nomeENG>Lemon Chicken</nomeENG>
+		<img>pollolimone.png</img>
+		<descrizioneITA>Il pollo al limone o pollo in salsa di limone è un piatto tipico della cucina cinese, creato e tramandato non dalla cucina tradizionale ma dalle comunità cinesi sparse nel mondo.</descrizioneITA>
+		<descrizioneENG>The lemon chicken or chicken in lemon sauce is a typical dish of Chinese cuisine, created and passed down not from traditional cuisine but from Chinese communities around the world.</descrizioneENG>
+		<commenti>
+			<commento lingua="ITA">
+				<autore>cguarisc</autore>
+				<testo>Buono questo pollo al limone.. quasi quasi mi sto dissetando.</testo>
+				<data>2014/02/25</data>
+				<email>c@guarisc.it</email>
+			</commento>
+		</commenti>
+	</piatto>
+
+	<piatto categoria="dessert">
+		<nomeITA>Crepes</nomeITA>
+		<nomeENG>Crepes</nomeENG>
+		<img>creepes.png</img>
+		<descrizioneITA>Le crêpes vengono farcite di ripieni vari, dolci o salati e arrotolate su se stesse per racchiuderli. L'impasto è a base di latte, uova, farina. La crêpe è generalmente considerata una pietanza tipica della cucina francese, tuttavia sono presenti preparazioni simili in vari paesi d'Europa.</descrizioneITA>
+		<descrizioneENG>The crêpes are stuffed with various fillings, sweet or salted and rolled up on themselves to enclose them. The dough is made with milk, eggs, flour. The crêpe is generally considered a dish typical of French cuisine, but there are similar preparations in various European countries.</descrizioneENG>   
+		<commenti>
+			<commento lingua="ITA">
+				<autore>mmassaro</autore>
+				<testo>Che buone ne ho gia mangiate 10.</testo>
+				<data>2014/02/25</data>
+				<email>m@massaro.it</email>
 			</commento>
 		</commenti>
 	</piatto>

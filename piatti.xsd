@@ -7,9 +7,11 @@
 	</xsd:complexType>
 	<xsd:complexType name="Tpiatto">
 		<xsd:sequence>
-			<xsd:element name="nome" type="xsd:string" />
+			<xsd:element name="nomeITA" type="xsd:string" />
+			<xsd:element name="nomeENG" type="xsd:string" />
 			<xsd:element name="img" type="xsd:string" />
-			<xsd:element name="descrizione" type="xsd:string" />
+			<xsd:element name="descrizioneITA" type="xsd:string" />
+			<xsd:element name="descrizioneENG" type="xsd:string" />
 			<xsd:element name="commenti" type="Tcommenti" />
 		</xsd:sequence>
 		<xsd:attribute name="categoria" type="Tcategoria" use="required" />
