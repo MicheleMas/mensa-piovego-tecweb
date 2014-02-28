@@ -46,6 +46,9 @@ html {
 #section h3 {
 	font-size: 13pt;
 }
+.notizia {
+	border-bottom: #DDDDDD 1px solid;
+}
 #recent_news h1 {
 	font-size: 22pt;
 }
