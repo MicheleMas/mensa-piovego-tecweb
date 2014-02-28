@@ -116,7 +116,6 @@
 #social_container img {
 	height: 2.1em;
 }
-#Gmap img
-{
-	 content: url("images/map_mobile.png");
+#Gmap {
+	content: url(images/map_mobile.png);
 }

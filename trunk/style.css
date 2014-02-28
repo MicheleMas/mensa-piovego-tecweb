@@ -282,11 +282,13 @@ table tr:nth-child(even){
 }
 
 #social_container {
-	margin-right: 2em;
+	margin-right: 1em;
+	margin-left: 1em;
 }
 
 #social_container img {
 	height: 2.1em;
+	margin-right: 1em;
 }
 
 #w3c_container img {
