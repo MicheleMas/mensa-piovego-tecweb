@@ -4,6 +4,16 @@
 	margin: 0;
 }
 
+#social_container{
+	float:none !important;
+}
+
+#w3c_container{
+	float:none !important;
+}
+	
+
+
 #header {
 	height: 8em;
 	margin: 0em;
