@@ -5,15 +5,13 @@
 }
 
 #social_container{
-	float:none !important;
+	float:none;
 }
 
 #w3c_container{
-	float:none !important;
+	float:none;
 }
 	
-
-
 #header {
 	height: 8em;
 	margin: 0em;
