@@ -292,17 +292,16 @@ table tr:nth-child(even){
 	margin-right: 1em;
 }
 
-#w3c_container img {
-	border:0;
-	width:88px;
-	height:31px
-}
-
 #w3c_container {
 	margin-right: 1em;
 	margin-left:1em;
 	float:right;
+}
 
+#w3c_container img {
+	border:0;
+	width:88px;
+	height:31px
 }
 
 #credits {
