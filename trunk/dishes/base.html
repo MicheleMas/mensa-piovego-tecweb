@@ -8,6 +8,77 @@
 		<link rel="stylesheet" type="text/css" href="../print.css" media="print" />
 		<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
 		<title><nome del piatto> - Mensa NordESU Piovego</title>
+		<script type="text/javascript">
+		<!--
+			function validateForm(){
+				//alert("here...");
+				var txtEmail = document.getElementById("email");
+				var txtCommento = document.getElementById("commento");
+				var flagValidate = false;
+				if(txtEmail && txtCommento){
+					//validazione txtEmail e txtCommento
+					if(txtEmail.value.indexOf("@") > 1 && txtEmail.value.lastIndexOf(".")>txtEmail.value.indexOf("@") && txtCommento.value != "")
+						flagValidate = true;				
+				}
+				if(flagValidate)
+				{
+					//form validato
+					alert("Invio form...");
+				}
+				else
+				{
+					if(!(txtEmail.value.indexOf("@") > 1 && txtEmail.value.lastIndexOf(".")>txtEmail.value.indexOf("@")))
+					{
+						//il campo email non è corretto
+						if(!(document.getElementById("lblEmailWarning")))
+						{
+							var emailAlertLabel = document.createElement("LABEL");
+							emailAlertLabel.appendChild(document.createTextNode("Inserire un indirizzo email valido!"));
+							emailAlertLabel.className = "";
+							emailAlertLabel.id = "lblEmailWarning";
+							emailAlertLabel.color ="red";						
+							txtEmail.parentNode.appendChild(emailAlertLabel);
+						}
+						txtEmail.style.borderColor = 'red';
+						txtEmail.focus();
+						txtEmail.select();					
+					}
+					else{
+						//set default
+						txtEmail.style.borderColor= 'black';
+						if(document.getElementById("lblEmailWarning"))
+							document.getElementById("lblEmailWarning").innerHTML = "";					
+					}
+					if(!(txtCommento.value != ""))
+					{
+						if(!(document.getElementById("lblCommentoWarning")))
+						{
+							var commentoAlertLabel = document.createElement("LABEL");
+							commentoAlertLabel.appendChild(document.createTextNode("Inserire un commento valido!"));
+							commentoAlertLabel.className = "";
+							commentoAlertLabel.color ="red";	
+							commentoAlertLabel.id = "lblCommentoWarning";
+							txtCommento.parentNode.appendChild(commentoAlertLabel);	
+						}
+						txtCommento.style.borderColor = 'red';
+						txtCommento.focus();
+						txtCommento.select();
+					}
+					else{
+						//set default
+						txtCommento.style.borderColor='black';
+						if(document.getElementById("lblCommentoWarning"))
+							document.getElementById("lblCommentoWarning").innerHTML = "";
+					}
+				}
+			}
+		
+		
+		//-->
+		</script>
+		<noscript>
+			<!-- Per browser che non supportano script-->
+		</noscript>
 	</head>
 	<body>
 		<div id="header">
@@ -22,8 +93,8 @@
 		</div>
 		<div id="nav">
 			<ul>
-				<li id="current_page">
-					<span xml:lang="eng">Home</span>
+				<li>
+					<span xml:lang="eng"><a href="../index.html">Home</a></span>
 				</li>
 				<li>
 					<a href="../news.html"><span xml:lang="en">News</span></a>
@@ -73,8 +144,8 @@
 				Commenta!
 			</h2>
 		<!-- form inserimento commenti -->
-		<div id="form_container"><a name="form">
-			<form class="commenti_submit" method="post" action="something.cgi">
+		<div id="form_container" class="dish_form"><a name="form">
+			<!-- <form class="commenti_submit" method="post">action="something.cgi">-->
 				<fieldset>
 					<legend>
 						I tuoi dati
@@ -82,7 +153,7 @@
 					<dl>
 						<dd>
 							<p class="form_description">
-								<label for="email">La tua email:</label>
+								<label id="lblEmail" for="email">La tua email:</label>&nbsp;
 							</p>
 							<p class="form_item">
 								<input type="text" id="email" alt="Indirizzo email"/>
@@ -90,7 +161,7 @@
 						</dd>				
 						<dd>
 							<p class="form_description">
-								<label for="commento">Commento</label>
+								<label id="lblCommento" for="commento">Commento</label>&nbsp;
 							</p>
 							<p class="form_item">
 								<input type="text" id="commento" alt="Commento..."/>
@@ -98,10 +169,11 @@
 						</dd>				
 					</dl>
 				</fieldset>
-				<fieldset class="form_action">
-					<button type="submit">Invia!</button>
-				</fieldset>
-			</form></a>
+					<!-- <button type="submit" onclick="validateForm();">Invia!</button> -->
+					<input type="button" id="btnSubmit" onclick="validateForm()" value="Invia!" class="form_action"/>
+			
+			<!--</form>-->
+			</a>
 			</div>
 		
 		</div>
