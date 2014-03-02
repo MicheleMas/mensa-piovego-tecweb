@@ -431,6 +431,68 @@ table tr:nth-child(even){
 
 }
 
+.back-to-top
+{
+	margin-bottom: 1em;
+	margin-top:1em;
+	width:18%;
+	font-weight: bold;
+	border-radius: 5px;
+	display:block;
+	text-decoration:underline;
+	color: #FFDD55;
+	background-color:#555555;
+	padding: 0.8em 1.5em;
+	border-radius: 5px;
+	
+}
+
+.page-title
+{
+	margin-bottom: 1em;
+	margin-top:1em;
+	font-weight: bold;
+	text-transform:uppercase;
+	border-radius: 5px;
+	display:block;
+	color: #FFDD55;
+	background-color:#555555;
+	padding: 1em;
+	border-radius: 5px;	
+}
+
+.page-paragraph
+{
+	margin-bottom: 1em;
+	margin-top:1em;
+	font-weight: bold;
+	text-transform:uppercase;
+	border-radius: 5px;
+	display:block;
+	color: #555555;
+	background-color:#FFDD55;
+	padding: 1em;
+	border-radius: 5px;	
+}
+
+.page-suggestions
+{
+	margin-bottom: 1em;
+	margin-top:1em;
+	font-weight: bold;
+	text-transform:uppercase;
+	border-radius: 5px;
+	display:block;
+	color: #555555;
+	background-color:#CCCCCC;
+	padding: 1em;
+	border-radius: 5px;	
+}
+
+.back-to-top a {
+	color: #FFDD55;
+}
+
 .action-button
 {
 	width:4em;
@@ -444,4 +506,5 @@ table tr:nth-child(even){
 .dish_form{
 	padding-left: 2em !important;
 	margin-right:1em !important;
+	width:94% !important;
 }
