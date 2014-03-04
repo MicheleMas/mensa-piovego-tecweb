@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes" />
+<xsl:output method="xhtml" version="1.0" encoding="UTF-8" indent="yes" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
 
 <xsl:template match="piatti">
 
@@ -12,6 +12,7 @@
         <meta name="keywords" content="piatti, pasta, carne, contorno, RistorESU, menu, mensa" />
         <meta name="author" content="Claudio Guarisco, Gianluca Bariga Boscolo, Michele Massaro, Daniele Ronzani" />
         <meta name="language" content="italian it" />
+        <base href="../" />
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="small.css" media="handheld, screen and (max-width:39em), only screen and (max-device-width:30em)" />
 		<link rel="stylesheet" type="text/css" href="print.css" media="print" />
@@ -27,7 +28,7 @@
 			<h1>RistorESU Nord Piovego</h1>
 		</div>
 		<div id="path">
-			Ti trovi in: <a href="index.html"><span xml:lang="eng">Home</span></a> > <span id="clb">Piatti</span>
+			Ti trovi in: <a href="index.html"><span xml:lang="eng">Home</span></a> &gt; <span id="clb">Piatti</span>
 		</div>
 		<div id="nav">
 			<ul>
