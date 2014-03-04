@@ -1,4 +1,4 @@
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mensapiovego.it" xmlns="http://www.mensapiovego.it" elementFormDefault="qualified">	
 	<xsd:element name="piatti" type="Tpiatti" />
 	<xsd:complexType name="Tpiatti">
 		<xsd:sequence maxOccurs="unbounded">
