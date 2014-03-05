@@ -6,6 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="description" content="Lista di tutti i piatti presenti nel menu del RistorESU Nord Piovego, con relativa immagine e descrizione" />
         <meta name="keywords" content="piatti, pasta, carne, contorno, RistorESU, menu, mensa" />
@@ -14,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="../style.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="../small.css" media="handheld, screen and (max-width:39em), only screen and (max-device-width:30em)" />
 		<link rel="stylesheet" type="text/css" href="../print.css" media="print" />
-		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
 		<script type="text/javascript" src="../script.js"></script>
 		<title>Piatti - RistorESU Nord Piovego</title>
 	</head>
@@ -55,7 +56,7 @@
 		</div>
 		<div id="section">
 			<div id="menu_section">
-				<h1>Lista di Piatti</h1>
+				<h1><a name="contenuto">Lista di Piatti</a></h1>
 				<h2>Primi Piatti</h2>
 				<dl>
 					<xsl:for-each select="piatto[@categoria='primo']">
@@ -64,7 +65,7 @@
 							<xsl:value-of select="nomeITA" />
 						</dt>
 						<dd>
-							<a href="dishes/viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altITA}" /></a>
+							<a href="viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altITA}" /></a>
 							<p><xsl:value-of select="descrizioneITA" /></p>
 							<a href="dishes/viewpiatto.cgi?id={@id}">[continua e commenta il piatto <xsl:value-of select="nomeITA" />]</a>
 						</dd>
@@ -78,7 +79,7 @@
 							<xsl:value-of select="nomeITA" />
 						</dt>
 						<dd>
-							<a href="dishes/viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altITA}" /></a>
+							<a href="viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altITA}" /></a>
 							<p><xsl:value-of select="descrizioneITA" /></p>
 							<a href="dishes/viewpiatto.cgi?id={@id}">[continua e commenta il piatto <xsl:value-of select="nomeITA" />]</a>
 						</dd>
@@ -92,7 +93,7 @@
 							<xsl:value-of select="nomeITA" />
 						</dt>
 						<dd>
-							<a href="dishes/viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altITA}" /></a>
+							<a href="viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altITA}" /></a>
 							<p><xsl:value-of select="descrizioneITA" /></p>
 							<a href="dishes/viewpiatto.cgi?id={@id}">[continua e commenta il piatto <xsl:value-of select="nomeITA" />]</a>
 						</dd>
