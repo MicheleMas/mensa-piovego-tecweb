@@ -14,7 +14,7 @@
 		<script type="text/javascript" src="script.js"></script>
 		<title>How to find us - RistorESU Nord Piovego</title>
 	</head>
-	<body onLoad="openTab();">
+	<body onLoad="replaceMap(); openTab()">
 		<div id="header">
 			<span id="lang">
 				<a href="where.html" id="lang_switch">ITA</a>
@@ -70,7 +70,9 @@
 					<p>
 						For an easier search you can use the following map:
 					</p>
-					<a href="http://maps.google.com/maps?ll=45.410941,11.889645&amp;z=18&amp;t=m&amp;hl=it-IT&amp;gl=IT&amp;mapclient=embed&amp;iwloc=lyrftr:m,3170557859610678232"><img id="Gmap" src="images/map.png" alt="Mappa raffigurante la posizione della mensa Piovego." /></a>
+					<div id="mapVisualization">
+						<a href="http://maps.google.com/maps?ll=45.410941,11.889645&amp;z=18&amp;t=m&amp;hl=it-IT&amp;gl=IT&amp;mapclient=embed&amp;iwloc=lyrftr:m,3170557859610678232"><img id="Gmap" src="images/map.png" alt="Map about the position of Cafeteria Piovego" /></a>
+					</div>
 				</div>
 				<a href="#menu" class="nav_helper">Return to the menu</a>
 			</div>
