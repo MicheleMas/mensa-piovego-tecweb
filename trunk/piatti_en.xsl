@@ -34,22 +34,22 @@
 			<h1><a name="menu">Menu</a></h1>
 			<ul>
 				<li>
-					<a tabindex="2" href="index_en.html">Home</a>
+					<a tabindex="2" href="../index_en.html">Home</a>
 				</li>
 				<li>
-					<a tabindex="3" href="news_en.html">News</a>
+					<a tabindex="3" href="../news_en.html">News</a>
 				</li>
 				<li>
-					<a tabindex="4" href="where_en.html">How to find us</a>
+					<a tabindex="4" href="../where_en.html">How to find us</a>
 				</li>
 				<li id="current_page">
 					<span>Meals</span>
 				</li>
 				<li>
-					<a tabindex="5" href="prices_en.html">Prices</a>
+					<a tabindex="5" href="../prices_en.html">Prices</a>
 				</li>
 				<li>
-					<a tabindex="6" href="info_en.html">Info and Referral</a>
+					<a tabindex="6" href="../info_en.html">Info and Referral</a>
 				</li>
 			</ul>
 		</div>
