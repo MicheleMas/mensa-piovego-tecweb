@@ -35,6 +35,10 @@ table tr:nth-child(even){
 	background: #999999;
 }
 
+.current_day {
+	background-color: #FFDD55 !important;
+}
+
 .nav_helper {
 	display: none;
 }
