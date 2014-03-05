@@ -30,6 +30,6 @@ my $result = $stylesheet->transform($data);
 my $page = $result->toString;
 
 #Invio della pagina al browser
-print "Content-Type: text/html\n";
-print "Content-Enconding: utf8\n\n";
+print "Content-Type: text/html\n\n";
+$page =~ s/standalone=\"yes\"/standalone=\"no\"/; 
 print $page;
