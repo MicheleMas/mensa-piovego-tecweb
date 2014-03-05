@@ -11,9 +11,10 @@
 		<link rel="stylesheet" type="text/css" href="small.css" media="handheld, screen and (max-width:39em), only screen and (max-device-width:30em)" />
 		<link rel="stylesheet" type="text/css" href="print.css" media="print" />
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<script type="text/javascript" src="script.js"></script>
 		<title>RistorESU Nord Piovego</title>
 	</head>
-	<body>
+	<body onload="addDayColor()">
 		<div id="header">
 			<span id="lang">
 				<span id="lang_switch_selected">ITA</span>
@@ -38,7 +39,7 @@
 					<a tabindex="3" href="where.html">Dove Siamo</a>
 				</li>
 				<li>
-					<a tabindex="4" href="piatti.html">Piatti</a>
+					<a tabindex="4" href="./cgi-bin/piatti.cgi">Piatti</a>
 				</li>
 				<li>
 					<a tabindex="5" href="prices.html">Prezzi</a>
@@ -91,27 +92,27 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr id="mon">
 								<td scope="row">Lunedì</td>
 								<td>pasta al ragù, alla vegetariana</td>
 								<td>tacchino, patate prezzemolate, insalata</td>
 							</tr>
-							<tr>
+							<tr id="tue">
 								<td scope="row">Martedì</td>
 								<td>tortellini in brodo, pasta al sugo</td>
 								<td>pollo, patate al forno, carote</td>
 							</tr>
-							<tr>
+							<tr id="wed">
 								<td scope="row">Mercoledì</td>
 								<td>pasta alla carbonara, crema di carote</td>
 								<td>hot-dog, roast beef, patate fritte</td>
 							</tr>
-							<tr>
+							<tr id="thu">
 								<td scope="row">Giovedì</td>
 								<td>gnocchi ai 4 formaggi, spaghetti al sugo</td>
 								<td>bruschetta, pollo al limone, patate prezzemolate</td>
 							</tr>
-							<tr>
+							<tr id="fri">
 								<td scope="row">Venerdì</td>
 								<td>pasta al sugo, riso e fagioli</td>
 								<td>filetto di pesce, canapè di melanzane, patate fritte</td>
