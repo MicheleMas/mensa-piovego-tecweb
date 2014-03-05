@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <?xml-stylesheet type="text/xsl" href="piatti.xsl" ?>
-<!--<piatti xmlns="http://www.mensapiovego.it" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="http://www.mensapiovego.it piatti.xsd"> -->
+<!--<piatti xmlns="http://www.mensapiovego.it" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="http://www.mensapiovego.it piatti.xsd">  -->
 <piatti>
 	<piatto id="1" categoria="primo">
 		<nomeITA>Gnocchi al ragù</nomeITA>
