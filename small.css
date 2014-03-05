@@ -127,3 +127,10 @@
 #Gmap {
 	content: url(images/map_mobile.png);
 }
+
+#Gmap_frame {
+	margin: auto;
+	width: 100%;
+	height: 15em;
+	border: 0;
+}
