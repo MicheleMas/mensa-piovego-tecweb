@@ -12,9 +12,10 @@
 		<link rel="stylesheet" type="text/css" href="small.css" media="handheld, screen and (max-width:39em), only screen and (max-device-width:30em)" />
 		<link rel="stylesheet" type="text/css" href="print.css" media="print" />
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<script type="text/javascript" src="script.js"></script>
 		<title>RistorESU Nord Piovego</title>
 	</head>
-	<body onload="openTab()">
+	<body onload="addDayColor(); openTab()">
 		<div id="header">
 			<a tabindex="1" href="#contenuto" class="hidden">Skip to content</a>
 			<span id="lang">
@@ -92,27 +93,27 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr id="mon">
 								<td scope="row">Monday</td>
 								<td>pasta with meat sauce, or with vegetarian sauce</td>
 								<td>turkey, parsley potatoes, salad</td>
 							</tr>
-							<tr>
+							<tr id="tue">
 								<td scope="row">Thuesday</td>
 								<td>tortellini soup, pasta with tomato sauce</td>
 								<td>chicken, baked potatoes, carrots</td>
 							</tr>
-							<tr>
+							<tr id="wed">
 								<td scope="row">Wednesday</td>
 								<td><span xml:lang="it">carbonara</span> pasta, carrot cream</td>
 								<td>hot dogs, roast beef, fried potatoes</td>
 							</tr>
-							<tr>
+							<tr id="thu">
 								<td scope="row">Thursday</td>
 								<td>gnocchi with 4 cheese, spaghetti with tomato sauce</td>
 								<td>bruschetta, chicken with lemon, parsley potatoes</td>
 							</tr>
-							<tr>
+							<tr id="fri">
 								<td scope="row">Fryday</td>
 								<td>pasta with sauce, rice with beans</td>
 								<td>fish fillet, sofa eggplant, fried potatoes</td>
