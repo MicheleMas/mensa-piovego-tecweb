@@ -139,10 +139,9 @@ table tr:nth-child(even){
 	color: #FFDD55;
 	background-color:#555555;
 	padding: 0.8em 1.5em;
-	
 	border-radius: 5px;
-
 }
+
 #nav ul li a:hover{
 	display:block;
 	text-decoration:underline;
@@ -174,7 +173,7 @@ table tr:nth-child(even){
 
 #content {
 	padding-top:2em;
-	padding-left: 2em;
+	padding-left:2em;
 	margin-right:10%;
 }
 
@@ -196,6 +195,17 @@ table tr:nth-child(even){
 
 #content p {
 	padding-bottom: 0.5em;
+}
+
+#content ul {
+	padding-left: 2em;
+	margin-bottom: 1em;
+}
+
+.return_link {
+	display: inline-block;
+	text-align: right;
+	width: 99%;
 }
 
 #content_image {
@@ -442,6 +452,7 @@ table tr:nth-child(even){
 
 }
 
+/*
 .back-to-top
 {
 	margin-bottom: 1em;
@@ -457,7 +468,9 @@ table tr:nth-child(even){
 	border-radius: 5px;
 	
 }
+*/
 
+/*
 .page-title
 {
 	margin-bottom: 1em;
@@ -472,6 +485,7 @@ table tr:nth-child(even){
 	border-radius: 5px;	
 }
 
+
 .page-paragraph
 {
 	margin-bottom: 1em;
@@ -485,6 +499,7 @@ table tr:nth-child(even){
 	padding: 1em;
 	border-radius: 5px;	
 }
+
 
 .page-suggestions
 {
