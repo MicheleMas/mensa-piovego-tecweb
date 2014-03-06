@@ -22,6 +22,7 @@
 	<body onload="openTab()">
 		<div id="header">
 			<span id="lang">
+				<a tabindex="1" href="#contenuto" class="hidden">Vai al contenuto</a>
 				<span id="lang_switch_selected">ITA</span> 
 				<a href="piatti.cgi?lang=en" id="lang_switch">ENG</a>
 			</span>
@@ -31,7 +32,6 @@
 			Ti trovi in: <a href="../index.html"><span xml:lang="eng">Home</span></a> &gt; <span id="clb">Piatti</span>
 		</div>
 		<div id="nav">
-			<a tabindex="1" href="#contenuto" class="hidden">Vai al contenuto</a>
 			<h1><a name="menu">Menù</a></h1>
 			<ul>
 				<li>

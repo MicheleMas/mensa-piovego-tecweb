@@ -21,6 +21,7 @@
 	</head>
 	<body onload="openTab()">
 		<div id="header">
+			<a tabindex="1" href="#contenuto" class="hidden">Skip to content</a>
 			<span id="lang">
 				<a href="piatti.cgi" id="lang_switch">ITA</a> 
 				<span id="lang_switch_selected">ENG</span>
@@ -31,7 +32,6 @@
 			You are in: <a href="../index_en.html">Home</a> &gt; <span id="clb">Meals</span>
 		</div>
 		<div id="nav">
-			<a tabindex="1" href="#contenuto" class="hidden">Skip to content</a>
 			<h1><a name="menu">Menu</a></h1>
 			<ul>
 				<li>
@@ -65,7 +65,7 @@
 							<xsl:value-of select="nomeENG" />
 						</dt>
 						<dd>
-							<a href="dishes/viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altENG}" /></a>
+							<a href="dishes/viewpiatto.cgi?id={@id}&amp;lang=en"><img src="../images/{img}" alt="{altENG}" /></a>
 							<p><xsl:value-of select="descrizioneENG" /></p>
 							<a href="viewpiatto.cgi?id={@id}&amp;lang=en">[continue and comment <xsl:value-of select="nomeENG" />]</a>
 						</dd>
@@ -79,7 +79,7 @@
 							<xsl:value-of select="nomeENG" />
 						</dt>
 						<dd>
-							<a href="dishes/viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altENG}" /></a>
+							<a href="dishes/viewpiatto.cgi?id={@id}&amp;lang=en"><img src="../images/{img}" alt="{altENG}" /></a>
 							<p><xsl:value-of select="descrizioneENG" /></p>
 							<a href="viewpiatto.cgi?id={@id}&amp;lang=en">[continue and comment <xsl:value-of select="nomeENG" />]</a>
 						</dd>
@@ -93,7 +93,7 @@
 							<xsl:value-of select="nomeENG" />
 						</dt>
 						<dd>
-							<a href="dishes/viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altENG}" /></a>
+							<a href="dishes/viewpiatto.cgi?id={@id}&amp;lang=en"><img src="../images/{img}" alt="{altENG}" /></a>
 							<p><xsl:value-of select="descrizioneENG" /></p>
 							<a href="viewpiatto.cgi?id={@id}&amp;lang=en">[continue and comment <xsl:value-of select="nomeENG" />]</a>
 						</dd>

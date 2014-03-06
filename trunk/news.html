@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="description" content="Notizie inerenti agli ultimi eventi presenti al RistorESU Nord Piovego" />
         <meta name="keywords" content="news, ristorazione, padova, RistorESU, menu, studenti, università, Piovego, mensa" />
@@ -16,7 +17,8 @@
 	</head>
 	<body onload="openTab()">
 		<div id="header">
-		<span id="lang">
+			<a tabindex="1" href="#contenuto" class="hidden">Vai al contenuto</a>
+			<span id="lang">
 				<span id="lang_switch_selected">ITA</span>
 				<a href="news_en.html" id="lang_switch">ENG</a>
 			</span>
@@ -26,7 +28,6 @@
 			Ti trovi in: <a href="index.html"><span xml:lang="eng">Home</span></a> &gt; <span id="clb" xml:lang="eng">News</span>
 		</div>
 		<div id="nav">
-			<a tabindex="1" href="#contenuto" class="hidden">Vai al contenuto</a>
 			<h1><a name="menu">Menù</a></h1>
 			<ul>
 				<li>
