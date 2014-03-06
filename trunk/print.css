@@ -5,6 +5,9 @@ html {
 #footer {
 	display: none;
 }
+.hidden {
+	display: none;
+}
 #nav {
 	display: none;
 }
@@ -13,6 +16,12 @@ html {
 }
 .nav_helper {
 	display: none;
+}
+.stampano {
+	display: none;
+}
+.stampasi {
+	display: block;
 }
 #Gmap {
 	width: 15cm;
