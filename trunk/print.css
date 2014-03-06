@@ -2,10 +2,27 @@ html {
 	font-family: "Times New Roman", Times, serif;
 	font-size: 14pt;
 }
+table{
+	width:100%; 
+	border-spacing: 0.2em;
+}
+table td{ 
+	padding:7px;
+}
+table th{
+	border:#000000 2px solid;
+}
+
+table td{
+	border:#000000 2px solid;
+}
 #footer {
 	display: none;
 }
 .hidden {
+	display: none;
+}
+.return_link {
 	display: none;
 }
 #nav {
