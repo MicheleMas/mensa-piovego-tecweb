@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="description" content="informazioni e contatti di riferimento per RistorESU" />
         <meta name="keywords" content="prezzi, fascie, tariffe, ristorazione, RistorESU, menu, studenti, università, mensa" />
@@ -14,8 +15,9 @@
 		<script type="text/javascript" src="script.js"></script>
 		<title>Info and Referral - RistorESU Nord Piovego</title>
 	</head>
-	<body onLoad="openTab();">
+	<body onload="openTab();">
 		<div id="header">
+			<a tabindex="1" href="#contenuto" class="hidden">Skip to content</a>
 			<span id="lang">
 			     <a href="info.html" id="lang_switch">ITA</a>
 				<span id="lang_switch_selected">ENG</span>
@@ -26,7 +28,6 @@
 			You are in: <a href="index_en.html"><span xml:lang="eng">Home</span></a> &gt; <span id="clb">Info and Referral</span>
 		</div>
 		<div id="nav">
-			<a tabindex="1" href="#contenuto" class="hidden">Skip to content</a>
 			<h1><a name="menu">Menù</a></h1>
 			<ul>
 				<li>
