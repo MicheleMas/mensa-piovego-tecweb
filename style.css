@@ -481,3 +481,25 @@ table tr:nth-child(even){
 .stampasi {
 	display: none;
 }
+
+#section_404 {
+	margin-left: 20%;
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+#section_404 h1 {
+	font-size: 2em;
+	margin: 1em;
+}
+
+#section_404 h2 {
+	font-size: 1.4em;
+	margin: 0.5em;
+}
+
+#section_404 img {
+	margin: 0 auto;
+	width: 50%;
+}
+
