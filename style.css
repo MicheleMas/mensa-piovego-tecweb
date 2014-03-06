@@ -212,6 +212,32 @@ table tr:nth-child(even){
 	width: 60%;
 }
 
+#meal_name {
+	text-align: center;
+	margin-top: 1em;
+	font-size: 2.5em;
+}
+
+#description {
+	margin: 2em;
+	padding: 1em;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 5px #DDDDDD;
+	min-height: 11em;
+}
+
+#description p {
+	margin-top: 2em;
+	margin-left: 28%;
+}
+
+#descr_image {
+	width: 20%;
+	margin: 1em;
+	border-radius: 10px;
+	float: left;
+}
+
 .notizia
 {
 	border-bottom: #DDDDDD 1px solid;
@@ -452,85 +478,6 @@ table tr:nth-child(even){
 
 }
 
-/*
-.back-to-top
-{
-	margin-bottom: 1em;
-	margin-top:1em;
-	width:18%;
-	font-weight: bold;
-	border-radius: 5px;
-	display:block;
-	text-decoration:underline;
-	color: #FFDD55;
-	background-color:#555555;
-	padding: 0.8em 1.5em;
-	border-radius: 5px;
-	
-}
-*/
-
-/*
-.page-title
-{
-	margin-bottom: 1em;
-	margin-top:1em;
-	font-weight: bold;
-	text-transform:uppercase;
-	border-radius: 5px;
-	display:block;
-	color: #FFDD55;
-	background-color:#555555;
-	padding: 1em;
-	border-radius: 5px;	
-}
-
-
-.page-paragraph
-{
-	margin-bottom: 1em;
-	margin-top:1em;
-	font-weight: bold;
-	text-transform:uppercase;
-	border-radius: 5px;
-	display:block;
-	color: #555555;
-	background-color:#FFDD55;
-	padding: 1em;
-	border-radius: 5px;	
-}
-
-
-.page-suggestions
-{
-	margin-bottom: 1em;
-	margin-top:1em;
-	font-weight: bold;
-	text-transform:uppercase;
-	border-radius: 5px;
-	display:block;
-	color: #555555;
-	background-color:#CCCCCC;
-	padding: 1em;
-	border-radius: 5px;	
-}
-
-.back-to-top a {
-	color: #FFDD55;
-}
-
-.action-button
-{
-	width:4em;
-	height:2.5em;
-	background-color:#707070;
-	color:white;
-	margin-bottom:2em;
-	border-width:0px;
-}
-
-.dish_form{
-	padding-left: 2em !important;
-	margin-right:1em !important;
-	width:94% !important;
+.stampasi {
+	display: none;
 }

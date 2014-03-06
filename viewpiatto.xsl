@@ -55,19 +55,19 @@
 			</ul>
 		</div>
 		<div id="section">
-			<h1><a name="contenuto"><xsl:value-of select="nomeITA" /></a></h1>
+			<h1 id="meal_name"><a name="contenuto"><xsl:value-of select="nomeITA" /></a></h1>
 			<div id="description">
+				<img id="descr_image" src="../images/{img}" alt="{altITA}" />
 				<p><xsl:value-of select="descrizioneITA" /></p>
 			</div>
-			<img src="../images/{img}" alt="{altITA}" />
+			
 			<h2>Commenti:</h2>
-			<!-- Commenti recenti -->
 			<div class="commenti_recenti" id="menu_section" >
 				<dl>
 					<xsl:for-each select="commenti/commento">
 						<xsl:sort select="data" />
 						<dt>
-							<xsl:value-of select="autore" />
+							<xsl:value-of select="autore" /> - <xsl:value-of select="data" />
 						</dt>
 						<dd>
 							<xsl:value-of select="testo" />
