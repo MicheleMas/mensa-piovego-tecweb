@@ -134,3 +134,20 @@
 	height: 15em;
 	border: 0;
 }
+
+#section_404 {
+	margin: 0;
+}
+
+#section_404 h1 {
+	font-size: 1.6em;
+	margin: 1em;
+}
+
+#section_404 h2 {
+	font-size: 1em;
+}
+
+#section_404 img {
+	width: 80%;
+}
