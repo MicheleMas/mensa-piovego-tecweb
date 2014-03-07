@@ -51,3 +51,4 @@ if ($size > 0) {
 #print "Content-Type: text/html\n\n";
 $page =~ s/standalone=\"yes\"/standalone=\"no\"/; 
 print $page;
+#print @target[0]->toString;
