@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" version="1.0" encoding="UTF-8" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" indent="no" /> 
-<xsl:template match="//piatto">
+<xsl:template match="piatto">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
@@ -21,9 +21,10 @@
 	</head>
 	<body onload="openTab()">
 		<div id="header">
+			<a tabindex="1" href="#contenuto" class="hidden">Vai al contenuto</a>
 			<span id="lang">
 				<span id="lang_switch_selected">ITA</span> 
-				<a href="piatti.cgi?lang=en" id="lang_switch">ENG</a>
+				<a href="viewpiatto.cgi?id={id}&amp;lang=en" id="lang_switch">ENG</a>
 			</span>
 			<h1>RistorESU Nord Piovego</h1>
 		</div>
@@ -35,22 +36,22 @@
 			<h1><a name="menu">Menù</a></h1>
 			<ul>
 				<li>
-					<a href="../index.html"><span xml:lang="en">Home</span></a>
+					<a tabindex="2" href="../index.html"><span xml:lang="en">Home</span></a>
 				</li>
 				<li>
-					<a href="../news.html"><span xml:lang="en">News</span></a>
+					<a tabindex="3" href="../news.html"><span xml:lang="en">News</span></a>
 				</li>
 				<li>
-					<a href="../where.html">Dove Siamo</a>
+					<a tabindex="4" href="../where.html">Dove Siamo</a>
 				</li>
 				<li>
-					<a href="./piatti.cgi">Piatti</a>
+					<a tabindex="5" href="./piatti.cgi">Piatti</a>
 				</li>
 				<li>
-					<a href="../prices.html">Prezzi</a>
+					<a tabindex="6" href="../prices.html">Prezzi</a>
 				</li>
 				<li>
-					<a href="../info.html">Info e Contatti</a>
+					<a tabindex="7" href="../info.html">Info e Contatti</a>
 				</li>
 			</ul>
 		</div>
