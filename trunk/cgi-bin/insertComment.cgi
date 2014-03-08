@@ -9,6 +9,7 @@ my $oCGI = CGI->new();
 my $nome = $oCGI->param('nome');
 my $email = $oCGI->param('email');
 my $lang = $oCGI->param('comment_lang');
+my $id = $oCGI->param('element_id');
 my $comment = $oCGI->param('comment_text');
 
 my $fileXML = "../public_html/piatti.xml";
@@ -22,4 +23,5 @@ print "Content-Type: text/html\n\n";
 print "nome $nome\n
 email $email\n
 lang $lang\n
+id $id\n
 comment $comment";
