@@ -530,7 +530,7 @@ table tr:nth-child(even){
 	margin: 1em;
 }
 
-.form_field #comment_lang {
+.form_field .hidden_input {
 	display: none;
 }
 

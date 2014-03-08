@@ -89,35 +89,35 @@
 			</div>
 			<h3>Comment!:</h3>
 			<div id="form_container" class="dish_form">
-			<form method="get" name="form" action="insertComment.cgi">
-				<!-- <form class="commenti_submit" method="post">action="something.cgi">-->
-				<fieldset class="form_field">
-					<legend>
-						Your infos:
-					</legend>
-					<label for="nome">Name: </label>
-					<input type="text" name="nome" id="nome" tabindex="8" />
+				<form method="get" name="form" action="insertComment.cgi">
+					<fieldset class="form_field">
+						<legend>
+							Your infos:
+						</legend>
+						<label for="nome">Name: </label>
+						<input type="text" name="nome" id="nome" tabindex="8" />
 
-					<label for="email">Email: </label>
-					<input type="text" name="email" id="email" tabindex="9" />
+						<label for="email">Email: </label>
+						<input type="text" name="email" id="email" tabindex="9" />
 
-					<input type="text" name="comment_lang" readonly="readonly" id="comment_lang" value="ENG" />
-				</fieldset>
-				<fieldset class="form_field">
-					<legend>
-						Comment!:
-					</legend>
-					<label for="comment_text">Text: </label>
-					<textarea rows="15" cols="60" name="comment_text" id="comment_text" tabindex="10"> </textarea>
-				</fieldset>
-				<fieldset id="form_field_buttons">
-					<legend>
-						Confirm:
-					</legend>
-					<input type="submit" class="buttons" id="submit_button" onclick="validateForm()" value="Invia commento" tabindex="10" />
-					<input type="reset" class="buttons" id="reset" value="Cancella tutto" tabindex="10" />
-				</fieldset>
-			</form>
+						<input type="text" name="comment_lang" readonly="readonly" id="comment_lang" value="ENG" />
+						<input type="text" name="element_id" readonly="readonly" id="element_id" class="hidden_input" value="{@id}" />
+					</fieldset>
+					<fieldset class="form_field">
+						<legend>
+							Comment!:
+						</legend>
+						<label for="comment_text">Text: </label>
+						<textarea rows="15" cols="60" name="comment_text" id="comment_text" tabindex="10"> </textarea>
+					</fieldset>
+					<fieldset id="form_field_buttons">
+						<legend>
+							Confirm:
+						</legend>
+						<input type="submit" class="buttons" id="submit_button" onclick="validateForm()" value="Invia commento" tabindex="10" />
+						<input type="reset" class="buttons" id="reset" value="Cancella tutto" tabindex="10" />
+					</fieldset>
+				</form>
 		</div>
 		</div>
 		<div id="footer">
