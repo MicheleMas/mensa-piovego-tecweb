@@ -35,22 +35,22 @@
 			<h1><a name="menu">Menu</a></h1>
 			<ul>
 				<li>
-					<a tabindex="2" href="index_en.html">Home</a>
+					<a tabindex="2" href="../index_en.html">Home</a>
 				</li>
 				<li>
-					<a tabindex="3" href="news_en.html">News</a>
+					<a tabindex="3" href="../news_en.html">News</a>
 				</li>
 				<li>
-					<a tabindex="4" href="where_en.html">How to find us</a>
+					<a tabindex="4" href="../where_en.html">How to find us</a>
 				</li>
 				<li>
-					<a tabindex="5" href="./cgi-bin/piatti.cgi?lang=en">Meals</a>
+					<a tabindex="5" href="piatti.cgi?lang=en">Meals</a>
 				</li>
 				<li>
-					<a tabindex="6" href="prices_en.html">Prices</a>
+					<a tabindex="6" href="../prices_en.html">Prices</a>
 				</li>
 				<li>
-					<a tabindex="7" href="info_en.html">Info and referral</a>
+					<a tabindex="7" href="../info_en.html">Info and referral</a>
 				</li>
 			</ul>
 		</div>
@@ -89,36 +89,35 @@
 			</div>
 			<h3>Comment!:</h3>
 			<div id="form_container" class="dish_form">
-			<a name="form">
+			<form method="get" name="form" action="insertComment.cgi">
 				<!-- <form class="commenti_submit" method="post">action="something.cgi">-->
-				<fieldset>
+				<fieldset class="form_field">
 					<legend>
-						Your infos
+						Your infos:
 					</legend>
-					<dl>
-						<dd>
-							<p class="form_description">
-								<label id="lblEmail" for="email">Your email:</label>
-							</p>
-							<p class="form_item">
-								<input type="text" id="email" alt="Email address"/>
-							</p>
-						</dd>				
-						<dd>
-							<p class="form_description">
-								<label id="lblCommento" for="commento">Comment</label>
-							</p>
-							<p class="form_item">
-								<input type="text" id="commento" alt="Comment"/>
-							</p>
-						</dd>				
-					</dl>
+					<label for="nome">Name: </label>
+					<input type="text" name="nome" id="nome" tabindex="8" />
+
+					<label for="email">Email: </label>
+					<input type="text" name="email" id="email" tabindex="9" />
+
+					<input type="text" name="comment_lang" readonly="readonly" id="comment_lang" value="ENG" />
 				</fieldset>
-				<!-- <button type="submit" onclick="validateForm();">Invia!</button> -->
-				<input type="button" id="btnSubmit" onclick="validateForm()" value="Invia!" class="form_action"/>
-			
-			<!--</form>-->
-			</a>
+				<fieldset class="form_field">
+					<legend>
+						Comment!:
+					</legend>
+					<label for="comment_text">Text: </label>
+					<textarea rows="15" cols="60" name="comment_text" id="comment_text" tabindex="10"> </textarea>
+				</fieldset>
+				<fieldset id="form_field_buttons">
+					<legend>
+						Confirm:
+					</legend>
+					<input type="submit" class="buttons" id="submit_button" onclick="validateForm()" value="Invia commento" tabindex="10" />
+					<input type="reset" class="buttons" id="reset" value="Cancella tutto" tabindex="10" />
+				</fieldset>
+			</form>
 		</div>
 		</div>
 		<div id="footer">
