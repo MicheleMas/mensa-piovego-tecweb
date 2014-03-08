@@ -101,7 +101,7 @@
 						<input type="text" name="email" id="email" tabindex="9" />
 
 						<input type="text" name="comment_lang" readonly="readonly" id="comment_lang" value="ENG" />
-						<input type="text" name="element_id" readonly="readonly" id="element_id" class="hidden_input" value="{@id}" />
+						<input type="text" name="element_id" readonly="readonly" id="element_id" class="hidden_input" value="{id}" />
 					</fieldset>
 					<fieldset class="form_field">
 						<legend>
