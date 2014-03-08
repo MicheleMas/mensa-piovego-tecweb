@@ -504,3 +504,37 @@ table tr:nth-child(even){
 	width: 50%;
 }
 
+.form_field {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: 1em;
+}
+
+.form_field legend {
+	margin-left: 0.5em;
+	font-weight: bold;
+}
+
+.form_field label {
+	display: block;
+	margin: 0.5em;
+}
+
+.form_field input {
+	display: block;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+
+.form_field textarea {
+	margin: 1em;
+}
+
+.form_field #comment_lang {
+	display: none;
+}
+
+#form_field_buttons input {
+	margin: 0.5em;
+	font-size: 2em;
+}
