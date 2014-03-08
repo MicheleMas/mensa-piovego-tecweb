@@ -3,75 +3,75 @@
 <xsl:output method="html" version="1.0" encoding="UTF-8" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" indent="no" /> 
 <xsl:template match="piatto">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="Content-Script-Type" content="text/javascript" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <meta name="description" content="Descrizione di un singolo piatto comprensivo di immagine, descrizione e commenti" />
-        <meta name="keywords" content="piatti, pasta, carne, contorno, RistorESU, menu, mensa" />
+        <meta name="description" content="Description of a single meal with image, description and comments" />
+        <meta name="keywords" content="catering, padova, RistorESU, menus, students, universities, Piovego, cafeteria" />
         <meta name="author" content="Claudio Guarisco, Gianluca Bariga Boscolo, Michele Massaro, Daniele Ronzani" />
-        <meta name="language" content="italian it" />
+        <meta name="language" content="english en" />
 		<link rel="stylesheet" type="text/css" href="../style.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="../small.css" media="handheld, screen and (max-width:39em), only screen and (max-device-width:30em)" />
 		<link rel="stylesheet" type="text/css" href="../print.css" media="print" />
 		<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
 		<script type="text/javascript" src="../script.js"></script>
-		<title><xsl:value-of select="nomeITA" /> - RistorESU Nord Piovego</title>
+		<title><xsl:value-of select="nomeENG" /> - RistorESU Nord Piovego</title>
 	</head>
 	<body onload="openTab()">
 		<div id="header">
-			<a tabindex="1" href="#contenuto" class="hidden">Vai al contenuto</a>
+			<a tabindex="1" href="#contenuto" class="hidden">Skip to content</a>
 			<span id="lang">
-				<span id="lang_switch_selected">ITA</span> 
-				<a href="viewpiatto.cgi?id={id}&amp;lang=en" id="lang_switch">ENG</a>
+				<a href="viewpiatto.cgi?id={id}&amp;lang=it" id="lang_switch">ITA</a>
+				<span id="lang_switch_selected">ENG</span> 
 			</span>
-			<h1>RistorESU Nord Piovego</h1>
+			<h1 xml:lang="it">RistorESU Nord Piovego</h1>
 		</div>
 		<div id="path">
-			Ti trovi in: <a href="../index.html"><span xml:lang="eng">Home</span></a> &gt; <a href="piatti.cgi">Piatti</a> &gt; <span id="clb"><xsl:value-of select="nomeITA" /></span>
+			You are in: <a href="../index.html">Home</a> &gt; <a href="piatti.cgi?lang=en">Meals</a> &gt; <span id="clb"><xsl:value-of select="nomeENG" /></span>
 		</div>
 		<div id="nav">
-			<h1><a name="menu">Menù</a></h1>
+			<h1><a name="menu">Menu</a></h1>
 			<ul>
 				<li>
-					<a tabindex="2" href="../index.html"><span xml:lang="en">Home</span></a>
+					<a tabindex="2" href="index_en.html">Home</a>
 				</li>
 				<li>
-					<a tabindex="3" href="../news.html"><span xml:lang="en">News</span></a>
+					<a tabindex="3" href="news_en.html">News</a>
 				</li>
 				<li>
-					<a tabindex="4" href="../where.html">Dove Siamo</a>
+					<a tabindex="4" href="where_en.html">How to find us</a>
 				</li>
 				<li>
-					<a tabindex="5" href="./piatti.cgi">Piatti</a>
+					<a tabindex="5" href="./cgi-bin/piatti.cgi?lang=en">Meals</a>
 				</li>
 				<li>
-					<a tabindex="6" href="../prices.html">Prezzi</a>
+					<a tabindex="6" href="prices_en.html">Prices</a>
 				</li>
 				<li>
-					<a tabindex="7" href="../info.html">Info e Contatti</a>
+					<a tabindex="7" href="info_en.html">Info and referral</a>
 				</li>
 			</ul>
 		</div>
 		<div id="section">
-			<h1 id="meal_name"><a name="contenuto"><xsl:value-of select="nomeITA" /></a></h1>
+			<h1 id="meal_name"><a name="contenuto"><xsl:value-of select="nomeENG" /></a></h1>
 			<div id="description">
-				<img id="descr_image" src="../images/{img}" alt="{altITA}" />
-				<p><xsl:value-of select="descrizioneITA" /></p>
+				<img id="descr_image" src="../images/{img}" alt="{altENG}" />
+				<p><xsl:value-of select="descrizioneENG" /></p>
 			</div>
 			
-			<h2>Commenti:</h2>
+			<h2>Comments:</h2>
 			<div class="commenti_recenti" id="menu_section" >
 				<dl>
 					<xsl:for-each select="commenti/commento">
 						<xsl:sort select="data" />
 						<xsl:choose>
-							<xsl:when test="@lingua='ENG'">
-								<dt xml:lang="en">
+							<xsl:when test="@lingua='ITA'">
+								<dt xml:lang="it">
 									<xsl:value-of select="autore" /> - <xsl:value-of select="data" />
 								</dt>
-								<dd xml:lang="en">
+								<dd xml:lang="it">
 									<xsl:value-of select="testo" />
 								</dd>
 							</xsl:when>
@@ -87,29 +87,29 @@
 					</xsl:for-each>
 				</dl>
 			</div>
-			<h3>Commenta:</h3>
+			<h3>Comment!:</h3>
 			<div id="form_container" class="dish_form">
 			<a name="form">
 				<!-- <form class="commenti_submit" method="post">action="something.cgi">-->
 				<fieldset>
 					<legend>
-						I tuoi dati
+						Your infos
 					</legend>
 					<dl>
 						<dd>
 							<p class="form_description">
-								<label id="lblEmail" for="email">La tua email:</label>
+								<label id="lblEmail" for="email">Your email:</label>
 							</p>
 							<p class="form_item">
-								<input type="text" id="email" alt="Indirizzo email"/>
+								<input type="text" id="email" alt="Email address"/>
 							</p>
 						</dd>				
 						<dd>
 							<p class="form_description">
-								<label id="lblCommento" for="commento">Commento</label>
+								<label id="lblCommento" for="commento">Comment</label>
 							</p>
 							<p class="form_item">
-								<input type="text" id="commento" alt="Commento..."/>
+								<input type="text" id="commento" alt="Comment"/>
 							</p>
 						</dd>				
 					</dl>
@@ -133,7 +133,7 @@
 					<img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" /></a>
 				<a class="popup" href="http://jigsaw.w3.org/css-validator/check/referer">
         		<img src="http://jigsaw.w3.org/css-validator/images/vcss"
-alt="CSS Valido!" />
+alt="Valid CSS" />
     			</a>
 			</span>
 		</div>
