@@ -67,12 +67,24 @@
 				<dl>
 					<xsl:for-each select="commenti/commento">
 						<xsl:sort select="data" />
-						<dt>
-							<xsl:value-of select="autore" /> - <xsl:value-of select="data" />
-						</dt>
-						<dd>
-							<xsl:value-of select="testo" />
-						</dd>
+						<xsl:choose>
+							<xsl:when test="@lingua='ENG'">
+								<dt xml:lang="en">
+									<xsl:value-of select="autore" /> - <xsl:value-of select="data" />
+								</dt>
+								<dd xml:lang="en">
+									<xsl:value-of select="testo" />
+								</dd>
+							</xsl:when>
+							<xsl:otherwise>
+								<dt>
+									<xsl:value-of select="autore" /> - <xsl:value-of select="data" />
+								</dt>
+								<dd>
+									<xsl:value-of select="testo" />
+								</dd>
+							</xsl:otherwise>
+						</xsl:choose>
 					</xsl:for-each>
 				</dl>
 			</div>
