@@ -12,6 +12,11 @@ my $email = $oCGI->param('email');
 my $lang = $oCGI->param('comment_lang');
 my $id = $oCGI->param('element_id');
 my $comment = $oCGI->param('comment_text');
+if ($lang eq 'ENG') {
+	$language = 'en';
+} else {
+	$language = 'it';
+}
 
 my $now = DateTime->now->ymd;
 my $fileXML = "../public_html/piatti.xml";
@@ -40,15 +45,17 @@ if ($numero == 1) {
 	print OUT $data->toString;
 	close (OUT);
 
+	print "Content-Type: text/html\n\n";
+	print "<meta http-equiv='refresh' content='0; url=./viewpiatto.cgi?id=$id&lang=$language' />";
 } else {
 	# TODO non si dovrebbe mai arrivare qui
 }
 
 #Answer
-print "Content-Type: text/html\n\n";
-print "nome $nome\n
-email $email\n
-lang $lang\n
-id $id\n
-date $now\n
-comment $comment\n";
+#print "Content-Type: text/html\n\n";
+#print "nome $nome\n
+#email $email\n
+#lang $lang\n
+#id $id\n
+#date $now\n
+#comment $comment\n";
