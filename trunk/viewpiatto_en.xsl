@@ -89,7 +89,7 @@
 			</div>
 			<h3>Comment!:</h3>
 			<div id="form_container" class="dish_form">
-				<form method="get" name="form" action="insertComment.cgi">
+				<form method="get" action="insertComment.cgi">
 					<fieldset class="form_field">
 						<legend>
 							Your infos:
