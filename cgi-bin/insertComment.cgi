@@ -27,7 +27,8 @@ my $root = $data->getDocumentElement || die("Non accedo alla radice");
 my @piatti = $root->findnodes("//piatto[\@id=$id]");
 
 $numero = @piatti;
-print $numero; 
+#TODO Il redirect va stampato come prima cosa della pagina, o non va
+#TODO print $numero; 
 if ($numero == 1) {
 	$piatto = @piatti[0];
 	$commentNode = $piatto->findnodes("commenti")->get_node(0);
