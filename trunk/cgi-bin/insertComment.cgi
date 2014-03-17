@@ -4,6 +4,7 @@ use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use XML::LibXML;
 use DateTime;
+#use Email::Valid;
 
 #Read GET parameters
 my $oCGI = CGI->new();
@@ -12,11 +13,16 @@ my $email = $oCGI->param('email');
 my $lang = $oCGI->param('comment_lang');
 my $id = $oCGI->param('element_id');
 my $comment = $oCGI->param('comment_text');
-if ($lang eq 'ENG') {
-	$language = 'en';
-} else {
-	$language = 'it';
-}
+#if ($lang eq 'ENG') {
+#	$language = 'en';
+#} elsif ($lang eq 'ITA') {
+#	$language = 'it';
+#}
+#else { die("Lingua non valida"); }
+
+#if (!Email::Valid->address($email)) { die("Indirizzo email non valido!"); }
+#if(length($nome)<2){ die("Nome troppo corto!"); }
+#if(length($comment)<2){ die("Commento troppo corto!"); }
 
 my $now = DateTime->now->ymd;
 my $fileXML = "../public_html/piatti.xml";
@@ -24,11 +30,9 @@ my $parser = XML::LibXML->new();
 my $data = $parser->parse_file($fileXML);
 
 my $root = $data->getDocumentElement || die("Non accedo alla radice");
-my @piatti = $root->findnodes("//piatto[\@id=$id]");
+my @piatti = $root->findnodes("//piatto[\@id=$id]") || die("Id piatto non valido");
 
 $numero = @piatti;
-#TODO Il redirect va stampato come prima cosa della pagina, o non va
-#TODO print $numero; 
 if ($numero == 1) {
 	$piatto = @piatti[0];
 	$commentNode = $piatto->findnodes("commenti")->get_node(0);
