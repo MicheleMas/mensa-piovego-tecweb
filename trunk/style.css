@@ -410,12 +410,6 @@ table tr:nth-child(even){
 }
 
 
-
-/*
-.commenti_recenti	{
-	margin-right:1em !important;
-}
-*/
 .commenti_submit legend	{
 	margin:1em;
 }
@@ -451,7 +445,7 @@ table tr:nth-child(even){
 	margin:1em;
 }
 
-.menu_container  img{
+.menu_container img{
 	margin-right:7em;
 
 }
@@ -478,7 +472,9 @@ table tr:nth-child(even){
 
 #form_container {
 	border-color:#555555;
-	width:100%;
+	/*width:100%;*/
+	margin-left: 2em;
+	margin-right: 4em;
 }
 
 .stampasi {
@@ -509,7 +505,6 @@ table tr:nth-child(even){
 .form_field {
 	margin-top: 1em;
 	margin-bottom: 1em;
-	margin-right: 1em;
 }
 
 .form_field legend {
@@ -544,7 +539,6 @@ table tr:nth-child(even){
 #form_field_buttons {
 	margin-top: 1em;
 	margin-bottom: 1em;
-	margin-right: 1em;
 }
 
 #form_field_buttons legend {

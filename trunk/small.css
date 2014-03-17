@@ -170,9 +170,10 @@
 	border-radius: 10px;
 }
 
+/*
 .form_field {
 	margin-left: 1em;
-}
+}*/
 
 .form_field textarea {
 	resize: both;
@@ -183,6 +184,3 @@
 	display: none;
 }
 
-#form_field_buttons {
-	margin-left:1em;
-}
