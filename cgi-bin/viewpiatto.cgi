@@ -5,7 +5,6 @@ use XML::LibXSLT;
 use XML::LibXML;
 use CGI;
 use CGI::Carp qw(fatalsToBrowser);
-$page = "615612546";
 
 #Read GET parameters
 my $oCGI = CGI->new();
@@ -34,7 +33,7 @@ my $xslRules = $xslt->parse_stylesheet($xslParsed) || die("Operazione di parsifi
 
 #Select the correct node
 my $radice= $data->getDocumentElement || die("Non accedo alla radice");
-my @target = $radice->findnodes("//piatto[\@id=".$id."]");
+my @target = $radice->findnodes("//piatto[\@id='".$id."']");
 my $size = @target;
 print "Content-Type: text/html\n\n";
 if ($size > 0) {
