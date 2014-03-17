@@ -521,13 +521,19 @@ table tr:nth-child(even){
 }
 
 .form_field input {
-	display: block;
+	display: inline;
 	margin-left: 1em;
 	margin-bottom: 1em;
 }
 
 .form_field textarea {
 	margin: 1em;
+}
+
+.form_field span {
+	font-weight: bold;
+	color: #ff0000;
+	padding-left: 1em;
 }
 
 #form_field_buttons input {
