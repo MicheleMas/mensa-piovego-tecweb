@@ -88,9 +88,10 @@
 					</xsl:for-each>
 				</dl>
 			</div>
-			<h3>Commenta:</h3>
 			<div id="form_container">
-				<form method="get" onsubmit="return completeCheck('ita');" action="insertComment.cgi">
+
+				<h3>Commenta:</h3>
+				<form method="post" onsubmit="return completeCheck('ita')" action="insertComment.cgi">
 					<fieldset class="form_field">
 						<legend>
 							I tuoi dati:
@@ -115,7 +116,7 @@
 						<legend>
 							Conferma:
 						</legend>
-						<input type="submit" id="submit_button" onclick="validateForm()" value="Invia commento" tabindex="10" />
+						<input type="submit" id="submit_button" onclick="validateForm('ita');" value="Invia commento" tabindex="10" />
 						<input type="reset" id="reset" value="Cancella tutto" tabindex="10" onclick="resetErrors();" />
 					</fieldset>
 				</form>
