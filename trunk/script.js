@@ -93,3 +93,12 @@ function completeCheck(lang) {
 		return false;
 	}
 }
+
+function resetErrors() {
+	var errorMessage1 = document.getElementById("emailErrors");
+	var errorMessage2 = document.getElementById("nameErrors");
+	var errorMessage3 = document.getElementById("commentErrors");
+	errorMessage1.innerHTML = "";
+	errorMessage2.innerHTML = "";
+	errorMessage3.innerHTML = "";
+}

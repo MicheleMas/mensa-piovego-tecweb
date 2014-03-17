@@ -29,7 +29,7 @@
 			<h1 xml:lang="it">RistorESU Nord Piovego</h1>
 		</div>
 		<div id="path">
-			You are in: <a href="../index.html">Home</a> &gt; <a href="piatti.cgi?lang=en">Meals</a> &gt; <span id="clb"><xsl:value-of select="nomeENG" /></span>
+			You are in: <a href="../index_en.html">Home</a> &gt; <a href="piatti.cgi?lang=en">Meals</a> &gt; <span id="clb"><xsl:value-of select="nomeENG" /></span>
 		</div>
 		<div id="nav">
 			<h1><a name="menu">Menu</a></h1>
@@ -89,16 +89,16 @@
 			</div>
 			<h3>Comment!:</h3>
 			<div id="form_container" class="dish_form">
-				<form method="get" onSubmit="return completeCheck('eng')" action="insertComment.cgi">
+				<form method="get" onsubmit="return completeCheck('eng')" action="insertComment.cgi">
 					<fieldset class="form_field">
 						<legend>
 							Your infos:
 						</legend>
 						<label for="nome">Name: </label>
-						<input type="text" name="nome" id="nome" tabindex="8" onBlur="checkName('eng');" /><span id="nameErrors"></span>
+						<input type="text" name="nome" id="nome" tabindex="8" onblur="checkName('eng');" /><span id="nameErrors"></span>
 
 						<label for="email">Email: </label>
-						<input type="text" name="email" id="email" tabindex="9" onBlur="checkEmail('eng');" /><span id="emailErrors"></span>
+						<input type="text" name="email" id="email" tabindex="9" onblur="checkEmail('eng');" /><span id="emailErrors"></span>
 
 						<input type="hidden" name="comment_lang" readonly="readonly" id="comment_lang" value="ENG"  />
 						<input type="hidden" name="element_id" readonly="readonly" id="element_id" value="{id}" />
@@ -108,14 +108,14 @@
 							Comment!:
 						</legend>
 						<label for="comment_text">Text: </label>
-						<textarea rows="15" cols="60" name="comment_text" id="comment_text" tabindex="10" onBlur="checkComment('eng');"> </textarea><span id="commentErrors"></span>
+						<textarea rows="15" cols="60" name="comment_text" id="comment_text" tabindex="10" onblur="checkComment('eng');"> </textarea><span id="commentErrors"></span>
 					</fieldset>
 					<fieldset id="form_field_buttons">
 						<legend>
 							Confirm:
 						</legend>
 						<input type="submit" class="buttons" id="submit_button" onclick="validateForm()" value="Invia commento" tabindex="10" />
-						<input type="reset" class="buttons" id="reset" value="Cancella tutto" tabindex="10" />
+						<input type="reset" class="buttons" id="reset" value="Cancella tutto" tabindex="10" onclick="resetErrors();" />
 					</fieldset>
 				</form>
 		</div>

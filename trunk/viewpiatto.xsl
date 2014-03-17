@@ -89,16 +89,16 @@
 			</div>
 			<h3>Commenta:</h3>
 			<div id="form_container" class="dish_form">
-				<form method="get" onSubmit="return completeCheck('ita')" action="insertComment.cgi">
+				<form method="get" onsubmit="return completeCheck('ita')" action="insertComment.cgi">
 					<fieldset class="form_field">
 						<legend>
 							I tuoi dati:
 						</legend>
 						<label for="nome">Nome: </label>
-						<input type="text" name="nome" id="nome" tabindex="8" onBlur="checkName('ita');" /><span id="nameErrors"></span>
+						<input type="text" name="nome" id="nome" tabindex="8" onblur="checkName('ita');" /><span id="nameErrors"></span>
 
 						<label for="email">Email: </label>
-						<input type="text" name="email" id="email" tabindex="9" onBlur="checkEmail('ita');" /><span id="emailErrors"></span>
+						<input type="text" name="email" id="email" tabindex="9" onblur="checkEmail('ita');" /><span id="emailErrors"></span>
 
 						<input type="hidden" name="comment_lang" readonly="readonly" id="comment_lang" value="ITA" />
 						<input type="hidden" name="element_id" readonly="readonly" id="element_id" value="{id}" />
@@ -108,7 +108,7 @@
 							Commenta:
 						</legend>
 						<label for="comment_text">Testo: </label>
-						<textarea rows="15" cols="60" name="comment_text" id="comment_text" tabindex="10" onBlur="checkComment('ita');" > </textarea><span id="commentErrors"></span>
+						<textarea rows="15" cols="60" name="comment_text" id="comment_text" tabindex="10" onblur="checkComment('ita');" > </textarea><span id="commentErrors"></span>
 					</fieldset>
 					<fieldset id="form_field_buttons">
 						<legend>
