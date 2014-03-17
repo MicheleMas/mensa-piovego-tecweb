@@ -17,9 +17,11 @@ my $fileXML = "../public_html/piatti.xml";
 #Check the language
 if($lang eq "en") {
 	$fileXSL = "../public_html/viewpiatto_en.xsl";
+	$errorpage="<meta http-equiv='refresh' content='0; url=../page_not_found_en.html' />";
 }
 else {
 	$fileXSL = "../public_html/viewpiatto.xsl";
+	$errorpage="<meta http-equiv='refresh' content='0; url=../page_not_found.html' />";
 }
 
 #Create objects for parsing and transformation
@@ -43,11 +45,10 @@ if ($size > 0) {
 	#Trasform the output in HTML
 	$page = $result->toString;
 } else {
-	$page = "<meta http-equiv='refresh' content='0; url=../page_not_found.html' />";
+	$page = $errorpage;
 }
 
 #Print the result page
 #print "Content-Type: text/html\n\n";
 $page =~ s/standalone=\"yes\"/standalone=\"no\"/; 
 print $page;
-#print @target[0]->toString;
