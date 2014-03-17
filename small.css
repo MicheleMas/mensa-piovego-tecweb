@@ -170,10 +170,10 @@
 	border-radius: 10px;
 }
 
-/*
-.form_field {
+#form_container {
 	margin-left: 1em;
-}*/
+	margin-right: 1em;
+}
 
 .form_field textarea {
 	resize: both;

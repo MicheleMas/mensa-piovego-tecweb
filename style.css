@@ -365,7 +365,7 @@ table tr:nth-child(even){
 #menu_section {
  	padding-left: 2em;
 	margin-bottom: 2em;
-	margin-right:4em;
+	margin-right:2em;
 }
 
 #menu_section h1 {
@@ -474,7 +474,7 @@ table tr:nth-child(even){
 	border-color:#555555;
 	/*width:100%;*/
 	margin-left: 2em;
-	margin-right: 4em;
+	margin-right: 2em;
 }
 
 .stampasi {
@@ -527,6 +527,7 @@ table tr:nth-child(even){
 	display: block;
 	margin: 1em;
 	border-radius: 5px;
+	width: 80%;
 }
 
 .form_field span {
