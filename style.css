@@ -523,11 +523,19 @@ table tr:nth-child(even){
 	margin-bottom: 0.5em;
 }
 
+.form_field input:focus {
+	border: #FFDD55 3px solid;
+}
+
 .form_field textarea {
 	display: block;
 	margin: 1em;
 	border-radius: 5px;
 	width: 80%;
+}
+
+.form_field textarea:focus {
+	border: #FFDD55 3px solid;
 }
 
 .form_field span {
