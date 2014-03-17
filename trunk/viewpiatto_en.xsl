@@ -89,7 +89,7 @@
 			</div>
 			<h3>Comment!:</h3>
 			<div id="form_container">
-				<form method="get" onsubmit="return completeCheck('eng')" action="insertComment.cgi">
+				<form method="get" onsubmit="return completeCheck('eng');" action="insertComment.cgi">
 					<fieldset class="form_field">
 						<legend>
 							Your infos:

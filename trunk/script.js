@@ -56,7 +56,7 @@ function checkName(lang) {
 	var errorMessage = document.getElementById("nameErrors");
 	if (string.length < 2) {
 		if (lang=="ita") {
-			errorMessage.innerHTML = "Inserire un nome di lunghezza almeno 2";
+			errorMessage.innerHTML = "Inserire un nome con almeno due caratteri";
 		} else {
 			errorMessage.innerHTML = "Insert a name with at least two characters";
 		}
@@ -72,7 +72,7 @@ function checkComment(lang) {
 	var errorMessage = document.getElementById("commentErrors");
 	if (string.length < 2) {
 		if (lang=="ita") {
-			errorMessage.innerHTML = "Inserire un commento di lunghezza almeno 2";
+			errorMessage.innerHTML = "Inserire un commento con almeno due caratteri";
 		} else {
 			errorMessage.innerHTML = "Insert a comment with at least two characters";
 		}
