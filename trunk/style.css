@@ -387,6 +387,14 @@ table tr:nth-child(even){
 	font-style: italic;
 }
 
+#menu_section dd {
+	margin-bottom: 1.5em;
+	border-bottom: #555555 1px solid;
+	border-left: #555555 1px solid;
+	border-right: #555555 1px solid;
+	padding:1em;
+}
+
 #menu_section dd img {
 	display: inline;
 	width: 7em;
@@ -401,18 +409,13 @@ table tr:nth-child(even){
 	margin-right: 10%;
 }
 
-#menu_section dd {
-	margin-bottom: 1.5em;
-	border-bottom: #555555 1px solid;
-	border-left: #555555 1px solid;
-	border-right: #555555 1px solid;
-	padding:1em;
-}
 
+
+/*
 .commenti_recenti	{
 	margin-right:1em !important;
 }
-
+*/
 .commenti_submit legend	{
 	margin:1em;
 }
@@ -476,7 +479,6 @@ table tr:nth-child(even){
 #form_container {
 	border-color:#555555;
 	width:100%;
-
 }
 
 .stampasi {
@@ -523,7 +525,7 @@ table tr:nth-child(even){
 .form_field input {
 	display: inline;
 	margin-left: 1em;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 
 .form_field textarea {
@@ -536,7 +538,18 @@ table tr:nth-child(even){
 	padding-left: 1em;
 }
 
+#form_field_buttons {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: 1em;
+}
+
+#form_field_buttons legend {
+	margin-left: 0.5em;
+	font-weight: bold;
+}
+
 #form_field_buttons input {
 	margin: 0.5em;
-	font-size: 2em;
+	font-size: 1em;
 }
