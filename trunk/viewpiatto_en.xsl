@@ -114,8 +114,8 @@
 						<legend>
 							Confirm:
 						</legend>
-						<input type="submit" id="submit_button" onclick="validateForm('eng')" value="Invia commento" tabindex="10" />
-						<input type="reset" id="reset" value="Cancella tutto" tabindex="10" onclick="resetErrors();" />
+						<input type="submit" id="submit_button" onclick="validateForm('eng')" value="Send Comment" tabindex="10" />
+						<input type="reset" id="reset" value="Delete All" tabindex="10" onclick="resetErrors();" />
 					</fieldset>
 				</form>
 		</div>

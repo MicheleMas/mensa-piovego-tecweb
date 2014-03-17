@@ -175,6 +175,12 @@
 	margin-right: 1em;
 }
 
+.form_field input {
+	display: block;
+	margin-left: 1em;
+	margin-bottom: 0.5em;
+}
+
 .form_field textarea {
 	resize: both;
 	max-width: 80%;
