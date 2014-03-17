@@ -4,7 +4,7 @@ use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use XML::LibXML;
 use DateTime;
-#use Email::Valid;
+use Email::Valid;
 
 #Read GET parameters
 my $oCGI = CGI->new();
@@ -13,16 +13,16 @@ my $email = $oCGI->param('email');
 my $lang = $oCGI->param('comment_lang');
 my $id = $oCGI->param('element_id');
 my $comment = $oCGI->param('comment_text');
-#if ($lang eq 'ENG') {
-#	$language = 'en';
-#} elsif ($lang eq 'ITA') {
-#	$language = 'it';
-#}
-#else { die("Lingua non valida"); }
+if ($lang eq 'ENG') {
+	$language = 'en';
+} elsif ($lang eq 'ITA') {
+	$language = 'it';
+}
+else { die("Lingua non valida"); }
 
-#if (!Email::Valid->address($email)) { die("Indirizzo email non valido!"); }
-#if(length($nome)<2){ die("Nome troppo corto!"); }
-#if(length($comment)<2){ die("Commento troppo corto!"); }
+if (!Email::Valid->address($email)) { die("Indirizzo email non valido!"); }
+if(length($nome)<2){ die("Nome troppo corto!"); }
+if(length($comment)<2){ die("Commento troppo corto!"); }
 
 my $now = DateTime->now->ymd;
 my $fileXML = "../public_html/piatti.xml";
@@ -30,7 +30,7 @@ my $parser = XML::LibXML->new();
 my $data = $parser->parse_file($fileXML);
 
 my $root = $data->getDocumentElement || die("Non accedo alla radice");
-my @piatti = $root->findnodes("//piatto[\@id=$id]") || die("Id piatto non valido");
+my @piatti = $root->findnodes("//piatto[\@id='$id']");
 
 $numero = @piatti;
 if ($numero == 1) {
@@ -53,7 +53,7 @@ if ($numero == 1) {
 	print "Content-Type: text/html\n\n";
 	print "<meta http-equiv='refresh' content='0; url=./viewpiatto.cgi?id=$id&lang=$language' />";
 } else {
-	# TODO non si dovrebbe mai arrivare qui
+	die("Id piatto non valido");
 }
 
 #Answer
