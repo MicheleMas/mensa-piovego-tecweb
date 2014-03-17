@@ -61,8 +61,9 @@
 				<p><xsl:value-of select="descrizioneITA" /></p>
 			</div>
 			
-			<h2>Commenti:</h2>
-			<div class="commenti_recenti" id="menu_section" >
+			
+			<div id="menu_section" >
+				<h2>Commenti:</h2>
 				<dl>
 					<xsl:for-each select="commenti/commento">
 						<xsl:sort select="data" />
@@ -88,7 +89,7 @@
 				</dl>
 			</div>
 			<h3>Commenta:</h3>
-			<div id="form_container" class="dish_form">
+			<div id="form_container">
 				<form method="get" onsubmit="return completeCheck('ita')" action="insertComment.cgi">
 					<fieldset class="form_field">
 						<legend>
@@ -114,8 +115,8 @@
 						<legend>
 							Conferma:
 						</legend>
-						<input type="submit" class="buttons" id="submit_button" onclick="validateForm()" value="Invia commento" tabindex="10" />
-						<input type="reset" class="buttons" id="reset" value="Cancella tutto" tabindex="10" />
+						<input type="submit" id="submit_button" onclick="validateForm()" value="Invia commento" tabindex="10" />
+						<input type="reset" id="reset" value="Cancella tutto" tabindex="10" />
 					</fieldset>
 				</form>
 			</div>
