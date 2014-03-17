@@ -529,13 +529,16 @@ table tr:nth-child(even){
 }
 
 .form_field textarea {
+	display: block;
 	margin: 1em;
+	border-radius: 5px;
 }
 
 .form_field span {
 	font-weight: bold;
 	color: #ff0000;
 	padding-left: 1em;
+	margin-bottom: 0.5em;
 }
 
 #form_field_buttons {
