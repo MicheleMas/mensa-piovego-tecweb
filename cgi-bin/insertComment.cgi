@@ -13,7 +13,7 @@ my $nome = $oCGI->param('nome');
 $nome =~ s/\W//g;
 
 my $email = $oCGI->param('email');
-$email  =~ s/\W//g;
+#$email  =~ $str =~ s/[#\&\$*()\<\>\'\"]//g; #rimuove caratteri injection dalla mail
 
 my $lang = $oCGI->param('comment_lang');
 my $id = $oCGI->param('element_id');
