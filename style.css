@@ -530,10 +530,6 @@ table tr:nth-child(even){
 	margin: 1em;
 }
 
-.form_field .hidden_input {
-	display: none;
-}
-
 #form_field_buttons input {
 	margin: 0.5em;
 	font-size: 2em;
