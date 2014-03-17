@@ -34,3 +34,62 @@ function replaceMap() {
 	var map = document.getElementById('mapVisualization');
 	map.innerHTML = "<iframe class='stampano' id='Gmap_frame' src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1400.460291941266!2d11.889645!3d45.410941!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c00159331ead3d8!2sRistorEsu+Nord+Piovego!5e0!3m2!1sit!2sit!4v1394028372446'></iframe><img id=\"Gmap\" class=\"stampasi\" src=\"images/map_mobile.png\" alt=\"Mappa raffigurante la posizione della mensa Piovego.\" />";
 }
+
+function checkEmail(lang) {
+	var string = document.getElementById("email").value;
+	var errorMessage = document.getElementById("emailErrors");
+	var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (regex.test(string)) {
+    	errorMessage.innerHTML = "";
+    	return true;
+    } else {
+    	if (lang=="ita") {
+    		errorMessage.innerHTML = "La mail non e' corretta";
+    	} else {
+    		errorMessage.innerHTML = "Please check your mail address";
+    	}
+    };
+}
+
+function checkName(lang) {
+	var string = document.getElementById("nome").value;
+	var errorMessage = document.getElementById("nameErrors");
+	if (string.length < 2) {
+		if (lang=="ita") {
+			errorMessage.innerHTML = "Inserire un nome di lunghezza almeno 2";
+		} else {
+			errorMessage.innerHTML = "Insert a name with at least two characters";
+		}
+		return false;
+	} else {
+		errorMessage.innerHTML = "";
+		return true;
+	};
+}
+
+function checkComment(lang) {
+	var string = document.getElementById("comment_text").value;
+	var errorMessage = document.getElementById("commentErrors");
+	if (string.length < 2) {
+		if (lang=="ita") {
+			errorMessage.innerHTML = "Inserire un commento di lunghezza almeno 2";
+		} else {
+			errorMessage.innerHTML = "Insert a comment with at least two characters";
+		}
+		return false;
+	} else {
+		errorMessage.innerHTML = "";
+		return true;
+	};
+}
+
+function completeCheck(lang) {
+	var check1 = checkName(lang);
+	var check2 = checkEmail(lang);
+	var check3 = checkComment(lang);
+	if (check1 && check2 && check3) {
+		return true;
+	} else {
+		return false;
+	}
+}
