@@ -44,10 +44,11 @@ function checkEmail(lang) {
     	return true;
     } else {
     	if (lang=="ita") {
-    		errorMessage.innerHTML = "La mail non e' corretta";
+    		errorMessage.innerHTML = "La mail non è corretta";
     	} else {
     		errorMessage.innerHTML = "Please check your mail address";
     	}
+    	return false;
     };
 }
 

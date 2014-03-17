@@ -82,7 +82,7 @@ table tr:nth-child(even){
 	padding-left: 0.2em;
 	padding-right: 0.2em;
 	border: #000000 1px solid;
-	text-decoration: none;
+	text-decoration: underline;
 	background-color: #FFDD55;
 	color: #555555;
 	font-weight: bold;

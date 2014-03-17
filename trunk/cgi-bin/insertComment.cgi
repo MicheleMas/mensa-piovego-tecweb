@@ -10,16 +10,16 @@ use Email::Valid;
 my $oCGI = CGI->new();
 
 my $nome = $oCGI->param('nome');
-$nome =~ s/\W//g;
+$nome =~ s/[<>&]//g;
 
 my $email = $oCGI->param('email');
-#$email  =~ $str =~ s/[#\&\$*()\<\>\'\"]//g; #rimuove caratteri injection dalla mail
+$email  =~ s/[<>&]//g;
 
 my $lang = $oCGI->param('comment_lang');
 my $id = $oCGI->param('element_id');
 
 my $comment = $oCGI->param('comment_text');
-$comment =~ s/\W//g;
+$comment =~ s/[<>&]//g;
 
 if ($lang eq 'ENG') {
 	$language = 'en';
