@@ -8,17 +8,24 @@ use Email::Valid;
 
 #Read GET parameters
 my $oCGI = CGI->new();
+
 my $nome = $oCGI->param('nome');
+$nome =~ s/\W//g;
+
 my $email = $oCGI->param('email');
+$email  =~ s/\W//g;
+
 my $lang = $oCGI->param('comment_lang');
 my $id = $oCGI->param('element_id');
+
 my $comment = $oCGI->param('comment_text');
+$comment =~ s/\W//g;
+
 if ($lang eq 'ENG') {
 	$language = 'en';
 } elsif ($lang eq 'ITA') {
 	$language = 'it';
-}
-else { die("Lingua non valida"); }
+} else { die("Lingua non valida"); }
 
 if (!Email::Valid->address($email)) { die("Indirizzo email non valido!"); }
 if(length($nome)<2){ die("Nome troppo corto!"); }
