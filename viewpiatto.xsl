@@ -60,8 +60,6 @@
 				<img id="descr_image" src="../images/{img}" alt="{altITA}" />
 				<p><xsl:value-of select="descrizioneITA" /></p>
 			</div>
-			
-			
 			<div id="menu_section" >
 				<h2>Commenti:</h2>
 				<dl>
@@ -89,7 +87,6 @@
 				</dl>
 			</div>
 			<div id="form_container">
-
 				<h3>Commenta:</h3>
 				<form method="post" onsubmit="return completeCheck('ita')" action="insertComment.cgi">
 					<fieldset class="form_field">

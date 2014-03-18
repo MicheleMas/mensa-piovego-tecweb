@@ -60,9 +60,8 @@
 				<img id="descr_image" src="../images/{img}" alt="{altENG}" />
 				<p><xsl:value-of select="descrizioneENG" /></p>
 			</div>
-			
-			<h2>Comments:</h2>
 			<div id="menu_section" >
+				<h2>Comments:</h2>
 				<dl>
 					<xsl:for-each select="commenti/commento">
 						<xsl:sort select="data" />

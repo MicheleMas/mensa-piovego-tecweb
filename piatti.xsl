@@ -21,8 +21,9 @@
 	</head>
 	<body onload="openTab()">
 		<div id="header">
-			<span id="lang">
+			
 				<a tabindex="1" href="#contenuto" class="hidden">Vai al contenuto</a>
+			<span id="lang">
 				<span id="lang_switch_selected">ITA</span> 
 				<a href="piatti.cgi?lang=en" id="lang_switch">ENG</a>
 			</span>
@@ -67,7 +68,7 @@
 						<dd>
 							<a href="viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altITA}" /></a>
 							<p><xsl:value-of select="descrizioneITA" /></p>
-							<a href="viewpiatto.cgi?id={@id}">[continua e commenta il piatto <xsl:value-of select="nomeITA" />]</a>
+							<a class="stampano" href="viewpiatto.cgi?id={@id}">[continua e commenta il piatto <xsl:value-of select="nomeITA" />]</a>
 						</dd>
 					</xsl:for-each>
 				</dl>
@@ -81,7 +82,7 @@
 						<dd>
 							<a href="viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altITA}" /></a>
 							<p><xsl:value-of select="descrizioneITA" /></p>
-							<a href="viewpiatto.cgi?id={@id}">[continua e commenta il piatto <xsl:value-of select="nomeITA" />]</a>
+							<a class="stampano" href="viewpiatto.cgi?id={@id}">[continua e commenta il piatto <xsl:value-of select="nomeITA" />]</a>
 						</dd>
 					</xsl:for-each>
 				</dl>
@@ -95,7 +96,7 @@
 						<dd>
 							<a href="viewpiatto.cgi?id={@id}"><img src="../images/{img}" alt="{altITA}" /></a>
 							<p><xsl:value-of select="descrizioneITA" /></p>
-							<a href="viewpiatto.cgi?id={@id}">[continua e commenta il piatto <xsl:value-of select="nomeITA" />]</a>
+							<a class="stampano" href="viewpiatto.cgi?id={@id}">[continua e commenta il piatto <xsl:value-of select="nomeITA" />]</a>
 						</dd>
 					</xsl:for-each>
 				</dl>

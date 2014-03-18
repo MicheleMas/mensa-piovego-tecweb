@@ -52,10 +52,13 @@ table td{
 	font-weight: bold;
 }
 #menu_section dd {
-	margin-bottom: 2cm;
+	margin-bottom: 1cm;
+}
+#menu_section dd p {
+	min-height: 6.0em;
 }
 #menu_section p {
-	margin-left: 4cm;
+	margin-left: 3.5cm;
 }
 .infoContainer {
 	padding-left: 2cm;
@@ -83,4 +86,10 @@ table td{
 }
 #recent_news h3 {
 	font-size: 13pt;
+}
+#form_container {
+	display: none;
+}
+#descr_image {
+	width: 20%;
 }
