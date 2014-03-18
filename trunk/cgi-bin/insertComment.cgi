@@ -37,7 +37,7 @@ my $parser = XML::LibXML->new();
 my $data = $parser->parse_file($fileXML);
 
 my $root = $data->getDocumentElement || die("Non accedo alla radice");
-my @piatti = $root->findnodes("//piatto[\@id='$id']");
+my @piatti = $root->findnodes("//piatto[id='$id']");
 
 $numero = @piatti;
 if ($numero == 1) {
