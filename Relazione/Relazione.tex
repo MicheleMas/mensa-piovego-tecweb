@@ -154,10 +154,18 @@ Il layout consiste quasi completamente in una classica disposizione a tre pannel
  \item \textbf{Path}: sezione immediatamente sottostante all'header in cui viene indicata la posizione attuale assoluta all'interno del sito.
  \item \textbf{Navigation}: la parte sinistra di ogni pagina \'e occupata dal men\'u di navigazione, che contiene i link per le pagine principali.
  \item \textbf{Section}: la parte a destra del men\'u contiene il vero contenuto della pagina, cio\'e la parte variabile che cambia per ogni pagina.
+ \item \textbf{Footer}: la parte inferiore del sito contiene le informazioni accessorie, dato che \'e quella meno visibile per l'utente; in questo caso contiene i link ai social network, il nome team che ha realizzato il sito e le certificazioni W3C.
 \end{itemize}
 Per garantire una corretta visualizzazione tramite ogni dispositivo si \'e scelto di utilizzare un layout elastico, che permette il ridimensionamento negli schermi dei PC ma arriva ad un punto di rottura che cambia completamente la presentazione nel caso di display troppo piccolo. In questo modo si riesce a sfruttare al meglio le diverse dimensioni, permettendone l'utilizzo sia da PC che da dispositivi mobile.
+La completa divisione tra contenuto e presentazione ha reso pi\'u facile questa operazione, dato che in questo modo non \'e stato necessario mobificare il contenuto HTML delle pagine, ma solo il CSS.
+In totale sono stati usati tre layout:
+\begin{itemize}
+ \item il principale (\textit{style.css}) contiene la presentazione per schermi medio grandi, contenente la disposizione vista precedentemente;
+ \item la versione mobile per schermi piccoli (\textit{small.css}), in cui la disposizione \'e stata studiata per permetterne l'utilizzo tramite touchscreen, e quindi contiene bottoni pi\'u grandi ed uno stile pi\'u verticale "scroll-friendly";
+ \item l'ultimo \'e il layout per la stampa (\textit{print.css}), che rimuove gli elementi che non necessitano di essere stampati (come il men\'u) ed utilizza un font pi\'u consono per la carta stampata (Times New Roman).
+\end{itemize}
+Inoltre, all'interno di ogni foglio di stile tutti gli elementi sono stati definiti tramite percentuali (nel caso di posizionamenti) o "em" (nel caso di testo), in modo che la pagina si adatti ad ogni tipo di schermo.
 Per migliorare il supporto ai diversi sistemi operativi sono state definite pi\'u famiglie di font, in modo l'assenza di supporto non causi un fallback su un altro non adatto per il sito; in particolare, l'ordine di font family \'e Helvetica, Arial e sans-serif.
-
 
 \subsection{Struttura organizzativa}
 
