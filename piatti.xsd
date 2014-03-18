@@ -16,7 +16,6 @@
 			<xsd:element name="descrizioneENG" type="xsd:string" />
 			<xsd:element name="commenti" type="Tcommenti" />
 		</xsd:sequence>
-		<xsd:attribute name="id" type="xsd:nonNegativeInteger" use="required" />
 		<xsd:attribute name="categoria" type="Tcategoria" use="required" />
 	</xsd:complexType>
 	<xsd:simpleType name="Tcategoria">

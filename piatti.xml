@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <piatti xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="piatti.xsd">
-	<piatto id="1" categoria="primo">
+	<piatto categoria="primo">
 		<id>1</id>
 		<nomeITA>Gnocchi al ragù</nomeITA>
 		<nomeENG>Gnocchi with meat sauce</nomeENG>
@@ -25,7 +25,7 @@
 		</commenti>
 	</piatto>
 	
-	<piatto id="2" categoria="primo">
+	<piatto categoria="primo">
 		<id>2</id>
 		<nomeITA>Carbonara</nomeITA>
 		<nomeENG>Carbonara</nomeENG>
@@ -44,7 +44,7 @@
 		</commenti>
 	</piatto>
 
-	<piatto id="3" categoria="secondo">
+	<piatto categoria="secondo">
 		<id>3</id>
 		<nomeITA>Patate prezzemolate</nomeITA>
 		<nomeENG>Parsley potatoes</nomeENG>
@@ -63,7 +63,7 @@
 		</commenti>
 	</piatto>
 
-	<piatto id="4" categoria="secondo">
+	<piatto categoria="secondo">
 		<id>4</id>
 		<nomeITA>Pollo al limone</nomeITA>
 		<nomeENG>Lemon Chicken</nomeENG>
@@ -82,7 +82,7 @@
 		</commenti>
 	</piatto>
 
-	<piatto id="5" categoria="dessert">
+	<piatto categoria="dessert">
 		<id>5</id>
 		<nomeITA>Crepes</nomeITA>
 		<nomeENG>Crepes</nomeENG>
