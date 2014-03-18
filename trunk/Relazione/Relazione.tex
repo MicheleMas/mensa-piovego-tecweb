@@ -148,17 +148,21 @@ Dato che \'e un sito la cui maggior parte degli utilizzatori sono giovani, si \'
 
 \subsection{Layout}
 
-Il layout consiste quasi completamente in un layout a tre pannelli, in cui possiamo in ogni pagina i seguenti elementi:
+Il layout consiste quasi completamente in una classica disposizione a tre pannelli, in cui possiamo trovare in ogni pagina i seguenti elementi:
 \begin{itemize}
- \item \textbf{Header}: parte superiore che contiene il titolo della pagina e l'indicazione della lingua.... %TODO 
+ \item \textbf{Header}: parte superiore che contiene il titolo della pagina e l'indicazione della lingua.
+ \item \textbf{Path}: sezione immediatamente sottostante all'header in cui viene indicata la posizione attuale assoluta all'interno del sito.
+ \item \textbf{Navigation}: la parte sinistra di ogni pagina \'e occupata dal men\'u di navigazione, che contiene i link per le pagine principali.
+ \item \textbf{Section}: la parte a destra del men\'u contiene il vero contenuto della pagina, cio\'e la parte variabile che cambia per ogni pagina.
 \end{itemize}
+Per garantire una corretta visualizzazione tramite ogni dispositivo si \'e scelto di utilizzare un layout elastico, che permette il ridimensionamento negli schermi dei PC ma arriva ad un punto di rottura che cambia completamente la presentazione nel caso di display troppo piccolo. In questo modo si riesce a sfruttare al meglio le diverse dimensioni, permettendone l'utilizzo sia da PC che da dispositivi mobile.
+Per migliorare il supporto ai diversi sistemi operativi sono state definite pi\'u famiglie di font, in modo l'assenza di supporto non causi un fallback su un altro non adatto per il sito; in particolare, l'ordine di font family \'e Helvetica, Arial e sans-serif.
+
 
 \subsection{Struttura organizzativa}
 
 La struttura organizzativa utilizzata dal sito \'e gerarchica, ed \'e stata scelta per permettere all'utente di orientarsi facilmente. A tale scopo \'e stato mantenuta una profondit\'a media molto bassa, mantenendo anche una ridotta ampiezza utilizzando solo sei voci nel men\'u, in modo che l'utente possa facilmente creare una propria mappa mentale e possa evitare il disorientamento.
-Inolte si \'e cercato di mantenere sempre presenti alcune informazioni importanti, che permettano di rispondere alle principali informazioni %parlare dei 6 assi W
-
-
+Inolte si \'e cercato di mantenere sempre presenti alcune informazioni importanti, che permettano di rispondere alle principali informazioni di cui l'utente ha bisogno. Per farlo \'e stato controllato che le sei domande principali rappresentate dai sei assi W fossero risposte nell'home page, come ad esempio "Cosa offre il sito?", o "Come raggiungere le sezioni principali del sito?".
 
 
 \section{Analisi generale dell'accessibilit\'a}
