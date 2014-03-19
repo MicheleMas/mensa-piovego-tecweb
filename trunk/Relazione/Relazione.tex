@@ -182,29 +182,30 @@ In totale sono stati usati tre layout CSS differenti:
 \end{figure}
 
 Inoltre, all'interno di ogni foglio di stile le dimensioni di tutti gli elementi sono state definite tramite percentuali (nel caso di posizionamenti) o "em" (nel caso di grandezza del testo), in modo che la pagina si adatti ad ogni tipo di schermo.
-Per migliorare il supporto ai diversi sistemi operativi sono state definite più famiglie di font, in modo che l'assenza di supporto per uno specifico fonto non causi un fallback su un altro non adatto per il sito; in particolare, l'ordine di font family è \textit{Helvetica}, \textit{Arial} e \textit{sans-serif}.
+Per migliorare il supporto ai diversi sistemi operativi sono state definite più famiglie di font, in modo che l'assenza di supporto per uno specifico font non causi un fallback su un altro non adatto per il sito; in particolare, l'ordine di font family è \textit{Helvetica}, \textit{Arial} e \textit{sans-serif}.
 
 \subsection{Struttura organizzativa}
 
-La struttura organizzativa utilizzata dal sito è gerarchica, ed è stata scelta per permettere all'utente di orientarsi facilmente. A tale scopo è stato mantenuta una profondità media molto bassa, mantenendo anche una ridotta ampiezza utilizzando solo sei voci nel menù, in modo che l'utente possa facilmente creare una propria mappa mentale e evitare il disorientamento.
+La struttura organizzativa utilizzata dal sito è gerarchica, ed è stata scelta per permettere all'utente di orientarsi facilmente. A tale scopo è stata mantenuta una profondità media molto bassa, mantenendo anche una ridotta ampiezza utilizzando solo sei voci nel menù, in modo che l'utente possa facilmente creare una propria mappa mentale e evitare il disorientamento.
 Inolte si è cercato di mantenere sempre presenti alcune informazioni importanti, che permettano di rispondere alle principali informazioni di cui l'utente ha bisogno. Per farlo è stato controllato che le sei domande principali rappresentate dai sei assi W fossero risposte nell'home page, come ad esempio ``Di cosa parla il sito?'', ``Cosa offre il sito?'', o ``Come raggiungere le sezioni principali del sito?''.
 
 \section{Dati}
 
-I dati del sito sono salvati in un database XML, per cui \'e stato definito un XMLSchema che propone la struttura visibile nella Figura \ref{xml}. \'E stata usata la struttura ``tende alla veneziana'', in modo da garantire la possibilit\'a di riutilizzo dei tipi avendo solo un elemento globale. 
-\'E stato deciso di utilizzare un solo database per tutto il sito, utilizzando di volta in volta solo alcune informazioni durante la generazione delle pagine; questa scelta \'e stata dettata dal fatto che tutti i dati inseriti sono logicamente correlati tra loro, e soprattutto dato che l'elaborazione viene effettuata server side, non \'e presente il problema dello spreco di banda per l'invio della totalit\'a delle informazioni.
-La radice "piatti" rappresenta quale tipologia di dati vogliamo salvare, cio\'e le informazioni relative alle portate disponibili.
+I dati del sito sono salvati in un database XML, per cui è stato definito un XMLSchema che propone la struttura visibile nella Figura \ref{xml}. È stato usato il modello di progettazione ``tende alla veneziana'', in modo da garantire la possibilità di riutilizzo dei tipi avendo solo un elemento globale. 
+È stato deciso di utilizzare un solo database per tutto il sito, utilizzando di volta in volta solo alcune informazioni durante la generazione delle pagine; questa scelta è stata dettata dal fatto che tutti i dati inseriti sono logicamente correlati tra loro.
+Considerando che l'elaborazione viene effettuata server side, non è presente il problema dello spreco di banda per l'invio della totalità delle informazioni, poichè al client vengono inviate solo le informazioni effettivamente visualizzate.
+La radice ``piatti'' rappresenta quale tipologia di dati vogliamo salvare, cioè le informazioni relative alle portate disponibili.
 Gli altri elementi importanti sono:
 \begin{itemize}
- \item \textbf{Piatto}: rappresenta il singolo piatto, e contiene le informazioni principali, quali il nome, la descrizione e l'immagine (come path). Inoltre tutte le informazioni contenenti testo sono state aggiunte due volte con tag con un suffisso diverso, uno per la lingua italiana e uno per la lingua inglese.
- \item \textbf{Commento}: ogni piatto contiene un figlio ``\textit{commenti}'', che a sua volta pu\'o contenere molti figli ``\textit{commento}'', che possiedono tutte le informazioni relative ad un singolo commento, come la data, l'autore, il testo e la lingua utilizzata dall'utente durante la scrittura.
+ \item \textbf{Piatto}: rappresenta il singolo piatto, e contiene le informazioni principali, quali il nome, la descrizione e l'immagine (come path). Inoltre tutte le informazioni contenenti testo sono state aggiunte due volte utilizzando un suffisso diverso per il nome dell'elemento: uno per la lingua italiana e uno per la lingua inglese.
+ \item \textbf{Commento}: ogni piatto contiene un figlio ``\textit{commenti}'', che a sua volta può contenere molti figli ``\textit{commento}'', che possiedono tutte le informazioni relative ad un singolo commento, come la data, l'autore, il testo e la lingua utilizzata dall'utente durante la scrittura.
 \end{itemize}
-Come detto precedentemente, diverse pagine utilizzano diversi elementi del database, in particolare:
+Come detto precedentemente, pagine diverse utilizzano diversi elementi del database, in particolare:
 \begin{itemize}
- \item la pagina piatti.xsl utilizza gli elementi ``\textit{piatto}'' per costruire dinamicamente la lista delle portate;
- \item la pagina viewpiatto.xsl utilizza l'elemento ``\textit{piatto}'' e le sue informazioni per costruire un resoconto dettagliato di una singola portata, includendo anche la visualizzazione dei commenti.
+ \item il foglio di trasformazione piatti.xsl utilizza gli elementi ``\textit{piatto}'' per costruire dinamicamente la lista delle portate disponibili;
+ \item il foglio viewpiatto.xsl utilizza l'elemento ``\textit{piatto}'' e le sue informazioni per costruire un resoconto dettagliato di una singola portata, includendo anche la visualizzazione dei commenti.
 \end{itemize}
-L'utilizzo specifico verr\'a trattato successivamente all'interno della descrizione delle singole pagine.
+L'utilizzo specifico verrà trattato successivamente all'interno della descrizione delle singole pagine.
 
 \begin{figure}[h]
 \centering
