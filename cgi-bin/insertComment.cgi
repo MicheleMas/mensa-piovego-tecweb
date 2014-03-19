@@ -5,12 +5,14 @@ use CGI::Carp qw(fatalsToBrowser);
 use XML::LibXML;
 use DateTime;
 use Email::Valid;
+use Fcntl ':flock';
 
 #Read GET parameters
 my $oCGI = CGI->new();
 
 my $nome = $oCGI->param('nome');
 $nome =~ s/[<>&]//g;
+$nome = substr $nome, 0, 64;
 
 my $email = $oCGI->param('email');
 $email  =~ s/[<>&]//g;
@@ -20,6 +22,7 @@ my $id = $oCGI->param('element_id');
 
 my $comment = $oCGI->param('comment_text');
 $comment =~ s/[<>&]//g;
+$comment = substr $comment, 0, 2048;
 
 if ($lang eq 'ENG') {
 	$language = 'en';
@@ -30,6 +33,11 @@ if ($lang eq 'ENG') {
 if (!Email::Valid->address($email)) { die("Indirizzo email non valido!"); }
 if(length($nome)<2){ die("Nome troppo corto!"); }
 if(length($comment)<2){ die("Commento troppo corto!"); }
+
+#otteniamo il lock
+my $lockfile = "../data/lock";
+open(my $fh, '>>', $lockfile) || die "Impossibile aprire file di lock.";
+flock($fh, LOCK_EX) || die "Impossibile ottenere il lock!";
 
 my $now = DateTime->now->ymd;
 my $fileXML = "../public_html/piatti.xml";
@@ -62,6 +70,8 @@ if ($numero == 1) {
 } else {
 	die("Id piatto non valido");
 }
+
+close($fh) || die "Impossibile liberare il lock!";
 
 #Answer
 #print "Content-Type: text/html\n\n";
