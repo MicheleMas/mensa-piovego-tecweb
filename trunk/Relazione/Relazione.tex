@@ -140,41 +140,58 @@ Si tratta di un sito che permette di ottenere informazioni utili per tutti gli u
 \clearpage
 
 \section{Analisi dei requisiti}
-Il sito \'e stato progettato per avere come target gli studenti universitari, che rappresentano la maggior parte degli utilizzatori del servizio di ristorazione della mensa Piovego. Inoltre si \'e cercato di capire quali informazioni siano di maggior interesse, in modo da renderle semplici e veloci da reperire.
-Dato che nel nostro bacino potenziali di utenti sono presenti anche molti studenti provenienti da altre nazioni, abbiamo pensato di inserire anche la lingua inglese in modo da renderlo comprensibile anche per loro. \\
-Dato che \'e un sito la cui maggior parte degli utilizzatori sono giovani, si \'e cercato di utilizzare una grafica semplice e colorata. Il colore principale (giallo) \'e stato scelto per richiamare gli elementi cromatici presenti nella sede fisica, in modo da rendere coerente il sito con ci\'o che rappresenta.
+Il sito è stato progettato per avere come target gli studenti universitari, che rappresentano la maggior parte degli utilizzatori del servizio di ristorazione della mensa Piovego. Inoltre si è cercato di capire quali informazioni siano di maggior interesse, in modo da renderle semplici e veloci da reperire.
+Dato che nel nostro bacino di potenziali utenti sono presenti anche molti studenti provenienti da altre nazioni, e quindi con difficoltà nel comprendere l'italiano, abbiamo pensato di tradurre ogni pagina del sito anche in lingua inglese in modo da rendere possibile la fruizione dei contenuti anche per loro. \\
+Dato che è un sito in cui la maggior parte degli utilizzatori è in età giovanile, si è cercato di utilizzare una grafica semplice e colorata. Il colore principale (giallo) è stato scelto per richiamare gli elementi cromatici presenti nella sede fisica della mensa, in modo da rendere coerente il sito con ciò che rappresenta.
 
 \section{Design}
 
 \subsection{Layout}
 
 Il layout consiste quasi completamente in una classica disposizione a tre pannelli, in cui possiamo trovare in ogni pagina i seguenti elementi:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.25]{layout}
+\caption{Layout utilizzato dal sito}
+\label{layoutPic}
+\end{figure}
+
 \begin{itemize}
  \item \textbf{Header}: parte superiore che contiene il titolo della pagina e l'indicazione della lingua.
  \item \textbf{Path}: sezione immediatamente sottostante all'header in cui viene indicata la posizione attuale assoluta all'interno del sito.
- \item \textbf{Navigation}: la parte sinistra di ogni pagina \'e occupata dal men\'u di navigazione, che contiene i link per le pagine principali.
- \item \textbf{Section}: la parte a destra del men\'u contiene il vero contenuto della pagina, cio\'e la parte variabile che cambia per ogni pagina.
- \item \textbf{Footer}: la parte inferiore del sito contiene le informazioni accessorie, dato che \'e quella meno visibile per l'utente; in questo caso contiene i link ai social network, il nome team che ha realizzato il sito e le certificazioni W3C.
+ \item \textbf{Navigation}: la parte sinistra di ogni pagina è occupata dal menù di navigazione, che contiene i link per le pagine principali.
+ \item \textbf{Section}: la parte a destra del menù contiene il vero contenuto, ovvero la parte variabile che cambia per ogni pagina.
+ \item \textbf{Footer}: la parte inferiore del sito contiene le informazioni accessorie, dato che è quella meno visibile per l'utente; in questo caso contiene i link ai social network, il nome team che ha realizzato il sito e le certificazioni W3C.
 \end{itemize}
-Per garantire una corretta visualizzazione tramite ogni dispositivo si \'e scelto di utilizzare un layout elastico, che permette il ridimensionamento negli schermi dei PC ma arriva ad un punto di rottura che cambia completamente la presentazione nel caso di display troppo piccolo. In questo modo si riesce a sfruttare al meglio le diverse dimensioni, permettendone l'utilizzo sia da PC che da dispositivi mobile.
-La completa divisione tra contenuto e presentazione ha reso pi\'u facile questa operazione, dato che in questo modo non \'e stato necessario mobificare il contenuto HTML delle pagine, ma solo il CSS.
-In totale sono stati usati tre layout:
+
+Per garantire una corretta visualizzazione tramite ogni dispositivo si è scelto di utilizzare un layout elastico, che permette il ridimensionamento negli schermi dei PC ma arriva ad un punto di rottura che cambia completamente la presentazione nel caso di larghezza del display troppo piccolo. In questo modo si riesce a sfruttare al meglio le diverse dimensioni, permettendone l'utilizzo sia da PC che da dispositivi mobile.
+La completa divisione tra contenuto e presentazione ha reso più facile questa operazione, dato che in questo modo non è stato necessario mobificare il contenuto HTML delle pagine, ma solo il CSS.
+In totale sono stati usati tre layout CSS differenti:
 \begin{itemize}
  \item il principale (\textit{style.css}) contiene la presentazione per schermi medio grandi, contenente la disposizione vista precedentemente;
- \item la versione mobile per schermi piccoli (\textit{small.css}), in cui la disposizione \'e stata studiata per permetterne l'utilizzo tramite touchscreen, e quindi contiene bottoni pi\'u grandi ed uno stile pi\'u verticale "scroll-friendly";
- \item l'ultimo \'e il layout per la stampa (\textit{print.css}), che rimuove gli elementi che non necessitano di essere stampati (come il men\'u) ed utilizza un font pi\'u consono per la carta stampata (Times New Roman).
+ \item la versione mobile per schermi piccoli (\textit{small.css}), in cui la disposizione è stata studiata per permetterne l'utilizzo tramite touchscreen, e quindi contiene bottoni più grandi ed uno stile più verticale "scroll-friendly";
+ \item l'ultimo è il layout per la stampa (\textit{print.css}), che rimuove gli elementi che non necessitano di essere stampati (come il menù) ed utilizza un font più consono per la carta stampata (\textit{Times New Roman}).
 \end{itemize}
-Inoltre, all'interno di ogni foglio di stile tutti gli elementi sono stati definiti tramite percentuali (nel caso di posizionamenti) o "em" (nel caso di testo), in modo che la pagina si adatti ad ogni tipo di schermo.
-Per migliorare il supporto ai diversi sistemi operativi sono state definite pi\'u famiglie di font, in modo l'assenza di supporto non causi un fallback su un altro non adatto per il sito; in particolare, l'ordine di font family \'e Helvetica, Arial e sans-serif.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.20]{trasformazione}
+\caption{Layout normale e mobile}
+\label{trasformazioneMobile}
+\end{figure}
+
+Inoltre, all'interno di ogni foglio di stile le dimensioni di tutti gli elementi sono state definite tramite percentuali (nel caso di posizionamenti) o "em" (nel caso di grandezza del testo), in modo che la pagina si adatti ad ogni tipo di schermo.
+Per migliorare il supporto ai diversi sistemi operativi sono state definite più famiglie di font, in modo che l'assenza di supporto per uno specifico fonto non causi un fallback su un altro non adatto per il sito; in particolare, l'ordine di font family è \textit{Helvetica}, \textit{Arial} e \textit{sans-serif}.
 
 \subsection{Struttura organizzativa}
 
-La struttura organizzativa utilizzata dal sito \'e gerarchica, ed \'e stata scelta per permettere all'utente di orientarsi facilmente. A tale scopo \'e stato mantenuta una profondit\'a media molto bassa, mantenendo anche una ridotta ampiezza utilizzando solo sei voci nel men\'u, in modo che l'utente possa facilmente creare una propria mappa mentale e possa evitare il disorientamento.
-Inolte si \'e cercato di mantenere sempre presenti alcune informazioni importanti, che permettano di rispondere alle principali informazioni di cui l'utente ha bisogno. Per farlo \'e stato controllato che le sei domande principali rappresentate dai sei assi W fossero risposte nell'home page, come ad esempio ``Di cosa parla il sito?'', ``Cosa offre il sito?'', o ``Come raggiungere le sezioni principali del sito?''.
+La struttura organizzativa utilizzata dal sito è gerarchica, ed è stata scelta per permettere all'utente di orientarsi facilmente. A tale scopo è stato mantenuta una profondità media molto bassa, mantenendo anche una ridotta ampiezza utilizzando solo sei voci nel menù, in modo che l'utente possa facilmente creare una propria mappa mentale e evitare il disorientamento.
+Inolte si è cercato di mantenere sempre presenti alcune informazioni importanti, che permettano di rispondere alle principali informazioni di cui l'utente ha bisogno. Per farlo è stato controllato che le sei domande principali rappresentate dai sei assi W fossero risposte nell'home page, come ad esempio ``Di cosa parla il sito?'', ``Cosa offre il sito?'', o ``Come raggiungere le sezioni principali del sito?''.
 
 \section{Dati}
 
-I dati del sito sono salvati in un database XML, per cui \'e stato definito un XMLSchema che propone la struttura visibile nella Figura \ref{xml}. \'E stata usata la struttura "tende alla veneziana", in modo da garantire la possibilit\'a di riutilizzo dei tipi avendo solo un elemento globale. 
+I dati del sito sono salvati in un database XML, per cui \'e stato definito un XMLSchema che propone la struttura visibile nella Figura \ref{xml}. \'E stata usata la struttura ``tende alla veneziana'', in modo da garantire la possibilit\'a di riutilizzo dei tipi avendo solo un elemento globale. 
 \'E stato deciso di utilizzare un solo database per tutto il sito, utilizzando di volta in volta solo alcune informazioni durante la generazione delle pagine; questa scelta \'e stata dettata dal fatto che tutti i dati inseriti sono logicamente correlati tra loro, e soprattutto dato che l'elaborazione viene effettuata server side, non \'e presente il problema dello spreco di banda per l'invio della totalit\'a delle informazioni.
 La radice "piatti" rappresenta quale tipologia di dati vogliamo salvare, cio\'e le informazioni relative alle portate disponibili.
 Gli altri elementi importanti sono:
@@ -196,14 +213,14 @@ L'utilizzo specifico verr\'a trattato successivamente all'interno della descrizi
 \label{xml}
 \end{figure}
 
-\section{Analisi generale dell'accessibilit\'a}
+\section{Analisi generale dell'accessibilità}
 
-Riguardo l'accessibilit\'a si \'e scelto di rispettare le direttive WCAG 2 AAA, e alcune delle scelte pi\'u importanti verranno descritte di seguito.
+Riguardo l'accessibilità si è scelto di rispettare le direttive WCAG 2 AAA, e alcune delle scelte più importanti verranno descritte di seguito.
 
 \subsubsection{Colori}
 
-Come anticipato precedentemente, la scelta cromatica \'e stata scelta in base ai colori che rappresentano al meglio la mensa Piovego. Prima di applicare i vari colori al sito, \'e stato controllato che mantenessero sempre un contrasto molto alto, in modo da non creare alcun problema di accessibilit\'a. Inoltre in tutto il sito non sono mai state veicolate informazioni tramite colori, per evitare che gli utenti ipovedenti, o con problemi di daltonismo, non riescano ad accedervi. Un esempio \'e la barra nera presente a fianco dell'elemento del men\'u selezionato, in modo che l'informazione sulla pagina corrente sia pi\'u evidente. \\
-Per l'analisi in caso di daltonismo ci siamo affidati al sito http://vischeck.com/, e i risultati sono evidenti dalla Figura \ref{colors}. Si pu\'o notare che i contenuti sono comprensibili anche nel caso pi\'u raro di tritanopia. \\
+Come anticipato precedentemente, la scelta cromatica è stata fatta in base ai colori che rappresentano al meglio la mensa Piovego. Prima di applicare i vari colori al sito, è stato controllato che mantenessero sempre un contrasto molto alto, in modo da non creare alcun problema di accessibilità a persone con disturbi visivi. Inoltre in tutto il sito non sono mai state veicolate informazioni tramite colori, per evitare che gli utenti ipovedenti, o con problemi di daltonismo, non riescano ad accedervi. Un esempio è la barra nera presente a fianco dell'elemento del menù selezionato, in modo che l'informazione sulla pagina corrente sia più evidente. \\
+Per l'analisi in caso di daltonismo ci siamo affidati al sito \textit{http://vischeck.com/}, e i risultati sono evidenti dalla Figura \ref{colors}. Si puà notare che i contenuti sono comprensibili anche nel caso più raro di tritanopia. \\
 
 \begin{figure}[h]
 \centering
