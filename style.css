@@ -400,6 +400,7 @@ table caption{
 	border-left: #555555 1px solid;
 	border-right: #555555 1px solid;
 	padding:1em;
+	word-wrap: break-word;
 }
 
 #menu_section dd img {

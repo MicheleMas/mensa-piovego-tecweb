@@ -79,18 +79,30 @@ function checkComment(lang) {
 		}
 		return false;
 	} else {
-		errorMessage.innerHTML = "";
-		return true;
+		if (string.length > 2048) {
+			if (lang=="ita") {
+			errorMessage.innerHTML = "Il commento ha troppi caratteri";
+			} else {
+			errorMessage.innerHTML = "The comment is too long";
+			}
+			return false;
+		} else {
+			errorMessage.innerHTML = "";
+			return true;
+		}
 	};
 }
 
 function completeCheck(lang) {
+	var button = document.getElementById("submit_button");
+	button.disabled = true;
 	var check1 = checkName(lang);
 	var check2 = checkEmail(lang);
 	var check3 = checkComment(lang);
 	if (check1 && check2 && check3) {
 		return true;
 	} else {
+		button.disabled = false;
 		return false;
 	}
 }
