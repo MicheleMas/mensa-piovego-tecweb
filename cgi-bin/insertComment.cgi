@@ -11,7 +11,7 @@ use Fcntl ':flock';
 my $oCGI = CGI->new();
 
 my $nome = $oCGI->param('nome');
-$nome =~ s/[<>&]//g;
+$nome =~ s/[<>&]/*/g;
 $nome = substr $nome, 0, 64;
 
 my $email = $oCGI->param('email');
@@ -21,7 +21,7 @@ my $lang = $oCGI->param('comment_lang');
 my $id = $oCGI->param('element_id');
 
 my $comment = $oCGI->param('comment_text');
-$comment =~ s/[<>&]//g;
+$comment =~ s/[<>&]/*/g;
 $comment = substr $comment, 0, 2048;
 
 if ($lang eq 'ENG') {
