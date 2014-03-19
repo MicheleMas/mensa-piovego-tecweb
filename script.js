@@ -63,8 +63,17 @@ function checkName(lang) {
 		}
 		return false;
 	} else {
-		errorMessage.innerHTML = "";
-		return true;
+		if (string.length > 64) {
+			if (lang=="ita") {
+			errorMessage.innerHTML = "Il nome e' troppo lungo";
+			} else {
+			errorMessage.innerHTML = "The name is too long";
+			}
+			return false;
+		} else {
+			errorMessage.innerHTML = "";
+			return true;
+		}
 	};
 }
 
