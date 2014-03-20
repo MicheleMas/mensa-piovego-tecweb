@@ -258,7 +258,7 @@ In entrambi i casi, si é scelto di indicare i link visitati con un colore diver
 
 Il problema principale affrontato nella progettazione del sito in ambito di screen reader è stata la commutazione tra lingua italiana e inglese: le pagine in lingua inglese contengono alcune parole italiane e le pagine in lingua italiana contengono alcune parole inglesi, quindi è stato necessario aggiungere l’attributo xml:lang=``it'' (xml:lang=``en'') per permettere allo screen reader di pronunciare la parola nella lingua corretta.
 Un altro accorgimento è stato introdotto nell'inserimento delle immagini: ogni immagine inserita contiene l'attributo alt, che permette allo screen reader di leggere la descrizione dell'immagine che non può essere visualizzata.
-Nella home è presente una tabella che indica il menù della settimana; al fine di permettere allo screen reader di leggere la tabella e far comprenderne meglio il contenuto all'utente, è stato inserito l'elemento ``summary'' che descrive il contenuto e la struttura della tabella e l'elemento ``scope'' che, in fase di lettura, indica le intestazioni relative all'elemento che sta leggendo in quel momento.
+Nella home è presente una tabella che indica il menù della settimana; al fine di permettere allo screen reader di leggere la tabella e far comprenderne meglio il contenuto all'utente, è stato inserito l'attributo ``summary'' che descrive il contenuto e la struttura della tabella e l'elemento ``scope'' che, in fase di lettura, indica le intestazioni relative all'elemento che sta leggendo in quel momento.
 
 \subsubsection{Tabindex}
 
@@ -277,7 +277,7 @@ Verranno ora descritte le tecniche scelte ed utilizzate nella costruzione delle 
 
 \subsection{Index}
 
-La pagina principale si propone di fornire all'utente appena arrivato le informazioni necessarie per avere una preview generale e contemporaneamente visualizzare i vari assi lungo la quale può continuare la sua navigazione interna. In particolare, per questi scopi, nella pagina principale si possono notare:
+La pagina principale si propone di fornire all'utente appena arrivato le informazioni necessarie per avere una preview generale e contemporaneamente visualizzare i vari assi lungo i quali può continuare la sua navigazione interna. In particolare, per questi scopi, nella pagina principale si possono notare:
 \begin{itemize}
  \item il menù a sinistra: presente in tutte le pagine, guida l'utente attraverso le sezioni del sito ovvero ``News'', ``Dove siamo'', ``Piatti'', ``Prezzi'' ed ``Info e contatti'';
  \item la sezione ``Ultime News'': fornisce all'utente le informazioni più recenti inerenti la mensa. Nella pagina principale vengono fornite solo delle anteprime brevi degli articoli o notizie, le quali possono essere lette interamente cliccando sul titolo, accedendo direttamente alla pagina delle news;
