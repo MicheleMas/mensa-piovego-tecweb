@@ -23,7 +23,7 @@
 		<div id="header">
 			<a tabindex="1" href="#contenuto" class="hidden">Skip to content</a>
 			<span id="lang">
-				<a href="viewpiatto.cgi?id={id}&amp;lang=it" id="lang_switch">ITA</a>
+				<a href="viewpiatto.cgi?id={p:id}&amp;lang=it" id="lang_switch">ITA</a>
 				<span id="lang_switch_selected">ENG</span> 
 			</span>
 			<h1 xml:lang="it">RistorESU Nord Piovego</h1>
@@ -100,7 +100,7 @@
 						<input type="text" name="email" id="email" tabindex="9" onblur="checkEmail('eng');" /><span id="emailErrors"></span>
 
 						<input type="hidden" name="comment_lang" readonly="readonly" id="comment_lang" value="ENG"  />
-						<input type="hidden" name="element_id" readonly="readonly" id="element_id" value="{id}" />
+						<input type="hidden" name="element_id" readonly="readonly" id="element_id" value="{p:id}" />
 					</fieldset>
 					<fieldset class="form_field">
 						<legend>
