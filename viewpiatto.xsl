@@ -24,7 +24,7 @@
 			<a tabindex="1" href="#contenuto" class="hidden">Vai al contenuto</a>
 			<span id="lang">
 				<span id="lang_switch_selected">ITA</span> 
-				<a href="viewpiatto.cgi?id={id}&amp;lang=en" id="lang_switch">ENG</a>
+				<a href="viewpiatto.cgi?id={p:id}&amp;lang=en" id="lang_switch">ENG</a>
 			</span>
 			<h1>RistorESU Nord Piovego</h1>
 		</div>
