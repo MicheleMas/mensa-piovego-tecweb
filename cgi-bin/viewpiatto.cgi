@@ -35,7 +35,9 @@ my $xslRules = $xslt->parse_stylesheet($xslParsed) || die("Operazione di parsifi
 
 #Select the correct node
 my $radice= $data->getDocumentElement || die("Non accedo alla radice");
-my @target = $radice->findnodes("//piatto[id='".$id."']");
+my $nsURI = $radice->namespaceURI();
+$radice->setNamespace($nsURI, 'p');
+my @target = $radice->findnodes("//p:piatto[p:id='".$id."']");
 my $size = @target;
 print "Content-Type: text/html\n\n";
 if ($size > 0) {

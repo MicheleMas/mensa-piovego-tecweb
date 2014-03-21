@@ -45,12 +45,14 @@ my $parser = XML::LibXML->new();
 my $data = $parser->parse_file($fileXML);
 
 my $root = $data->getDocumentElement || die("Non accedo alla radice");
-my @piatti = $root->findnodes("//piatto[id='$id']");
+my $nsURI = $root->namespaceURI();
+$root->setNamespace($nsURI, 'p');
+my @piatti = $root->findnodes("//p:piatto[p:id='$id']");
 
 $numero = @piatti;
 if ($numero == 1) {
 	$piatto = @piatti[0];
-	$commentNode = $piatto->findnodes("commenti")->get_node(0);
+	$commentNode = $piatto->findnodes("p:commenti")->get_node(0);
 	$newNode = "\n<commento lingua=\"$lang\">
 	<autore>$nome</autore>
 	<testo>$comment</testo>

@@ -100,7 +100,7 @@
 						<input type="text" name="email" id="email" tabindex="9" onblur="checkEmail('ita');" /><span id="emailErrors"></span>
 
 						<input type="hidden" name="comment_lang" readonly="readonly" id="comment_lang" value="ITA" />
-						<input type="hidden" name="element_id" readonly="readonly" id="element_id" value="{id}" />
+						<input type="hidden" name="element_id" readonly="readonly" id="element_id" value="{p:id}" />
 					</fieldset>
 					<fieldset class="form_field">
 						<legend>
