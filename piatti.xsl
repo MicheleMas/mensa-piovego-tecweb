@@ -66,7 +66,7 @@
 							<xsl:value-of select="p:nomeITA" />
 						</dt>
 						<dd>
-							<a href="viewpiatto.cgi?id={p:id}"><img src="../images/{img}" alt="{p:altITA}" /></a>
+							<a href="viewpiatto.cgi?id={p:id}"><img src="../images/{p:img}" alt="{p:altITA}" /></a>
 							<p><xsl:value-of select="p:descrizioneITA" /></p>
 							<a class="stampano" href="viewpiatto.cgi?id={p:id}">[continua e commenta il piatto <xsl:value-of select="p:nomeITA" />]</a>
 						</dd>
@@ -80,7 +80,7 @@
 							<xsl:value-of select="p:nomeITA" />
 						</dt>
 						<dd>
-							<a href="viewpiatto.cgi?id={p:id}"><img src="../images/{img}" alt="{p:altITA}" /></a>
+							<a href="viewpiatto.cgi?id={p:id}"><img src="../images/{p:img}" alt="{p:altITA}" /></a>
 							<p><xsl:value-of select="p:descrizioneITA" /></p>
 							<a class="stampano" href="viewpiatto.cgi?id={p:id}">[continua e commenta il piatto <xsl:value-of select="p:nomeITA" />]</a>
 						</dd>
@@ -94,7 +94,7 @@
 							<xsl:value-of select="p:nomeITA" />
 						</dt>
 						<dd>
-							<a href="viewpiatto.cgi?id={p:id}"><img src="../images/{img}" alt="{p:altITA}" /></a>
+							<a href="viewpiatto.cgi?id={p:id}"><img src="../images/{p:img}" alt="{p:altITA}" /></a>
 							<p><xsl:value-of select="p:descrizioneITA" /></p>
 							<a class="stampano" href="viewpiatto.cgi?id={p:id}">[continua e commenta il piatto <xsl:value-of select="p:nomeITA" />]</a>
 						</dd>
