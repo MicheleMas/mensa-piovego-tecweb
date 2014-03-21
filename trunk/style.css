@@ -540,6 +540,7 @@ table caption{
 	margin: 1em;
 	border-radius: 5px;
 	width: 80%;
+	border: #000000 1px solid;
 }
 
 .form_field textarea:focus {
