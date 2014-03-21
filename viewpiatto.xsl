@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:p="http://www.mensapiovego.it" exclude-result-prefixes="p">
 <xsl:output method="html" version="1.0" encoding="UTF-8" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" indent="no" /> 
-<xsl:template match="piatto">
+<xsl:template match="p:piatto">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="../print.css" media="print" />
 		<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
 		<script type="text/javascript" src="../script.js"></script>
-		<title><xsl:value-of select="nomeITA" /> - RistorESU Nord Piovego</title>
+		<title><xsl:value-of select="p:nomeITA" /> - RistorESU Nord Piovego</title>
 	</head>
 	<body onload="openTab()">
 		<div id="header">
@@ -29,7 +29,7 @@
 			<h1>RistorESU Nord Piovego</h1>
 		</div>
 		<div id="path">
-			Ti trovi in: <a href="../index.html"><span xml:lang="eng">Home</span></a> &gt; <a href="piatti.cgi">Piatti</a> &gt; <span id="clb"><xsl:value-of select="nomeITA" /></span>
+			Ti trovi in: <a href="../index.html"><span xml:lang="eng">Home</span></a> &gt; <a href="piatti.cgi">Piatti</a> &gt; <span id="clb"><xsl:value-of select="p:nomeITA" /></span>
 		</div>
 		<div id="nav">
 			<h1><a name="menu">Menù</a></h1>
@@ -55,31 +55,31 @@
 			</ul>
 		</div>
 		<div id="section">
-			<h1 id="meal_name"><a name="contenuto"><xsl:value-of select="nomeITA" /></a></h1>
+			<h1 id="meal_name"><a name="contenuto"><xsl:value-of select="p:nomeITA" /></a></h1>
 			<div id="description">
-				<img id="descr_image" src="../images/{img}" alt="{altITA}" />
-				<p><xsl:value-of select="descrizioneITA" /></p>
+				<img id="descr_image" src="../images/{p:img}" alt="{p:altITA}" />
+				<p><xsl:value-of select="p:descrizioneITA" /></p>
 			</div>
 			<div id="menu_section" >
 				<h2>Commenti:</h2>
 				<dl>
-					<xsl:for-each select="commenti/commento">
-						<xsl:sort select="data" />
+					<xsl:for-each select="p:commenti/p:commento">
+						<xsl:sort select="p:data" />
 						<xsl:choose>
 							<xsl:when test="@lingua='ENG'">
 								<dt xml:lang="en">
-									<xsl:value-of select="autore" /> - <xsl:value-of select="data" />
+									<xsl:value-of select="p:autore" /> - <xsl:value-of select="p:data" />
 								</dt>
 								<dd xml:lang="en">
-									<xsl:value-of select="testo" />
+									<xsl:value-of select="p:testo" />
 								</dd>
 							</xsl:when>
 							<xsl:otherwise>
 								<dt>
-									<xsl:value-of select="autore" /> - <xsl:value-of select="data" />
+									<xsl:value-of select="p:autore" /> - <xsl:value-of select="p:data" />
 								</dt>
 								<dd>
-									<xsl:value-of select="testo" />
+									<xsl:value-of select="p:testo" />
 								</dd>
 							</xsl:otherwise>
 						</xsl:choose>
