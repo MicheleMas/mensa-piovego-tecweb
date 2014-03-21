@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:p="http://www.mensapiovego.it" exclude-result-prefixes="p">
 <xsl:output method="html" version="1.0" encoding="UTF-8" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" indent="no" /> 
-<xsl:template match="piatti">
+<xsl:template match="/">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
@@ -59,43 +59,43 @@
 				<h1><a name="contenuto">List of Meals</a></h1>
 				<h2>First Courses</h2>
 				<dl>
-					<xsl:for-each select="piatto[@categoria='primo']">
-						<xsl:sort select="nomeENG" />
+					<xsl:for-each select="//p:piatto[@categoria='primo']">
+						<xsl:sort select="p:nomeENG" />
 						<dt>
-							<xsl:value-of select="nomeENG" />
+							<xsl:value-of select="p:nomeENG" />
 						</dt>
 						<dd>
-							<a href="viewpiatto.cgi?id={id}&amp;lang=en"><img src="../images/{img}" alt="{altENG}" /></a>
-							<p><xsl:value-of select="descrizioneENG" /></p>
-							<a class="stampano" href="viewpiatto.cgi?id={id}&amp;lang=en">[continue and comment <xsl:value-of select="nomeENG" />]</a>
+							<a href="viewpiatto.cgi?id={p:id}&amp;lang=en"><img src="../images/{p:img}" alt="{p:altENG}" /></a>
+							<p><xsl:value-of select="p:descrizioneENG" /></p>
+							<a class="stampano" href="viewpiatto.cgi?id={p:id}&amp;lang=en">[continue and comment <xsl:value-of select="p:nomeENG" />]</a>
 						</dd>
 					</xsl:for-each>
 				</dl>
 				<h2>Second Courses</h2>
 				<dl>
-					<xsl:for-each select="piatto[@categoria='secondo']">
-						<xsl:sort select="nomeENG" />
+					<xsl:for-each select="//p:piatto[@categoria='secondo']">
+						<xsl:sort select="p:nomeENG" />
 						<dt>
-							<xsl:value-of select="nomeENG" />
+							<xsl:value-of select="p:nomeENG" />
 						</dt>
 						<dd>
-							<a href="viewpiatto.cgi?id={id}&amp;lang=en"><img src="../images/{img}" alt="{altENG}" /></a>
-							<p><xsl:value-of select="descrizioneENG" /></p>
-							<a  class="stampano" href="viewpiatto.cgi?id={id}&amp;lang=en">[continue and comment <xsl:value-of select="nomeENG" />]</a>
+							<a href="viewpiatto.cgi?id={p:id}&amp;lang=en"><img src="../images/{p:img}" alt="{p:altENG}" /></a>
+							<p><xsl:value-of select="p:descrizioneENG" /></p>
+							<a  class="stampano" href="viewpiatto.cgi?id={p:id}&amp;lang=en">[continue and comment <xsl:value-of select="p:nomeENG" />]</a>
 						</dd>
 					</xsl:for-each>
 				</dl>
 				<h2>Desserts</h2>
 				<dl>
-					<xsl:for-each select="piatto[@categoria='dessert']">
-						<xsl:sort select="nomeENG" />
+					<xsl:for-each select="//p:piatto[@categoria='dessert']">
+						<xsl:sort select="p:nomeENG" />
 						<dt>
-							<xsl:value-of select="nomeENG" />
+							<xsl:value-of select="p:nomeENG" />
 						</dt>
 						<dd>
-							<a href="viewpiatto.cgi?id={id}&amp;lang=en"><img src="../images/{img}" alt="{altENG}" /></a>
-							<p><xsl:value-of select="descrizioneENG" /></p>
-							<a  class="stampano" href="viewpiatto.cgi?id={id}&amp;lang=en">[continue and comment <xsl:value-of select="nomeENG" />]</a>
+							<a href="viewpiatto.cgi?id={p:id}&amp;lang=en"><img src="../images/{p:img}" alt="{p:altENG}" /></a>
+							<p><xsl:value-of select="p:descrizioneENG" /></p>
+							<a  class="stampano" href="viewpiatto.cgi?id={p:id}&amp;lang=en">[continue and comment <xsl:value-of select="p:nomeENG" />]</a>
 						</dd>
 					</xsl:for-each>
 				</dl>
