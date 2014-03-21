@@ -7,6 +7,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="Tpiatto">
 		<xsd:sequence>
+			<xsd:element name="id" type="xsd:string" />
 			<xsd:element name="nomeITA" type="xsd:string" />
 			<xsd:element name="nomeENG" type="xsd:string" />
 			<xsd:element name="img" type="xsd:string" />

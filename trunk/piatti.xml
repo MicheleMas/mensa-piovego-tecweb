@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<piatti xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="piatti.xsd">
+<piatti xmlns="http://www.mensapiovego.it" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:schemaLocation="http://www.mensapiovego.it piatti.xsd">
 	<piatto categoria="primo">
 		<id>1</id>
 		<nomeITA>Gnocchi al ragù</nomeITA>
@@ -51,11 +51,11 @@
 		<img>prezzemolate.png</img>
 		<altITA>Patate prezzemolate con olio</altITA>
 		<altENG>Parsley potateos with some oil</altENG>
-		<descrizioneITA>Patate prezzemolate non so</descrizioneITA>
-		<descrizioneENG>Parsley potatoes are unknown</descrizioneENG>
+		<descrizioneITA>Le patate prezzemolate sono un piatto molto gustoso che unisce il gusto delle patate con la delicatezza del prezzemolo.</descrizioneITA>
+		<descrizioneENG>Prezzemolate potatoes are a very tasty dish that unites the taste of potatoes with the delicacy of parsley.</descrizioneENG>
 		<commenti>
 			<commento lingua="ITA">
-				<autore>cguarisc</autore>
+				<autore>dronzani</autore>
 				<testo>Ma cosa sono queste patate prezzemolate?</testo>
 				<data>2014-02-22</data>
 				<email>c@guarisc.it</email>
