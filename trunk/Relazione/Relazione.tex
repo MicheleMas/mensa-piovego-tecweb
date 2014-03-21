@@ -133,7 +133,7 @@ Michele Massaro
 \clearpage 
 
 \begin{abstract}
-Questo progetto consiste nella realizzazione di un sito per la mensa 'RistorESU Nord Piovego'.
+Questo progetto consiste nella realizzazione di un sito per la mensa ``RistorESU Nord Piovego''.
 Si tratta di un sito che permette di ottenere informazioni utili per tutti gli utilizzatori del servizio di ristorazione della mensa Piovego, come ad esempio la lista dei piatti serviti, le informazioni sulle tariffe o la posizione geografica.
 \end{abstract}
 
@@ -170,7 +170,7 @@ La completa divisione tra contenuto e presentazione ha reso più facile questa o
 In totale sono stati usati tre layout CSS differenti:
 \begin{itemize}
  \item il principale (\textit{style.css}) contiene la presentazione per schermi medio grandi, contenente la disposizione vista precedentemente;
- \item la versione mobile per schermi piccoli (\textit{small.css}), in cui la disposizione è stata studiata per permetterne l'utilizzo tramite touchscreen, e quindi contiene bottoni più grandi ed uno stile più verticale "scroll-friendly";
+ \item la versione mobile per schermi piccoli (\textit{small.css}), in cui la disposizione è stata studiata per permetterne l'utilizzo tramite touchscreen, e quindi contiene bottoni più grandi ed uno stile più verticale ``scroll-friendly'';
  \item l'ultimo è il layout per la stampa (\textit{print.css}), che rimuove gli elementi che non necessitano di essere stampati (come il menù) ed utilizza un font più consono per la carta stampata (\textit{Times New Roman}).
 \end{itemize}
 
@@ -181,7 +181,7 @@ In totale sono stati usati tre layout CSS differenti:
 \label{trasformazioneMobile}
 \end{figure}
 
-Inoltre, all'interno di ogni foglio di stile le dimensioni di tutti gli elementi sono state definite tramite percentuali (nel caso di posizionamenti) o "em" (nel caso di grandezza del testo), in modo che la pagina si adatti ad ogni tipo di schermo.
+Inoltre, all'interno di ogni foglio di stile le dimensioni di tutti gli elementi sono state definite tramite percentuali (nel caso di posizionamenti) o ``em'' (nel caso di grandezza del testo), in modo che la pagina si adatti ad ogni tipo di schermo.
 Per migliorare il supporto ai diversi sistemi operativi sono state definite più famiglie di font, in modo che l'assenza di supporto per uno specifico font non causi un fallback su un altro non adatto per il sito; in particolare, l'ordine di font family è \textit{Helvetica}, \textit{Arial} e \textit{sans-serif}.
 
 \subsection{Struttura organizzativa}
@@ -382,11 +382,51 @@ Prima di rilasciare il lock, viene letto lo stato attuale del database, aggiunti
 
 \section{Test}
 
-TODO parlare dei test effettuati, sui browser, screenreader, lynx, ... e delle validazioni.
+Sono stati provati i seguenti browser su sistemi operativi Windows e Linux, sia con aspect ratio 16:9 che 4:3:
+\begin{itemize}
+ \item Chrome 33
+ \item Firefox 23 e 28
+ \item Internet Explorer 11
+ \item Opera 12.16
+ \item Steam Browser
+ \item Konqueror 4.8.5
+\end{itemize}
+I test su dispositivi mobile sono stati effettuati tramite:
+\begin{itemize}
+ \item Tablet:
+ \begin{itemize}
+  \item Internet Explorer 11 (versione touch)
+  \item Safari su iPad (iOS 7)
+ \end{itemize}
+ \item Smartphone:
+ \begin{itemize}
+  \item Chrome 33, Xperia Browser, e Default Browser su Android
+  \item Safari su iPhone (iOS 7)
+ \end{itemize}
+\end{itemize}
+Su Mac sono stati provati:
+\begin{itemize}
+ \item Safari 7
+ \item Chrome 33
+ \item Firefox 
+\end{itemize}
+Su tali browser non è stata riscontrata nessuna problematica di sorta. \\
+I test con:
+\begin{itemize}
+ \item Internet Explorer 7 e 8
+ \item Kindle Touch
+\end{itemize}
+hanno evidenziato qualche problema nell’interpretare alcune istruzioni CSS3, come ad esempio il text-shadow per il titolo nell’header e il border-radius per alcuni elementi del layout.
+Questo ha danneggiato lievemente la leggibilità del titolo nell’header, ma considerando che si tratta di un elemento presentazionale e non di contenuto si è preferito non utilizzare tecniche di code-forking per utilizzare soluzioni alternative in caso di assenza di text-shadow.
+In generale il sito rimane utilizzabile e i contenuti restano fruibili.
+Inoltre da IE 8 in giù la mancanza del supporto a CSS3 non permette di differenziare il colore delle righe nella tabella nella home. Il risultato è leggermente meno leggibile (il diverso colore aiuta ad identificare le righe), ma non causa problemi di accessibilità.
+Sono stati testati i due browser testuali Lynx e Links, e neppure qui sono stati riscontrati problemi di accessibilità: i collegamenti sono tutti visibili e ogni immagine che non può essere visualizzata è stata sostituita con un testo descrittivo. Anche le pagine \textit{.cgi} funzionano correttamente, compreso il form per i commenti.
+L'ultimo test è stato effettuato su un simulatore di sceen reader: la struttura del sito e i link visibili solo da questi dispositivi hanno reso accessibile e facilmente fruibile i contenuti proposti.
 
 \section{Conclusioni}
 
-TODO boh, possiamo anche toglierle
+Lo scopo di questo progetto vuole essere il mostrare una “demo” di un sito, rispettando requisiti di accessibilità. Alcune funzionalità sarebbero necessarie nella versione “completa” del sito, ma non sono state effettivamente realizzate poichè non ritenute necessarie ai  fini del corso.
+Serve ad esempio una pagina di amministrazione, che consenta di moderare i commenti inseriti (dando la possibilità di rimuoverli), aggiungere/rimuovere/modificare nuovi piatti o aggiungere le news. Inoltre sarebbe necessario chiedere una conferma via mail prima della pubblicazione del commento, il che sarebbe stato possibile tramite Perl se non fosse che l’invio di messaggi e-mail dal server del corso è stato bloccato per ovvi motivi di sicurezza.
 
 \end{document}
 
