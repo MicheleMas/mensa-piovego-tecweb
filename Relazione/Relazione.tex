@@ -162,17 +162,17 @@ Il layout consiste quasi completamente in una classica disposizione a tre pannel
  \item \textbf{Header}: parte superiore che contiene il titolo della pagina e l'indicazione della lingua.
  \item \textbf{Path}: sezione immediatamente sottostante all'header in cui viene indicata la posizione attuale assoluta all'interno del sito.
  \item \textbf{Navigation}: la parte sinistra di ogni pagina è occupata dal menù di navigazione, che contiene i link per le pagine principali.
- \item \textbf{Section}: la parte a destra del menù contiene il vero contenuto, ovvero la parte variabile che cambia per ogni pagina.
+ \item \textbf{Section}: la parte a destra del menù rappresenta la parte principale, ovvero la parte variabile che cambia per ogni pagina.
  \item \textbf{Footer}: la parte inferiore del sito contiene le informazioni accessorie, dato che è quella meno visibile per l'utente; in questo caso contiene i link ai social network, il nome del team che ha realizzato il sito e le certificazioni W3C.
 \end{itemize}
 
-Per garantire una corretta visualizzazione tramite ogni dispositivo si è scelto di utilizzare un layout elastico, che permette il ridimensionamento negli schermi dei PC ma arriva ad un punto di rottura che cambia completamente la presentazione nel caso di display troppo piccolo. In questo modo si riesce a sfruttare al meglio le diverse dimensioni, permettendone l'utilizzo sia da PC che da dispositivi mobile.
+Per garantire una corretta visualizzazione tramite ogni dispositivo si è scelto di utilizzare un layout elastico, che permette il ridimensionamento negli schermi dei PC ma arriva ad un punto di rottura che cambia completamente la presentazione nel caso di display troppo piccolo. In questo modo si riescono a sfruttare al meglio le diverse dimensioni, permettendone l'utilizzo sia da PC che da dispositivi mobile.
 La completa divisione tra contenuto e presentazione ha reso più facile questa operazione, dato che in questo modo non è stato necessario modificare il contenuto HTML delle pagine, ma solo il CSS.
 In totale sono stati usati tre layout CSS differenti:
 \begin{itemize}
- \item il principale (\textit{style.css}) contiene la presentazione per schermi medio grandi, contenente la disposizione vista precedentemente;
- \item la versione mobile per schermi piccoli (\textit{small.css}), in cui la disposizione è stata studiata per permetterne l'utilizzo tramite touchscreen, e quindi contiene bottoni più grandi ed uno stile più verticale ``scroll-friendly'';
- \item l'ultimo è il layout per la stampa (\textit{print.css}), che rimuove gli elementi che non necessitano di essere stampati (come il menù) ed utilizza un font più consono per la carta stampata (\textit{Times New Roman}).
+ \item il principale (\textit{style.css}) definisce la presentazione per schermi medio grandi, e contiene la disposizione vista precedentemente;
+ \item la versione mobile per schermi piccoli (\textit{small.css}), in cui la disposizione è stata studiata per permetterne l'utilizzo tramite touchscreen, e quindi utilizza  bottoni più grandi ed uno stile più verticale ``scroll-friendly'';
+ \item l'ultimo è il layout per la stampa (\textit{print.css}), che rimuove gli elementi che non necessitano di essere stampati (come il menù) ed usa un font più consono per la carta stampata (\textit{Times New Roman}).
 \end{itemize}
 
 \begin{figure}[h]
@@ -188,7 +188,7 @@ Per migliorare il supporto ai diversi sistemi operativi sono state definite più
 \subsection{Struttura organizzativa}
 
 La struttura organizzativa utilizzata dal sito è gerarchica, ed è stata scelta per permettere all'utente di orientarsi facilmente. A tale scopo è stata mantenuta una profondità media molto bassa, definendo anche una ridotta ampiezza utilizzando solo sei voci nel menù, in modo che l'utente possa facilmente creare una propria mappa mentale ed evitare il disorientamento.
-Inolte si è cercato di mantenere sempre presenti alcune informazioni importanti, che permettano di rispondere alle principali informazioni di cui l'utente ha bisogno. Per farlo è stato controllato che le sei domande principali rappresentate dai sei assi W fossero risposte nell'home page, come ad esempio ``Di cosa parla il sito?'', ``Cosa offre il sito?'', o ``Come raggiungere le sezioni principali del sito?''.
+Inolte si è cercato di mantenere sempre presenti alcune informazioni importanti, che permettano di rispondere alle principali informazioni di cui l'utente ha bisogno. Per farlo è stato controllato che le sei domande principali rappresentate dai sei assi W trovassero risposta nell'home page, come ad esempio ``Di cosa parla il sito?'', ``Cosa offre il sito?'', o ``Come raggiungere le sezioni principali del sito?''.
 
 \section{Dati}
 
@@ -299,7 +299,7 @@ Ovviamente, i contenuti dei metatag con contenuto in italiano, sono stati tradot
 
 Nell'affrontare la creazione delle varie sezioni della pagina Index.html, in particolare per quanto riguarda la sezione news, si é notato che la visualizzazione finale non era indipendente dall'ordine con il quale venivano inseriti i contenuti all'interno del \textit{div} contenitore. 
 Infatti, particolari ordinamenti di questi \textit{div} portavano a problemi di allineamento degli stessi, con risultati molto diversi da quanto desiderato. Nonostante questo potesse sembrare una violazione dell'indipendenza tra contenuto e presentazione, si é fatto riferimento a siti simili (come ad esempio il sito del corso di informatica dell'Universita di Padova), per trovare il giusto ordine di \textit{div} contenitori che non creasse problemi di presentazione.
-Come accennato in precedenza, i link alle notizie portano alla pagina news direttamente alla notizia che si stava leggendo, tramite un'ancora passata in querystring.
+Come accennato in precedenza, i link alle notizie portano alla pagina news, direttamente alla notizia che si stava leggendo, tramite un'ancora passata in querystring.
 
 \subsubsection{Javascript}
 
@@ -321,7 +321,7 @@ La pagina ``Dove Siamo'' contiene le informazioni che permettono all’utente di
 
 Per permettere di aumentare il grado di interazione del sito è stato deciso di aggiungere anche un iframe collegato alla mappa di google, in modo che sia possibile non solo sapere la posizione, ma anche calcolare il percorso per raggiungerla.
 Il principale problema di questa funzione è dato dal fatto che l’introduzione di un iframe comporta possibili problemi di accessibilità e la pagina risulta non valida secondo gli standard del W3C.
-Per risolvere questo problema è stato necessario considerare le varie situazioni di utilizzo ed adattare la visualizzazione tramite CSS e JavaScript.
+Per risolverlo è stato necessario considerare le varie situazioni di utilizzo ed adattare la visualizzazione tramite CSS e JavaScript.
 Nella struttura della pagina è solo presente un’immagine statica, che viene cambiata con un’altra con zoom maggiore in caso di layout mobile (tramite CSS). Questa versione basilare è valida secondo gli standard W3C. Successivamente al caricamento, uno script JavaScript aggiunge l’iframe contenente la mappa interattiva e nasconde l’immagine. In questo modo tutti i browser che supportano JavaScript potranno godere del contenuto migliorato, mentre gli altri non noteranno alcuna differenza (degrado aggraziato). Nel caso di stampa, il CSS si occupa di nascondere l’iframe e mostrare l’immagine in modo che possa essere stampata.
 Nel caso in cui la pagina venga letta da uno screen reader non sono presenti problemi, dato che verrà letto l’attributo ``alt'' dell’immagine, rispettando i requisiti di accessibilità. Purtroppo non è possibile migliorare l’esperienza d’uso in questo caso, dato che la mappa interattiva è inaccessibile per definizione per utenti con problemi di vista, ma con questa soluzione evita di creare problemi.
 
