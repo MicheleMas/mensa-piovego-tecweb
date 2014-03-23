@@ -143,7 +143,7 @@ Il sito dovrà rispettare gli standard W3C e le linee guida WCAG 2 AAA.
 \section{Analisi dei requisiti}
 Il sito è stato progettato per avere come target gli studenti universitari, che rappresentano la maggior parte degli utilizzatori del servizio di ristorazione della mensa Piovego. Inoltre si è cercato di capire quali informazioni siano di maggior interesse, in modo da renderle semplici e veloci da reperire.
 Dato che nel nostro bacino di potenziali utenti sono presenti anche molti studenti provenienti da altre nazioni, e quindi con difficoltà nel comprendere l'italiano, abbiamo pensato di tradurre ogni pagina del sito anche in lingua inglese in modo da rendere possibile la fruizione dei contenuti anche per loro. \\
-Dato che è un sito in cui la maggior parte degli utilizzatori è in età giovanile, si è cercato di utilizzare una grafica semplice e colorata. Il colore principale (giallo) è stato scelto per richiamare gli elementi cromatici presenti nella sede fisica della mensa, in modo da rendere coerente il sito con ciò che rappresenta.
+Considerando che la maggior parte dei potenziali utilizzatori del sito è in età giovanile, si è cercato di utilizzare una grafica semplice e colorata. Il colore principale (giallo) è stato scelto per richiamare gli elementi cromatici presenti nella sede fisica della mensa, in modo da rendere coerente il sito con ciò che rappresenta.
 
 \section{Design}
 
@@ -172,7 +172,7 @@ In totale sono stati usati tre layout CSS differenti:
 \begin{itemize}
  \item il principale (\textit{style.css}) definisce la presentazione per schermi medio grandi, e contiene la disposizione vista precedentemente;
  \item la versione mobile per schermi piccoli (\textit{small.css}), in cui la disposizione è stata studiata per permetterne l'utilizzo tramite touchscreen, e quindi utilizza  bottoni più grandi ed uno stile più verticale ``scroll-friendly'';
- \item l'ultimo è il layout per la stampa (\textit{print.css}), che rimuove gli elementi che non necessitano di essere stampati (come il menù) ed usa un font più consono per la carta stampata (\textit{Times New Roman}).
+ \item infine abbiamo il layout per la stampa (\textit{print.css}), che rimuove gli elementi che non necessitano di essere stampati (come il menù) ed usa un font più consono per la carta stampata (\textit{Times New Roman}).
 \end{itemize}
 
 \begin{figure}[h]
@@ -199,7 +199,7 @@ La radice ``piatti'' rappresenta quale tipologia di dati vogliamo salvare, cioè
 Gli altri elementi importanti sono:
 \begin{itemize}
  \item \textbf{Piatto}: rappresenta il singolo piatto, e contiene le informazioni principali, quali il nome, la descrizione e l'immagine (come path). Inoltre tutte le informazioni contenenti testo sono state aggiunte due volte utilizzando un suffisso diverso per il nome dell'elemento: uno per la lingua italiana e uno per la lingua inglese.
- \item \textbf{Commento}: ogni piatto contiene un figlio ``\textit{commenti}'', che a sua volta può contenere molti figli ``\textit{commento}'', che possiedono tutte le informazioni relative ad un singolo commento, come la data, l'autore, il testo e la lingua utilizzata dall'utente durante la scrittura.
+ \item \textbf{Commento}: ogni piatto contiene un nodo figlio ``\textit{commenti}'', che a sua volta può contenere molti nodi figli ``\textit{commento}'', che possiedono tutte le informazioni relative ad un singolo commento, come la data, l'autore, il testo e la lingua utilizzata dall'utente durante la scrittura.
 \end{itemize}
 Come detto precedentemente, pagine diverse utilizzano diversi elementi del database, in particolare:
 \begin{itemize}
@@ -240,7 +240,7 @@ La struttura dei paragrafi ha seguito una divisione in sezioni in modo da favori
 
 L’uso di immagini all’interno di questo sito è avvenuto, principalmente, per due scopi:
 \begin{itemize}
- \item presentazione: come ad esempio per l’immagine contenuta all’interno dell’header del sito e presente in tutte le pagine. La definizione di queste immagini è avvenuta tramite assegnamento dello sfondo dell’header nel foglio di stile e non sono state inserite informazioni aggiuntive, in quanto elemento di sola presentazione. In particolare, il titolo ``RistorESU Nord Piovego'' presente nell’header è stato creato come semplice contenuto testuale (con successive applicazioni di stili idonei) e non come parte dell’immagine di sfondo per evitare problemi durante la fase di resize del browser o nella visualizzazione a risoluzioni diverse;
+ \item presentazione: come ad esempio l’immagine contenuta all’interno dell’header del sito e presente in tutte le pagine. In particolare, la definizione di questa è avvenuta tramite assegnamento dello sfondo al div dell’header nel foglio di stile e non sono state inserite informazioni aggiuntive, in quanto tale elemento è di sola presentazione. In particolare, il titolo ``RistorESU Nord Piovego'' presente nell’header è stato creato come semplice contenuto testuale (con successive applicazioni di stili idonei) e non come parte dell’immagine di sfondo per evitare problemi durante la fase di resize del browser o nella visualizzazione a risoluzioni diverse;
  \item contenuto: le altre immagini presenti nel sito, quali le anteprime dei piatti o le foto illustrative dell’interno della mensa, sono state definite tramite tag <img> avendo l’accortezza di inserire sempre l’attributo ``alt'' in modo da spiegarne brevemente il contenuto anche agli utenti che non possono visualizzarle.  In alcuni casi sono state anche utilizzate come collegamenti ipertestuali, come per le immagini dei piatti o i link nel footer ai social network e ai validatori.
 \end{itemize}
 Sempre per quanto riguarda le immagini, abbiamo cercato di mantenere una dimensione accettabile delle stesse, raggiungendo un compromesso tra buona qualità di visualizzazione e bassa occupazione di banda. Come fatto per i colori, anche per le immagini è stata fatta attenzione a mantenere sempre un contrasto elevato, in modo da agevolare la visualizzazione da parte di soggetti ipovedenti.
@@ -299,7 +299,7 @@ Ovviamente, i contenuti dei metatag con contenuto in italiano, sono stati tradot
 
 Nell'affrontare la creazione delle varie sezioni della pagina Index.html, in particolare per quanto riguarda la sezione news, si é notato che la visualizzazione finale non era indipendente dall'ordine con il quale venivano inseriti i contenuti all'interno del \textit{div} contenitore. 
 Infatti, particolari ordinamenti di questi \textit{div} portavano a problemi di allineamento degli stessi, con risultati molto diversi da quanto desiderato. Nonostante questo potesse sembrare una violazione dell'indipendenza tra contenuto e presentazione, si é fatto riferimento a siti simili (come ad esempio il sito del corso di informatica dell'Universita di Padova), per trovare il giusto ordine di \textit{div} contenitori che non creasse problemi di presentazione.
-Come accennato in precedenza, i link alle notizie portano alla pagina news, direttamente alla notizia che si stava leggendo, tramite un'ancora passata in querystring.
+% Come accennato in precedenza, i link alle notizie portano alla pagina news, direttamente alla notizia che si stava leggendo, tramite un'ancora passata in querystring.
 
 \subsubsection{Javascript}
 
@@ -341,9 +341,9 @@ Lo scopo di questa pagina è quello di presentare all’utente la lista delle pi
 L’elenco dei piatti è memorizzato all’interno del file \textit{piatti.xml}. Per poterli presentare all’utente è stato creato un foglio di trasformazione di stile \textit{piatti.xsl} che è in grado di estrarre dall’intero database solo le informazioni di cui ha bisogno, scartando quindi i commenti, i nomi e le descrizioni scritte in lingua diversa da quella correntemente selezionata.
 Per presentare queste informazioni all’utente vengono create tre differenti DefinitionList, una diversa per ogni tipo di categoria presente (Primi Piatti, Secondi Piatti e Desserts).
 Per ogni categoria viene effettuato un xsl:for-each sui nodi <piatto>, facendo una selezione sull’attributo @categoria. Per ogni piatto viene creato un DefinitionTitle con il nome del piatto corrente, e un corrispondente DefinitionDescription con immagine, descrizione e link alla pagina specifica in cui è possibile inserire e leggere i commenti.
-L’applicazione del foglio di trasformazione di stile al database XML viene effettuata lato server per diversi motivi, principalmente per alleggerire il carico di banda all’utente che vuole visualizzare la pagina. Facendo effettuare la trasformazione in locale al browser dell’utente, sarebbe stato necessario scaricare l’intero database, comprensivo dei commenti per ogni piatto, mostrandone però solo una minima parte. Inoltre alcuni browser (come ad esempio quelli testuali) non sono in grado di effettuare tale trasformazione. Facendola in locale, inoltre, gli utilizzatori di dispositivi mobile avrebbero sofferto un notevole calo delle prestazioni visitando la pagina, in quanto l’elaborazione è una operazione computazionalmente molto costosa.
+L’applicazione del foglio di trasformazione di stile al database XML viene effettuata lato server per diversi motivi, di cui il principale è l'alleggerimento del carico di banda all’utente che vuole visualizzare la pagina. Facendo effettuare la trasformazione in locale al browser dell’utente, sarebbe stato necessario scaricare l’intero database, comprensivo dei commenti per ogni piatto, mostrandone però solo una minima parte. In aggiunta, alcuni browser (come ad esempio quelli testuali) non sono in grado di effettuare tale trasformazione. Facendola in locale, inoltre, gli utilizzatori di dispositivi mobile avrebbero sofferto un notevole calo delle prestazioni visitando la pagina, in quanto l’elaborazione è una operazione computazionalmente molto costosa.
 La trasformazione lato server viene effettuata utilizzando la libreria XML::LibXSLT, che consente di applicare il foglio di trasformazione direttamente all’XML dopo una fase di parsing per controllare che siano entrambi ben formati.
-\`E vero che questa scelta potrebbe causare un carico di lavoro eccessivo lato server, ma considerando le alternative è sembrata la scelta piu ragionevole, specialmente considerando il fatto che utilizzando tecniche di caching sarebbe possibile minimizzare tale carico.
+\`E vero che questa scelta potrebbe causare un carico di lavoro eccessivo lato server, ma considerando le alternative è sembrata la scelta piu ragionevole, specialmente valutando il fatto che utilizzando tecniche di caching sarebbe possibile minimizzare tale carico.
 In questo caso la traduzione in differenti lingue è stata effettuata selezionando quale foglio di trasformazione utilizzare tramite il valore del parametro \textit{lang} passato in GET nell’URL della pagina.
 
 \subsection{Viewpiatto}
@@ -368,7 +368,7 @@ Per garantire una buona accessibilità, ogni voce del form è identificata da un
 \subsubsection*{Client}
 
 Per diminuire il carico di lavoro per il server si è deciso di aggiungere i controlli di inserimento dei dati tramite JavaScript (non sostitutivi ai controlli server side), in modo da avere un resoconto immediato su eventuali campi compilati in modo non corretto. Ad ogni perdita di focus di un campo viene controllato che il contenuto rispetti alcuni canoni, come la lunghezza minima e massima del campo nome e commento, o il pattern della mail.
-Anche alla pressione del bottone di invio ogni campo viene controllato nuovamente, e in caso almeno uno dei box contenga errori l’invio viene bloccato, e quindi viene evitato lo spreco di banda per la restituzione dell’errore. In caso non siano presenti errori, il pulsante di invio viene disabilitato subito dopo il click, in modo da dare il tempo allo script lato server di prendere in carico la richiesta e di reindirizzare l’utente alla nuova pagina contenente il commento appena inserito, evitando accidentali invii multipli.
+Anche alla pressione del bottone di invio ogni campo viene controllato nuovamente, e in caso almeno uno dei box contenga errori l’invio viene bloccato, e quindi viene evitato lo spreco di banda per la restituzione dell’errore. In caso non siano presenti errori, il pulsante di invio viene disabilitato subito dopo il click, in modo da dare il tempo allo script lato server di prendere in carico la richiesta e di reindirizzare l’utente alla nuova pagina contenente il commento appena inserito, evitando accidentali invii multipli del medesimo commento.
 Inoltre sono stati aggiunti campi aggiuntivi rispetto a quelli visibili dall’utente, che permettono di comunicare alcune informazioni che sono implicite nella pagina, come la lingua e l’ID del piatto.
 
 \subsubsection*{Server}
@@ -378,7 +378,7 @@ Prima di inserire i dati nel database, viene effettuato un processing per evitar
 Per ogni parametro ricevuto vengono ripetuti i controlli effettuati da javascript, in modo da poter controllare anche gli utenti che non lo hanno abilitato o che non hanno buone intenzioni. In particolare il controllo di validità dell’indirizzo e-mail viene effettuato utilizzando la libreria Email::Valid, mentre la lunghezza dei campi nome e descrizione viene valutato con la funzione length().
 Prima di inserire i dati vengono eliminati alcuni caratteri speciali che potrebbero danneggiare la struttura del file, quali <, > e \&. Questi caratteri vengono sostituiti da un *, in modo da non impattare sulla lunghezza effettiva del nome/commento.
 Per evitare problemi che potrebbero sorgere a causa di un accesso concorrente in scrittura da parte di due client differenti, viene aperto un file di lock e usata la funzione flock() con parametro LOCK\_EX, che resta in attesa finchè non riesce effettivamente ad ottenere il lock esclusivo.
-Prima di rilasciare il lock, viene letto lo stato attuale del database, aggiunti i nuovi dati creando un nodo figlio nella posizione corretta, e scritto il nuovo file aggiornando il database. All’interno del nuovo nodo creato vengono inseriti gli attributi di lingua, che serviranno alla pagina di visualizzazione per inserire correttamente gli attributi xml:lang per gli screen reader.
+Prima di rilasciare il lock, viene letto lo stato attuale del database, aggiunti i nuovi dati all'albero corrente creando un nodo figlio nella posizione corretta, e scritto su disco il nuovo file in modo da aggiornare il database. All’interno del nuovo nodo creato vengono inseriti gli attributi di lingua, che serviranno alla pagina di visualizzazione per inserire correttamente gli attributi xml:lang per gli screen reader.
 
 \clearpage
 
@@ -404,6 +404,7 @@ I test su dispositivi mobile sono stati effettuati tramite:
  \begin{itemize}
   \item Chrome 33, Xperia Browser, e Default Browser su Android
   \item Safari su iPhone (iOS 7)
+  \item Internet Explorer 10 su Windows Mobile
  \end{itemize}
 \end{itemize}
 Su Mac sono stati provati:
@@ -423,6 +424,14 @@ Questo ha danneggiato lievemente la leggibilità del titolo nell’header, ma co
 In generale il sito rimane utilizzabile e i contenuti restano fruibili.
 Inoltre da IE 8 in giù la mancanza del supporto a CSS3 non permette di differenziare il colore delle righe nella tabella nella home. Il risultato è leggermente meno leggibile (il diverso colore aiuta ad identificare le righe), ma non causa problemi di accessibilità.
 Sono stati testati i due browser testuali Lynx e Links, e neppure qui sono stati riscontrati problemi di accessibilità: i collegamenti sono tutti visibili e ogni immagine che non può essere visualizzata è stata sostituita con un testo descrittivo. Anche le pagine \textit{.cgi} funzionano correttamente, compreso il form per i commenti.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.20]{piattiLynx}
+\caption{Pagina piatti visualizzata con Lynx}
+\label{piattiLynx}
+\end{figure}
+
 L'ultimo test è stato effettuato su un simulatore di screen reader (Fangs): la struttura del sito e i link visibili solo da questi dispositivi hanno reso accessibile e facilmente fruibile i contenuti proposti.
 
 \section{Validazione}
